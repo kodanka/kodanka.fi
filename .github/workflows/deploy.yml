@@ -2,15 +2,8 @@
 
 name: CI
 
-# Controls when the action will run. Triggers the workflow on push or pull request
-# events but only for the master branch
-on:
-  push:
-    branches: [ master ]
-  pull_request:
-    branches: [ master ]
+on: [push]
 
-# A workflow run is made up of one or more jobs that can run sequentially or in parallel
 jobs:
   # This workflow contains a single job called "build"
   build:
@@ -22,20 +15,11 @@ jobs:
     # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
     - uses: actions/checkout@v2
 
-    # Runs a single command using the runners shell
-    - name: Run a one-line script
-      run: echo Hello, world!
-
-    # Runs a set of commands using the runners shell
-    - name: Run a multi-line script
-      run: |
-        echo Add other actions to build,
-        echo test, and deploy your project.
-
     - name: Set up Python 3.6
       uses: actions/setup-python@v1
       with:
         python-version: 3.6
+
     - name: Install dependencies
       run: |
         sudo apt install pandoc
@@ -46,6 +30,7 @@ jobs:
       run: |
         python -m sphinx . _build/ -b html
         touch _build/.nojekyll
+
     - name: Deploy
       uses: peaceiris/actions-gh-pages@v3
       with:
