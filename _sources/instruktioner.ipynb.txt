@@ -4,24 +4,7 @@
    "cell_type": "markdown",
    "metadata": {},
    "source": [
-    "# Grunder"
-   ]
-  },
-  {
-   "cell_type": "code",
-   "execution_count": 1,
-   "metadata": {},
-   "outputs": [
-    {
-     "name": "stdout",
-     "output_type": "stream",
-     "text": [
-      "Hello, World!\n"
-     ]
-    }
-   ],
-   "source": [
-    "print(\"Hello, World!\")"
+    "# Instruktioner"
    ]
   }
  ],

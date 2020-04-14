@@ -1,19 +1,18 @@
 
-Ankdammen lär sig koda
-======================
+Ankdammen Kodar
+===============
 
 .. toctree::
    :maxdepth: 2
    :caption: Innehåll:
 
-   instructions
+   instruktioner
    faq
 
 .. toctree::
    :maxdepth: 2
    :caption: Vecka 1:
 
-   basics
+   grunder
+   latex
 
-Indices and tables
-==================
