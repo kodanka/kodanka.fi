@@ -35,6 +35,10 @@ extensions = [
     'sphinx.ext.mathjax',
 ]
 
+mathjax_config = {
+    'TeX': {'equationNumbers': {'autoNumber': 'AMS', 'useLabelIds': True}},
+}
+
 # Add any paths that contain templates here, relative to this directory.
 templates_path = ['_templates']
 
