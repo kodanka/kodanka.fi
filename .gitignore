@@ -1,5 +1,4 @@
 _build/
-_static/
 .vscode/
 env/
 .ipynb_checkpoints
