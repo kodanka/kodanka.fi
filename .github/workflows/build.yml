@@ -1,9 +1,6 @@
-name: Deploy site
+name: Check build status
 
-on:
-  push:
-    branches:
-      - master
+on: pull_request
 
 jobs:
   # This workflow contains a single job called "build"
@@ -30,10 +27,3 @@ jobs:
     - name: Build sphinx documentation
       run: |
         python -m sphinx . _build/ -b html
-        touch _build/.nojekyll
-
-    - name: Deploy
-      uses: peaceiris/actions-gh-pages@v3
-      with:
-        github_token: ${{ secrets.GITHUB_TOKEN }}
-        publish_dir: _build
