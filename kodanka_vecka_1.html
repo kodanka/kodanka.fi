@@ -41,8 +41,7 @@
   <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Sök" href="search.html" />
-    <link rel="next" title="LaTeX" href="latex.html" />
-    <link rel="prev" title="FAQ" href="faq.html" /> 
+    <link rel="prev" title="LaTeX" href="latex.html" /> 
 </head>
 
 <body class="wy-body-for-nav">
@@ -96,12 +95,19 @@
 </ul>
 <p class="caption"><span class="caption-text">Vecka 1:</span></p>
 <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="grunder.html">Grunder</a></li>
+<li class="toctree-l1"><a class="reference internal" href="latex.html">LaTeX</a></li>
 <li class="toctree-l1 current"><a class="current reference internal" href="#">Grunder</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#Vad-är-programmering?">Vad är programmering?</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#Vad-äro-Python?">Vad äro Python?</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#Input--&gt;-Output">Input -&gt; Output</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#Hello,-World!">Hello, World!</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#Variabler">Variabler</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#Skriva-ut-meningar">Skriva ut meningar</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="#Uppgift-1">Uppgift 1</a></li>
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="#Variabler">Variabler</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#id1">Variabler</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#Funktioner">Funktioner</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="#Uppgift-2">Uppgift 2</a></li>
 </ul>
@@ -109,8 +115,6 @@
 <li class="toctree-l2"><a class="reference internal" href="#Ge-in-variabler">Ge in variabler</a></li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="latex.html">LaTeX</a></li>
-<li class="toctree-l1"><a class="reference internal" href="kodanka_vecka_1.html">Grunder</a></li>
 </ul>
 
             
@@ -162,7 +166,7 @@
       <li class="wy-breadcrumbs-aside">
         
             
-            <a href="_sources/grunder.ipynb.txt" rel="nofollow"> View page source</a>
+            <a href="_sources/kodanka_vecka_1.ipynb.txt" rel="nofollow"> View page source</a>
           
         
       </li>
@@ -430,6 +434,7 @@ div.rendered_html tbody tr:hover {
     text-align: unset;
 }
 </style>
+<p><img alt="Open In Colab" src="https://colab.research.google.com/assets/colab-badge.svg" /></p>
 <div class="section" id="Grunder">
 <h1>Grunder<a class="headerlink" href="#Grunder" title="Permalink till denna rubrik">¶</a></h1>
 <table class="docutils align-default">
@@ -443,6 +448,80 @@ div.rendered_html tbody tr:hover {
 </tr>
 </tbody>
 </table>
+<div class="section" id="Vad-är-programmering?">
+<h2>Vad är programmering?<a class="headerlink" href="#Vad-är-programmering?" title="Permalink till denna rubrik">¶</a></h2>
+<p>Datorer har som vi känner dem funnits sedan mitten av 1900-talet. Sen kan man ju fråga sig att vad är en dator? Vi kan definiera en dator som en maskin som kan ta aritmetiska och logiska instruktioner och sedan utföra detta och producera nån form av resultat. En simpel synpunkt är att tänka sig att programering är konsten att skriva instruktioner till datorn som datorn kan uppfatta de. Datorn pratar själv i ett pråk som består bara av 1 och 0. Vi som människor har svårt att kommunisera med detta
+språk. Därför har man hitta på en massa olika programmerings språk för att underlätta vår kommunikation med datorn. Det finns massa olika programmerings språk och de bra för olika applikationer. En av de mest populära programmering språken nuförtiden är Python och vi kommer att använde Python i detta material.</p>
+</div>
+<div class="section" id="Vad-äro-Python?">
+<h2>Vad äro Python?<a class="headerlink" href="#Vad-äro-Python?" title="Permalink till denna rubrik">¶</a></h2>
+<p>Utöver att python är en orm så är det också en av de populäraste programmerings språken. Python används till många olika ändamål. Man kan göra websidor, appar, vetenskapliga beräkningar, animationer, spel och egentligen vad som helts annat som man kan tänka sig göra med en dator. Varför är python så populärt? En grund orsakt att python har bygts upp så att de är mycket lästbart och lätt att komma igång med.</p>
+</div>
+<div class="section" id="Input--&gt;-Output">
+<h2>Input -&gt; Output<a class="headerlink" href="#Input-->-Output" title="Permalink till denna rubrik">¶</a></h2>
+<p>[skriv hit en beskrivning om vad input och ouput är]</p>
+</div>
+<div class="section" id="Hello,-World!">
+<h2>Hello, World!<a class="headerlink" href="#Hello,-World!" title="Permalink till denna rubrik">¶</a></h2>
+<p>Hejsan välden! Nu ska vi börja med att bekanta oss med Python. Vi kommer att börja med ett simpelt ”Hello, World!” program pågrund av historiska själ. Hello world programmets funktion är att få datorn att ”hälsa” till oss. Programmet är ofta den som man lär sig förs alltid när man börjar med ett nytt system eller språk. För att kunna göra programmet kommer vi att lära oss vårt första kommando</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">()</span>
+</pre></div>
+</div>
+<p>När vi skriver Kommandot <code class="docutils literal notranslate"><span class="pre">print()</span></code> kommer datorn att skriva till output det som vi har specifierat mellan parenteserna. Nu om vi vill att datorn ska hälsa ”hello, world!” till oss kan vi skriva följande kommando:</p>
+<div class="nbinput docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[1]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
+<span></span><span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Hello, world!&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="nboutput nblast docutils container">
+<div class="prompt empty docutils container">
+</div>
+<div class="output_area docutils container">
+<div class="highlight"><pre>
+Hello, world!
+</pre></div></div>
+</div>
+<p>Vi märker nu att programmet har orsakat att programmet har skrivit ”hello,wold!” till ouptutten, just så som vi ville. Men varför fungerar månne inte följande?</p>
+<div class="nbinput docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[2]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
+<span></span><span class="nb">print</span><span class="p">(</span><span class="n">hello</span><span class="p">,</span><span class="n">wold</span><span class="o">!)</span>
+</pre></div>
+</div>
+</div>
+<div class="nboutput nblast docutils container">
+<div class="prompt empty docutils container">
+</div>
+<div class="output_area docutils container">
+<div class="highlight"><pre>
+<span class="ansi-cyan-fg">  File </span><span class="ansi-green-fg">&#34;&lt;ipython-input-2-309a55b00953&gt;&#34;</span><span class="ansi-cyan-fg">, line </span><span class="ansi-green-fg">1</span>
+<span class="ansi-red-fg">    print(hello,wold!)</span>
+                    ^
+<span class="ansi-red-fg">SyntaxError</span><span class="ansi-red-fg">:</span> invalid syntax
+
+</pre></div></div>
+</div>
+<p>Vad hände – Programmet har skrivit nåt men inte det som vi ville. Utan nu har vi bekantant oss med vår första error. Errors kommer i många olika smaker och vi kommer garanterat att stöta på flera när vi kommer vidare. Vad gör man nar man stöter på en error? Errormeddelande berättar till användaren att något har gåt fel med programmet. Meddelandet berättar till oss oftast vad som har gåt fel och vi som programmerare kan sedan konsultera med vår anka och sedan gå och göra ändringar till vår kod
+så att den fungerar. Errorn som vi nu mötte var en såkallad <code class="docutils literal notranslate"><span class="pre">SyntaxError</span></code> vilket berättar till oss att Python kan inte upfatta det som vi har get det.</p>
+<p>Men var gick allt fel? Ända skillnade mellan programmet som fungerade och programmet som inte fungerade var karaktaren ” . Det här karaktäret har en speciel betydelse. Allt som vi sätter mellan två ” ” så kommer Python att tolka som text. Om vi inte har dessa symboler med så kommer Python att tolka det som vi sker i parenteserna som mera instruktioner och eftersom vi inte har definiera varken <code class="docutils literal notranslate"><span class="pre">hello</span></code> eller <code class="docutils literal notranslate"><span class="pre">wolrd</span></code> som instruktioner så vet inte Python vad de ska göra och berätta till oss
+detta genom ett error meddelande.</p>
+</div>
+<div class="section" id="Variabler">
+<h2>Variabler<a class="headerlink" href="#Variabler" title="Permalink till denna rubrik">¶</a></h2>
+<p>Variabler är kanske bekanta för oss får matematik lektionen men nu kommer vi att gå djupare in på vad en variabel egentligen är. Namnet ”variabel” kanske ger oss vår första ledtråd, det är nåt som man kan ändra på. Men för vårt ändamål så måst vi definiera ett variabel lite bredare. Vi kan tänka oss att ett varibel är som en låda. Vi kan kolla in i lådan och titta vad det finns inne i den, vi kan ta ut det som finns i den, vi kan lägga till saker i lådan, vi kan ta bort saker från lådan, samt vi
+kan byta ut saker som finns i den. Vi kan också namnge lådan och ge det ett ”variabel namn”, det är som om nån skulle ha skrivit på lådan för hjälpa den som kommer sökandes om dess innehåll. Variabeln är kanske en av det mest grundläggande byggkloss som det finns i ett programmeringspråk. I Python så kan en variabel definieras på följande sätt:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">text</span> <span class="o">=</span> <span class="s2">&quot;Hejsan,världen!&quot;</span>
+</pre></div>
+</div>
+<p>Vad beskriver detta? I mitten av kommandot har vi ett likamed(”=”) tecken och med hjälp av den så har vi definierat ett varibel dvs. vi har skapat en låda dot vi kan sätta saker. På vänstra sidan av likamed tecknet har vi vårt variabelnamn i vårt fall <code class="docutils literal notranslate"><span class="pre">text</span></code>. Det här kan tolkas som en lapp på lådan som berättar oss vad lådan innehåller. På högra sidan av likamed tecknet så har vi det som vi vill sätta i lådan. Vi ser att vi har använt ” ” tecken vilket betyder att vi sätter i lådan nånting som
+datorn upfattar som text, i detta fall hälsningen ”Hejsan,världen!”</p>
+</div>
 <div class="section" id="Skriva-ut-meningar">
 <h2>Skriva ut meningar<a class="headerlink" href="#Skriva-ut-meningar" title="Permalink till denna rubrik">¶</a></h2>
 <div class="nbinput docutils container">
@@ -489,8 +568,8 @@ Se! Vad händer?
 </div>
 </div>
 </div>
-<div class="section" id="Variabler">
-<h2>Variabler<a class="headerlink" href="#Variabler" title="Permalink till denna rubrik">¶</a></h2>
+<div class="section" id="id1">
+<h2>Variabler<a class="headerlink" href="#id1" title="Permalink till denna rubrik">¶</a></h2>
 <div class="nbinput nblast docutils container">
 <div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[ ]:
 </pre></div>
@@ -627,10 +706,8 @@ Hej Kodare Ankan
   
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
       
-        <a href="latex.html" class="btn btn-neutral float-right" title="LaTeX" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
       
-      
-        <a href="faq.html" class="btn btn-neutral float-left" title="FAQ" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+        <a href="latex.html" class="btn btn-neutral float-left" title="LaTeX" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
       
     </div>
   

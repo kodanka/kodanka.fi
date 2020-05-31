@@ -1,0 +1,480 @@
+{
+  "nbformat": 4,
+  "nbformat_minor": 0,
+  "metadata": {
+    "kernelspec": {
+      "display_name": "Python 3",
+      "language": "python",
+      "name": "python3"
+    },
+    "language_info": {
+      "codemirror_mode": {
+        "name": "ipython",
+        "version": 3
+      },
+      "file_extension": ".py",
+      "mimetype": "text/x-python",
+      "name": "python",
+      "nbconvert_exporter": "python",
+      "pygments_lexer": "ipython3",
+      "version": "3.7.4"
+    },
+    "colab": {
+      "name": "kodanka_vecka_1.ipynb",
+      "provenance": [],
+      "collapsed_sections": [],
+      "include_colab_link": true
+    }
+  },
+  "cells": [
+    {
+      "cell_type": "markdown",
+      "metadata": {
+        "id": "view-in-github",
+        "colab_type": "text"
+      },
+      "source": [
+        "<a href=\"https://colab.research.google.com/github/kodanka/kodanka.fi/blob/material/kodanka_vecka_1.ipynb\" target=\"_parent\"><img src=\"https://colab.research.google.com/assets/colab-badge.svg\" alt=\"Open In Colab\"/></a>"
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "metadata": {
+        "id": "y4ouSlpil9zh",
+        "colab_type": "text"
+      },
+      "source": [
+        "# Grunder"
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "metadata": {
+        "id": "iY2V66oOl9zj",
+        "colab_type": "text"
+      },
+      "source": [
+        "|           |           |\n",
+        "|:---------:|:---------:|\n",
+        "| [Uppgift 1: Hello, World!](#Uppgift-1) | [Uppgift 2: Addition](#Uppgift-2) |"
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "metadata": {
+        "id": "NhEF_vm78LfD",
+        "colab_type": "text"
+      },
+      "source": [
+        "## Vad är programmering?\n",
+        "Datorer har som vi känner dem funnits sedan mitten av 1900-talet. Sen kan man ju fråga sig att vad är en dator? Vi kan definiera en dator som en maskin som kan ta aritmetiska och logiska instruktioner och sedan utföra detta och producera nån form av resultat. En simpel synpunkt är att tänka sig att programering är konsten att skriva instruktioner till datorn som datorn kan uppfatta de. Datorn pratar själv i ett pråk som består bara av 1 och 0. Vi som människor har svårt att kommunisera med detta språk. Därför har man hitta på en massa olika programmerings språk för att underlätta vår kommunikation med datorn. Det finns massa olika programmerings språk och de bra för olika applikationer. En av de mest populära programmering språken nuförtiden är Python och vi kommer att använde Python i detta material.  "
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "metadata": {
+        "id": "C3me2eFc92nA",
+        "colab_type": "text"
+      },
+      "source": [
+        "## Vad äro Python?\n",
+        "Utöver att python är en orm så är det också en av de populäraste programmerings språken. Python används till många olika ändamål. Man kan göra websidor, appar, vetenskapliga beräkningar, animationer, spel och egentligen vad som helts annat som man kan tänka sig göra med en dator. Varför är python så populärt? En grund orsakt att python har bygts upp så att de är mycket lästbart och lätt att komma igång med.    "
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "metadata": {
+        "id": "lXf4K5HhG7W_",
+        "colab_type": "text"
+      },
+      "source": [
+        "## Input -> Output\n",
+        "[skriv hit en beskrivning om vad input och ouput är]"
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "metadata": {
+        "id": "6craL2w5EFMg",
+        "colab_type": "text"
+      },
+      "source": [
+        "## Hello, World!\n",
+        "Hejsan välden! Nu ska vi börja med att bekanta oss med Python. Vi kommer att börja med ett simpelt \"Hello, World!\" program pågrund av historiska själ. Hello world programmets funktion är att få datorn att \"hälsa\" till oss. Programmet är ofta den som man lär sig förs alltid när man börjar med ett nytt system eller språk. För att kunna göra programmet kommer vi att lära oss vårt första kommando \n",
+        "```\n",
+        "print()\n",
+        "```\n",
+        "När vi skriver Kommandot `print()` kommer datorn att skriva till output det som vi har specifierat mellan parenteserna. Nu om vi vill att datorn ska hälsa \"hello, world!\" till oss kan vi skriva följande kommando:\n"
+      ]
+    },
+    {
+      "cell_type": "code",
+      "metadata": {
+        "id": "xtnTNWc1_9Rh",
+        "colab_type": "code",
+        "colab": {
+          "base_uri": "https://localhost:8080/",
+          "height": 34
+        },
+        "outputId": "a69c9de7-c0cb-43b7-e915-c6c62219e2eb"
+      },
+      "source": [
+        "print(\"Hello, world!\")"
+      ],
+      "execution_count": 1,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "text": [
+            "Hello, world!\n"
+          ],
+          "name": "stdout"
+        }
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "metadata": {
+        "id": "IhrTk60YIATu",
+        "colab_type": "text"
+      },
+      "source": [
+        "Vi märker nu att programmet har orsakat att programmet har skrivit \"hello,wold!\" till ouptutten, just så som vi ville. Men varför fungerar månne inte följande?"
+      ]
+    },
+    {
+      "cell_type": "code",
+      "metadata": {
+        "id": "7_Upxhq7IWpT",
+        "colab_type": "code",
+        "colab": {
+          "base_uri": "https://localhost:8080/",
+          "height": 129
+        },
+        "outputId": "e842304b-668f-4e77-e53f-b0c5bd9e7b6c"
+      },
+      "source": [
+        "print(hello,wold!)"
+      ],
+      "execution_count": 2,
+      "outputs": [
+        {
+          "output_type": "error",
+          "ename": "SyntaxError",
+          "evalue": "ignored",
+          "traceback": [
+            "\u001b[0;36m  File \u001b[0;32m\"<ipython-input-2-309a55b00953>\"\u001b[0;36m, line \u001b[0;32m1\u001b[0m\n\u001b[0;31m    print(hello,wold!)\u001b[0m\n\u001b[0m                    ^\u001b[0m\n\u001b[0;31mSyntaxError\u001b[0m\u001b[0;31m:\u001b[0m invalid syntax\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "metadata": {
+        "id": "ZFYIw_JaIz9W",
+        "colab_type": "text"
+      },
+      "source": [
+        "Vad hände -- Programmet har skrivit nåt men inte det som vi ville. Utan nu har vi bekantant oss med vår första error. Errors kommer i många olika smaker och vi kommer garanterat att stöta på flera när vi kommer vidare. Vad gör man nar man stöter på en error? Errormeddelande berättar till användaren att något har gåt fel med programmet. Meddelandet berättar till oss oftast vad som har gåt fel och vi som programmerare kan sedan konsultera med vår anka och sedan gå och göra ändringar till vår kod så att den fungerar.  Errorn som vi nu mötte var en såkallad `SyntaxError` vilket berättar till oss att Python kan inte upfatta det som vi har get det. \n",
+        "\n",
+        "Men var gick allt fel? Ända skillnade mellan programmet som fungerade och programmet som inte fungerade var karaktaren \" .  Det här karaktäret har en speciel betydelse. Allt som vi sätter mellan två \" \" så kommer Python att tolka som text. Om vi inte har dessa symboler med så kommer Python att tolka det som vi sker i parenteserna som mera instruktioner och eftersom vi inte har definiera varken `hello` eller `wolrd` som instruktioner så vet inte Python vad de ska göra och berätta till oss detta genom ett error meddelande.  "
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "metadata": {
+        "id": "eIsY_kOyL7bQ",
+        "colab_type": "text"
+      },
+      "source": [
+        "## Variabler\n",
+        "Variabler är kanske bekanta för oss får matematik lektionen men nu kommer vi att gå djupare in på vad en variabel egentligen är. Namnet \"variabel\" kanske ger oss vår första ledtråd, det är nåt som man kan ändra på. Men för vårt ändamål så måst vi definiera ett variabel lite bredare. Vi kan tänka oss att ett varibel är som en låda. Vi kan kolla in i lådan och titta vad det finns inne i den, vi kan ta ut det som finns i den, vi kan lägga till saker i lådan, vi kan ta bort saker från lådan, samt vi kan byta ut saker som finns i den. Vi kan också namnge lådan och ge det ett \"variabel namn\", det är som om nån skulle ha skrivit på lådan för hjälpa den som kommer sökandes om dess innehåll.  Variabeln är kanske en av det mest grundläggande byggkloss som det finns i ett programmeringspråk. I Python så kan en variabel definieras på följande sätt:\n",
+        "\n",
+        "```\n",
+        "text = \"Hejsan,världen!\"\n",
+        "```\n",
+        "Vad beskriver detta?  I mitten av kommandot har vi ett likamed(\"=\") tecken och med hjälp av den så har vi definierat ett varibel dvs. vi har skapat en låda dot vi kan sätta saker. På vänstra sidan av likamed tecknet har vi vårt variabelnamn i vårt fall `text`. Det här kan tolkas som en lapp på lådan som berättar oss vad lådan innehåller. På högra sidan av likamed tecknet så har vi det som vi vill sätta i lådan. Vi ser att vi har använt \" \" tecken vilket betyder att vi sätter i lådan nånting som datorn upfattar som text, i detta fall hälsningen \"Hejsan,världen!\" \n",
+        "\n"
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "metadata": {
+        "id": "RPQOkFPYl9zo",
+        "colab_type": "text"
+      },
+      "source": [
+        "## Skriva ut meningar"
+      ]
+    },
+    {
+      "cell_type": "code",
+      "metadata": {
+        "id": "YVKe4G6ql9zp",
+        "colab_type": "code",
+        "outputId": "ee638f15-7ce8-4114-a03e-c9e86273400c",
+        "colab": {}
+      },
+      "source": [
+        "print(\"testing testing!\")"
+      ],
+      "execution_count": 0,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "text": [
+            "testing testing!\n"
+          ],
+          "name": "stdout"
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "metadata": {
+        "id": "KaE3CETxl9zt",
+        "colab_type": "code",
+        "outputId": "f87fd439-436f-4e18-c94b-3b7433f18e3e",
+        "colab": {}
+      },
+      "source": [
+        "print(\"Se!\", \"Vad händer?\")"
+      ],
+      "execution_count": 0,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "text": [
+            "Se! Vad händer?\n"
+          ],
+          "name": "stdout"
+        }
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "metadata": {
+        "id": "NaRg-Qv9l9zx",
+        "colab_type": "text"
+      },
+      "source": [
+        "#### Uppgift 1"
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "metadata": {
+        "id": "gNdjUnjfl9zy",
+        "colab_type": "text"
+      },
+      "source": [
+        "<div class=\"alert alert-info\"> Hello, World!\n",
+        "\n",
+        "Få programmet att skriva ut\n",
+        "\n",
+        "`Hello, World!`\n",
+        "\n",
+        "[Det är ett klassiskt program att börja med.](https://sv.wikipedia.org/wiki/Hello_World)\n",
+        "\n",
+        "</div>"
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "metadata": {
+        "id": "lPlgpB-Dl9zy",
+        "colab_type": "text"
+      },
+      "source": [
+        "## Variabler"
+      ]
+    },
+    {
+      "cell_type": "code",
+      "metadata": {
+        "id": "Y1kvgt4El9zz",
+        "colab_type": "code",
+        "colab": {}
+      },
+      "source": [
+        "a = 1"
+      ],
+      "execution_count": 0,
+      "outputs": []
+    },
+    {
+      "cell_type": "markdown",
+      "metadata": {
+        "id": "Y1AOFQtFl9z2",
+        "colab_type": "text"
+      },
+      "source": [
+        "## Funktioner"
+      ]
+    },
+    {
+      "cell_type": "code",
+      "metadata": {
+        "id": "aCYpvDAEl9z2",
+        "colab_type": "code",
+        "outputId": "745f8087-4808-45d5-c591-834894ee6528",
+        "colab": {}
+      },
+      "source": [
+        "def skriv_hej():\n",
+        "    print(\"Hej!\")\n",
+        "\n",
+        "skriv_hej()"
+      ],
+      "execution_count": 0,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "text": [
+            "Hej!\n"
+          ],
+          "name": "stdout"
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "metadata": {
+        "id": "fcKb4Ti0l9z5",
+        "colab_type": "code",
+        "outputId": "813c6eda-6c89-4b44-a2a8-c1e438afe81a",
+        "colab": {}
+      },
+      "source": [
+        "def ge_mening():\n",
+        "    return \"Hmm, intressant\"\n",
+        "\n",
+        "mening = ge_mening()\n",
+        "\n",
+        "print(mening)"
+      ],
+      "execution_count": 0,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "text": [
+            "Hmm, intressant\n"
+          ],
+          "name": "stdout"
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "metadata": {
+        "id": "T8OsJF_pl9z9",
+        "colab_type": "code",
+        "outputId": "fd3a9d7b-a7d3-4600-aad2-ba84ddc9c2b7",
+        "colab": {}
+      },
+      "source": [
+        "def addera_utropstecken(mening):\n",
+        "    return mening + \"!\"\n",
+        "\n",
+        "kommando = addera_utropstecken(\"Var bestämd\")\n",
+        "\n",
+        "print(kommando)"
+      ],
+      "execution_count": 0,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "text": [
+            "Var bestämd!\n"
+          ],
+          "name": "stdout"
+        }
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "metadata": {
+        "id": "ZnJlWyvWl90B",
+        "colab_type": "text"
+      },
+      "source": [
+        "#### Uppgift 2"
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "metadata": {
+        "id": "95_w5l6cl90B",
+        "colab_type": "text"
+      },
+      "source": [
+        "<div class=\"alert alert-info\"> Addition\n",
+        "\n",
+        "Försök få additionsfunktionen att fungera:\n",
+        "\n",
+        "```\n",
+        "def addera(a, b):\n",
+        "    return ____\n",
+        "\n",
+        "summa = addera(3, 7)\n",
+        "\n",
+        "print(summa)\n",
+        "```\n",
+        "\n",
+        "Programmet borde spotta ut `10` när `a = 3` och `b = 7`.\n",
+        "\n",
+        "</div>"
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "metadata": {
+        "id": "axHMaCXkl90C",
+        "colab_type": "text"
+      },
+      "source": [
+        "## Ge in variabler"
+      ]
+    },
+    {
+      "cell_type": "code",
+      "metadata": {
+        "id": "SLQAxkAgl90C",
+        "colab_type": "code",
+        "outputId": "b2829503-3599-4703-ac09-bbb997ee0c0d",
+        "colab": {}
+      },
+      "source": [
+        "namn = input(\"Vem där? \")\n",
+        "print(\"Hej\", namn)"
+      ],
+      "execution_count": 0,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "text": [
+            "Vem där?  Kodare Ankan\n"
+          ],
+          "name": "stdin"
+        },
+        {
+          "output_type": "stream",
+          "text": [
+            "Hej Kodare Ankan\n"
+          ],
+          "name": "stdout"
+        }
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "metadata": {
+        "id": "smXFKPVLl90F",
+        "colab_type": "text"
+      },
+      "source": [
+        "#### <div class=\"alert alert-warning\">Första delen är avklarad när du har kommit så här långt! 🎉</div>"
+      ]
+    }
+  ]
+}
