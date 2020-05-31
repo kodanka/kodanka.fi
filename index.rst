@@ -15,4 +15,5 @@ Ankdammen Kodar
 
    grunder
    latex
+   kodanka_vecka_1
 
