@@ -1,7 +1,17 @@
 
 # kodanka
 
+[![CC BY-SA 4.0][cc-by-sa-shield]][cc-by-sa]
+
 <img src="images/duck.png" width="100">
+
+## Licens
+
+Materialet delas under [Creative Commons Attribution-ShareAlike 4.0
+International License][cc-by-sa].
+
+[cc-by-sa]: http://creativecommons.org/licenses/by-sa/4.0/
+[cc-by-sa-shield]: https://img.shields.io/badge/License-CC%20BY--SA%204.0-lightgrey.svg
 
 ## Utveckla
 
