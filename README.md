@@ -1,6 +1,7 @@
 
 # kodanka
 
+![](https://github.com/kodanka/kodanka.fi/workflows/Deploy%20site/badge.svg)
 [![CC BY-SA 4.0][cc-by-sa-shield]][cc-by-sa]
 
 <img src="images/duck.png" width="100">
