@@ -20,4 +20,4 @@ help:
 	@$(SPHINXBUILD) -M $@ "$(SOURCEDIR)" "$(BUILDDIR)" $(SPHINXOPTS) $(O)
 
 build:
-	python -m sphinx . _build/ -b html && xdg-open _build/index.html
+	python -m sphinx . _build/ -b html && python pagemods.py && xdg-open _build/index.html
