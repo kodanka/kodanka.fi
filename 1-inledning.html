@@ -1,0 +1,1032 @@
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="sv" > <![endif]-->
+<!--[if gt IE 8]><!-->
+<html class="no-js" lang="sv">
+ <!--<![endif]-->
+ <head>
+  <meta charset="utf-8"/>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+  <title>
+   Kodanka - Inledning
+  </title>
+  <link href="_static/logo.png" rel="shortcut icon"/>
+  <script src="_static/js/modernizr.min.js" type="text/javascript">
+  </script>
+  <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js" type="text/javascript">
+  </script>
+  <script src="_static/jquery.js">
+  </script>
+  <script src="_static/underscore.js">
+  </script>
+  <script src="_static/doctools.js">
+  </script>
+  <script src="_static/language_data.js">
+  </script>
+  <script src="_static/translations.js">
+  </script>
+  <script crossorigin="anonymous" integrity="sha256-Ae2Vz/4ePdIu6ZyI/5ZGsYnb+m0JlOmKPjt6XZ9JJkA=" src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js">
+  </script>
+  <script async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/latest.js?config=TeX-AMS-MML_HTMLorMML">
+  </script>
+  <script type="text/x-mathjax-config">
+   MathJax.Hub.Config({"TeX": {"equationNumbers": {"autoNumber": "AMS", "useLabelIds": true}}, "tex2jax": {"inlineMath": [["$", "$"], ["\\(", "\\)"]], "processEscapes": true, "ignoreClass": "document", "processClass": "math|output_area"}})
+  </script>
+  <script src="_static/js/theme.js" type="text/javascript">
+  </script>
+  <link href="_static/css/theme.css" rel="stylesheet" type="text/css"/>
+  <link href="_static/pygments.css" rel="stylesheet" type="text/css"/>
+  <link href="genindex.html" rel="index" title="Index"/>
+  <link href="search.html" rel="search" title="Sök"/>
+  <link href="latex.html" rel="next" title="LaTeX"/>
+  <link href="faq.html" rel="prev" title="FAQ"/>
+ </head>
+ <body class="wy-body-for-nav">
+  <div class="wy-grid-for-nav">
+   <nav class="wy-nav-side" data-toggle="wy-nav-shift">
+    <div class="wy-side-scroll">
+     <div class="wy-side-nav-search">
+      <a class="icon icon-home" href="index.html">
+       Kodanka
+       <img alt="Logo" class="logo" src="_static/logo.png"/>
+      </a>
+      <div role="search">
+       <form action="search.html" class="wy-form" id="rtd-search-form" method="get">
+        <input name="q" placeholder="Sök" type="text"/>
+        <input name="check_keywords" type="hidden" value="yes"/>
+        <input name="area" type="hidden" value="default"/>
+       </form>
+      </div>
+     </div>
+     <div aria-label="main navigation" class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation">
+      <p class="caption">
+       <span class="caption-text">
+        Info:
+       </span>
+      </p>
+      <ul>
+       <li class="toctree-l1">
+        <a class="reference internal" href="instruktioner.html">
+         Instruktioner
+        </a>
+       </li>
+       <li class="toctree-l1">
+        <a class="reference internal" href="faq.html">
+         FAQ
+        </a>
+       </li>
+      </ul>
+      <p class="caption">
+       <span class="caption-text">
+        Grunder:
+       </span>
+      </p>
+      <ul class="current">
+       <li class="toctree-l1 current">
+        <a class="current reference internal" href="#">
+         Inledning
+        </a>
+        <ul>
+         <li class="toctree-l2">
+          <a class="reference internal" href="#Vad-är-programmering?">
+           Vad är programmering?
+          </a>
+         </li>
+         <li class="toctree-l2">
+          <a class="reference internal" href="#Vad-äro-Python?">
+           Vad äro Python?
+          </a>
+         </li>
+         <li class="toctree-l2">
+          <a class="reference internal" href="#Input--&gt;-Output">
+           Input -&gt; Output
+          </a>
+         </li>
+         <li class="toctree-l2">
+          <a class="reference internal" href="#Hello,-World!">
+           Hello, World!
+          </a>
+         </li>
+         <li class="toctree-l2">
+          <a class="reference internal" href="#Variabler">
+           Variabler
+          </a>
+         </li>
+         <li class="toctree-l2">
+          <a class="reference internal" href="#Skriva-ut-meningar">
+           Skriva ut meningar
+          </a>
+          <ul>
+           <li class="toctree-l3">
+            <a class="reference internal" href="#Uppgift-1">
+             Uppgift 1
+            </a>
+           </li>
+          </ul>
+         </li>
+         <li class="toctree-l2">
+          <a class="reference internal" href="#id1">
+           Variabler
+          </a>
+         </li>
+         <li class="toctree-l2">
+          <a class="reference internal" href="#Funktioner">
+           Funktioner
+          </a>
+          <ul>
+           <li class="toctree-l3">
+            <a class="reference internal" href="#Uppgift-2">
+             Uppgift 2
+            </a>
+           </li>
+          </ul>
+         </li>
+         <li class="toctree-l2">
+          <a class="reference internal" href="#Ge-in-variabler">
+           Ge in variabler
+          </a>
+         </li>
+        </ul>
+       </li>
+      </ul>
+      <p class="caption">
+       <span class="caption-text">
+        Bonus:
+       </span>
+      </p>
+      <ul>
+       <li class="toctree-l1">
+        <a class="reference internal" href="latex.html">
+         LaTeX
+        </a>
+       </li>
+      </ul>
+     </div>
+    </div>
+   </nav>
+   <section class="wy-nav-content-wrap" data-toggle="wy-nav-shift">
+    <nav aria-label="top navigation" class="wy-nav-top">
+     <i class="fa fa-bars" data-toggle="wy-nav-top">
+     </i>
+     <a href="index.html">
+      Kodanka
+     </a>
+    </nav>
+    <div class="wy-nav-content">
+     <div class="rst-content">
+      <div aria-label="breadcrumbs navigation" role="navigation">
+       <ul class="wy-breadcrumbs">
+        <a href="https://colab.research.google.com/github/kodanka/kodanka.fi/blob/master/1-inledning.ipynb" rel="noopener noreferrer" target="_blank">
+         <img alt="Öppna i Colab" src="_static/colab-badge.png"/>
+        </a>
+       </ul>
+       <hr/>
+      </div>
+      <div class="document" itemscope="itemscope" itemtype="http://schema.org/Article" role="main">
+       <div itemprop="articleBody">
+        <style>
+         /* CSS for nbsphinx extension */
+
+/* remove conflicting styling from Sphinx themes */
+div.nbinput.container,
+div.nbinput.container div.prompt,
+div.nbinput.container div.input_area,
+div.nbinput.container div[class*=highlight],
+div.nbinput.container div[class*=highlight] pre,
+div.nboutput.container,
+div.nboutput.container div.prompt,
+div.nboutput.container div.output_area,
+div.nboutput.container div[class*=highlight],
+div.nboutput.container div[class*=highlight] pre {
+    background: none;
+    border: none;
+    padding: 0 0;
+    margin: 0;
+    box-shadow: none;
+}
+
+/* avoid gaps between output lines */
+div.nboutput.container div[class*=highlight] pre {
+    line-height: normal;
+}
+
+/* input/output containers */
+div.nbinput.container,
+div.nboutput.container {
+    display: -webkit-flex;
+    display: flex;
+    align-items: flex-start;
+    margin: 0;
+    width: 100%;
+}
+@media (max-width: 540px) {
+    div.nbinput.container,
+    div.nboutput.container {
+        flex-direction: column;
+    }
+}
+
+/* input container */
+div.nbinput.container {
+    padding-top: 5px;
+}
+
+/* last container */
+div.nblast.container {
+    padding-bottom: 5px;
+}
+
+/* input prompt */
+div.nbinput.container div.prompt pre {
+    color: #307FC1;
+}
+
+/* output prompt */
+div.nboutput.container div.prompt pre {
+    color: #BF5B3D;
+}
+
+/* all prompts */
+div.nbinput.container div.prompt,
+div.nboutput.container div.prompt {
+    width: 4.5ex;
+    padding-top: 5px;
+    position: relative;
+    user-select: none;
+}
+
+div.nbinput.container div.prompt > div,
+div.nboutput.container div.prompt > div {
+    position: absolute;
+    right: 0;
+    margin-right: 0.3ex;
+}
+
+@media (max-width: 540px) {
+    div.nbinput.container div.prompt,
+    div.nboutput.container div.prompt {
+        width: unset;
+        text-align: left;
+        padding: 0.4em;
+    }
+    div.nboutput.container div.prompt.empty {
+        padding: 0;
+    }
+
+    div.nbinput.container div.prompt > div,
+    div.nboutput.container div.prompt > div {
+        position: unset;
+    }
+}
+
+/* disable scrollbars on prompts */
+div.nbinput.container div.prompt pre,
+div.nboutput.container div.prompt pre {
+    overflow: hidden;
+}
+
+/* input/output area */
+div.nbinput.container div.input_area,
+div.nboutput.container div.output_area {
+    -webkit-flex: 1;
+    flex: 1;
+    overflow: auto;
+}
+@media (max-width: 540px) {
+    div.nbinput.container div.input_area,
+    div.nboutput.container div.output_area {
+        width: 100%;
+    }
+}
+
+/* input area */
+div.nbinput.container div.input_area {
+    border: 1px solid #e0e0e0;
+    border-radius: 2px;
+    background: #f5f5f5;
+}
+
+/* override MathJax center alignment in output cells */
+div.nboutput.container div[class*=MathJax] {
+    text-align: left !important;
+}
+
+/* override sphinx.ext.imgmath center alignment in output cells */
+div.nboutput.container div.math p {
+    text-align: left;
+}
+
+/* standard error */
+div.nboutput.container div.output_area.stderr {
+    background: #fdd;
+}
+
+/* ANSI colors */
+.ansi-black-fg { color: #3E424D; }
+.ansi-black-bg { background-color: #3E424D; }
+.ansi-black-intense-fg { color: #282C36; }
+.ansi-black-intense-bg { background-color: #282C36; }
+.ansi-red-fg { color: #E75C58; }
+.ansi-red-bg { background-color: #E75C58; }
+.ansi-red-intense-fg { color: #B22B31; }
+.ansi-red-intense-bg { background-color: #B22B31; }
+.ansi-green-fg { color: #00A250; }
+.ansi-green-bg { background-color: #00A250; }
+.ansi-green-intense-fg { color: #007427; }
+.ansi-green-intense-bg { background-color: #007427; }
+.ansi-yellow-fg { color: #DDB62B; }
+.ansi-yellow-bg { background-color: #DDB62B; }
+.ansi-yellow-intense-fg { color: #B27D12; }
+.ansi-yellow-intense-bg { background-color: #B27D12; }
+.ansi-blue-fg { color: #208FFB; }
+.ansi-blue-bg { background-color: #208FFB; }
+.ansi-blue-intense-fg { color: #0065CA; }
+.ansi-blue-intense-bg { background-color: #0065CA; }
+.ansi-magenta-fg { color: #D160C4; }
+.ansi-magenta-bg { background-color: #D160C4; }
+.ansi-magenta-intense-fg { color: #A03196; }
+.ansi-magenta-intense-bg { background-color: #A03196; }
+.ansi-cyan-fg { color: #60C6C8; }
+.ansi-cyan-bg { background-color: #60C6C8; }
+.ansi-cyan-intense-fg { color: #258F8F; }
+.ansi-cyan-intense-bg { background-color: #258F8F; }
+.ansi-white-fg { color: #C5C1B4; }
+.ansi-white-bg { background-color: #C5C1B4; }
+.ansi-white-intense-fg { color: #A1A6B2; }
+.ansi-white-intense-bg { background-color: #A1A6B2; }
+
+.ansi-default-inverse-fg { color: #FFFFFF; }
+.ansi-default-inverse-bg { background-color: #000000; }
+
+.ansi-bold { font-weight: bold; }
+.ansi-underline { text-decoration: underline; }
+
+
+div.nbinput.container div.input_area div[class*=highlight] > pre,
+div.nboutput.container div.output_area div[class*=highlight] > pre,
+div.nboutput.container div.output_area div[class*=highlight].math,
+div.nboutput.container div.output_area.rendered_html,
+div.nboutput.container div.output_area > div.output_javascript,
+div.nboutput.container div.output_area:not(.rendered_html) > img{
+    padding: 5px;
+}
+
+/* fix copybtn overflow problem in chromium (needed for 'sphinx_copybutton') */
+div.nbinput.container div.input_area > div[class^='highlight'],
+div.nboutput.container div.output_area > div[class^='highlight']{
+    overflow-y: hidden;
+}
+
+/* hide copybtn icon on prompts (needed for 'sphinx_copybutton') */
+.prompt a.copybtn {
+    display: none;
+}
+
+/* Some additional styling taken form the Jupyter notebook CSS */
+div.rendered_html table {
+  border: none;
+  border-collapse: collapse;
+  border-spacing: 0;
+  color: black;
+  font-size: 12px;
+  table-layout: fixed;
+}
+div.rendered_html thead {
+  border-bottom: 1px solid black;
+  vertical-align: bottom;
+}
+div.rendered_html tr,
+div.rendered_html th,
+div.rendered_html td {
+  text-align: right;
+  vertical-align: middle;
+  padding: 0.5em 0.5em;
+  line-height: normal;
+  white-space: normal;
+  max-width: none;
+  border: none;
+}
+div.rendered_html th {
+  font-weight: bold;
+}
+div.rendered_html tbody tr:nth-child(odd) {
+  background: #f5f5f5;
+}
+div.rendered_html tbody tr:hover {
+  background: rgba(66, 165, 245, 0.2);
+}
+
+/* CSS overrides for sphinx_rtd_theme */
+
+/* 24px margin */
+.nbinput.nblast.container,
+.nboutput.nblast.container {
+    margin-bottom: 19px;  /* padding has already 5px */
+}
+
+/* ... except between code cells! */
+.nblast.container + .nbinput.container {
+    margin-top: -19px;
+}
+
+.admonition > p:before {
+    margin-right: 4px;  /* make room for the exclamation icon */
+}
+
+/* Fix math alignment, see https://github.com/rtfd/sphinx_rtd_theme/pull/686 */
+.math {
+    text-align: unset;
+}
+        </style>
+        <p>
+         <img alt="Open In Colab" src="https://colab.research.google.com/assets/colab-badge.svg"/>
+        </p>
+        <div class="section" id="Inledning">
+         <h1>
+          Inledning
+          <a class="headerlink" href="#Inledning" title="Permalink till denna rubrik">
+           ¶
+          </a>
+         </h1>
+         <table class="docutils align-default">
+          <colgroup>
+           <col style="width: 53%"/>
+           <col style="width: 47%"/>
+          </colgroup>
+          <tbody>
+           <tr class="row-odd">
+            <td>
+             <p>
+              <a class="reference external" href="#Uppgift-1">
+               Uppgift 1: Hello, World!
+              </a>
+             </p>
+            </td>
+            <td>
+             <p>
+              <a class="reference external" href="#Uppgift-2">
+               Uppgift 2: Addition
+              </a>
+             </p>
+            </td>
+           </tr>
+          </tbody>
+         </table>
+         <div class="section" id="Vad-är-programmering?">
+          <h2>
+           Vad är programmering?
+           <a class="headerlink" href="#Vad-är-programmering?" title="Permalink till denna rubrik">
+            ¶
+           </a>
+          </h2>
+          <p>
+           Datorer har som vi känner dem funnits sedan mitten av 1900-talet. Sen kan man ju fråga sig att vad är en dator? Vi kan definiera en dator som en maskin som kan ta aritmetiska och logiska instruktioner och sedan utföra detta och producera nån form av resultat. En simpel synpunkt är att tänka sig att programering är konsten att skriva instruktioner till datorn som datorn kan uppfatta de. Datorn pratar själv i ett pråk som består bara av 1 och 0. Vi som människor har svårt att kommunisera med detta
+språk. Därför har man hitta på en massa olika programmerings språk för att underlätta vår kommunikation med datorn. Det finns massa olika programmerings språk och de bra för olika applikationer. En av de mest populära programmering språken nuförtiden är Python och vi kommer att använde Python i detta material.
+          </p>
+         </div>
+         <div class="section" id="Vad-äro-Python?">
+          <h2>
+           Vad äro Python?
+           <a class="headerlink" href="#Vad-äro-Python?" title="Permalink till denna rubrik">
+            ¶
+           </a>
+          </h2>
+          <p>
+           Utöver att python är en orm så är det också en av de populäraste programmerings språken. Python används till många olika ändamål. Man kan göra websidor, appar, vetenskapliga beräkningar, animationer, spel och egentligen vad som helts annat som man kan tänka sig göra med en dator. Varför är python så populärt? En grund orsakt att python har bygts upp så att de är mycket lästbart och lätt att komma igång med.
+          </p>
+         </div>
+         <div class="section" id="Input--&gt;-Output">
+          <h2>
+           Input -&gt; Output
+           <a class="headerlink" href="#Input--&gt;-Output" title="Permalink till denna rubrik">
+            ¶
+           </a>
+          </h2>
+          <p>
+           [skriv hit en beskrivning om vad input och ouput är]
+          </p>
+         </div>
+         <div class="section" id="Hello,-World!">
+          <h2>
+           Hello, World!
+           <a class="headerlink" href="#Hello,-World!" title="Permalink till denna rubrik">
+            ¶
+           </a>
+          </h2>
+          <p>
+           Hejsan välden! Nu ska vi börja med att bekanta oss med Python. Vi kommer att börja med ett simpelt ”Hello, World!” program pågrund av historiska själ. Hello world programmets funktion är att få datorn att ”hälsa” till oss. Programmet är ofta den som man lär sig förs alltid när man börjar med ett nytt system eller språk. För att kunna göra programmet kommer vi att lära oss vårt första kommando
+          </p>
+          <div class="highlight-default notranslate">
+           <div class="highlight">
+            <pre><span></span><span class="nb">print</span><span class="p">()</span>
+</pre>
+           </div>
+          </div>
+          <p>
+           När vi skriver Kommandot
+           <code class="docutils literal notranslate">
+            <span class="pre">
+             print()
+            </span>
+           </code>
+           kommer datorn att skriva till output det som vi har specifierat mellan parenteserna. Nu om vi vill att datorn ska hälsa ”hello, world!” till oss kan vi skriva följande kommando:
+          </p>
+          <div class="nbinput docutils container">
+           <div class="prompt highlight-none notranslate">
+            <div class="highlight">
+             <pre><span></span>[1]:
+</pre>
+            </div>
+           </div>
+           <div class="input_area highlight-ipython3 notranslate">
+            <div class="highlight">
+             <pre>
+<span></span><span class="nb">print</span><span class="p">(</span><span class="s2">"Hello, world!"</span><span class="p">)</span>
+</pre>
+            </div>
+           </div>
+          </div>
+          <div class="nboutput nblast docutils container">
+           <div class="prompt empty docutils container">
+           </div>
+           <div class="output_area docutils container">
+            <div class="highlight">
+             <pre>
+Hello, world!
+</pre>
+            </div>
+           </div>
+          </div>
+          <p>
+           Vi märker nu att programmet har orsakat att programmet har skrivit ”hello,wold!” till ouptutten, just så som vi ville. Men varför fungerar månne inte följande?
+          </p>
+          <div class="nbinput docutils container">
+           <div class="prompt highlight-none notranslate">
+            <div class="highlight">
+             <pre><span></span>[2]:
+</pre>
+            </div>
+           </div>
+           <div class="input_area highlight-ipython3 notranslate">
+            <div class="highlight">
+             <pre>
+<span></span><span class="nb">print</span><span class="p">(</span><span class="n">hello</span><span class="p">,</span><span class="n">wold</span><span class="o">!)</span>
+</pre>
+            </div>
+           </div>
+          </div>
+          <div class="nboutput nblast docutils container">
+           <div class="prompt empty docutils container">
+           </div>
+           <div class="output_area docutils container">
+            <div class="highlight">
+             <pre>
+<span class="ansi-cyan-fg">  File </span><span class="ansi-green-fg">"&lt;ipython-input-2-309a55b00953&gt;"</span><span class="ansi-cyan-fg">, line </span><span class="ansi-green-fg">1</span>
+<span class="ansi-red-fg">    print(hello,wold!)</span>
+                    ^
+<span class="ansi-red-fg">SyntaxError</span><span class="ansi-red-fg">:</span> invalid syntax
+
+</pre>
+            </div>
+           </div>
+          </div>
+          <p>
+           Vad hände – Programmet har skrivit nåt men inte det som vi ville. Utan nu har vi bekantant oss med vår första error. Errors kommer i många olika smaker och vi kommer garanterat att stöta på flera när vi kommer vidare. Vad gör man nar man stöter på en error? Errormeddelande berättar till användaren att något har gåt fel med programmet. Meddelandet berättar till oss oftast vad som har gåt fel och vi som programmerare kan sedan konsultera med vår anka och sedan gå och göra ändringar till vår kod
+så att den fungerar. Errorn som vi nu mötte var en såkallad
+           <code class="docutils literal notranslate">
+            <span class="pre">
+             SyntaxError
+            </span>
+           </code>
+           vilket berättar till oss att Python kan inte upfatta det som vi har get det.
+          </p>
+          <p>
+           Men var gick allt fel? Ända skillnade mellan programmet som fungerade och programmet som inte fungerade var karaktaren ” . Det här karaktäret har en speciel betydelse. Allt som vi sätter mellan två ” ” så kommer Python att tolka som text. Om vi inte har dessa symboler med så kommer Python att tolka det som vi sker i parenteserna som mera instruktioner och eftersom vi inte har definiera varken
+           <code class="docutils literal notranslate">
+            <span class="pre">
+             hello
+            </span>
+           </code>
+           eller
+           <code class="docutils literal notranslate">
+            <span class="pre">
+             wolrd
+            </span>
+           </code>
+           som instruktioner så vet inte Python vad de ska göra och berätta till oss
+detta genom ett error meddelande.
+          </p>
+         </div>
+         <div class="section" id="Variabler">
+          <h2>
+           Variabler
+           <a class="headerlink" href="#Variabler" title="Permalink till denna rubrik">
+            ¶
+           </a>
+          </h2>
+          <p>
+           Variabler är kanske bekanta för oss får matematik lektionen men nu kommer vi att gå djupare in på vad en variabel egentligen är. Namnet ”variabel” kanske ger oss vår första ledtråd, det är nåt som man kan ändra på. Men för vårt ändamål så måst vi definiera ett variabel lite bredare. Vi kan tänka oss att ett varibel är som en låda. Vi kan kolla in i lådan och titta vad det finns inne i den, vi kan ta ut det som finns i den, vi kan lägga till saker i lådan, vi kan ta bort saker från lådan, samt vi
+kan byta ut saker som finns i den. Vi kan också namnge lådan och ge det ett ”variabel namn”, det är som om nån skulle ha skrivit på lådan för hjälpa den som kommer sökandes om dess innehåll. Variabeln är kanske en av det mest grundläggande byggkloss som det finns i ett programmeringspråk. I Python så kan en variabel definieras på följande sätt:
+          </p>
+          <div class="highlight-default notranslate">
+           <div class="highlight">
+            <pre><span></span><span class="n">text</span> <span class="o">=</span> <span class="s2">"Hejsan,världen!"</span>
+</pre>
+           </div>
+          </div>
+          <p>
+           Vad beskriver detta? I mitten av kommandot har vi ett likamed(”=”) tecken och med hjälp av den så har vi definierat ett varibel dvs. vi har skapat en låda dot vi kan sätta saker. På vänstra sidan av likamed tecknet har vi vårt variabelnamn i vårt fall
+           <code class="docutils literal notranslate">
+            <span class="pre">
+             text
+            </span>
+           </code>
+           . Det här kan tolkas som en lapp på lådan som berättar oss vad lådan innehåller. På högra sidan av likamed tecknet så har vi det som vi vill sätta i lådan. Vi ser att vi har använt ” ” tecken vilket betyder att vi sätter i lådan nånting som
+datorn upfattar som text, i detta fall hälsningen ”Hejsan,världen!”
+          </p>
+         </div>
+         <div class="section" id="Skriva-ut-meningar">
+          <h2>
+           Skriva ut meningar
+           <a class="headerlink" href="#Skriva-ut-meningar" title="Permalink till denna rubrik">
+            ¶
+           </a>
+          </h2>
+          <div class="nbinput docutils container">
+           <div class="prompt highlight-none notranslate">
+            <div class="highlight">
+             <pre><span></span>[ ]:
+</pre>
+            </div>
+           </div>
+           <div class="input_area highlight-ipython3 notranslate">
+            <div class="highlight">
+             <pre>
+<span></span><span class="nb">print</span><span class="p">(</span><span class="s2">"testing testing!"</span><span class="p">)</span>
+</pre>
+            </div>
+           </div>
+          </div>
+          <div class="nboutput nblast docutils container">
+           <div class="prompt empty docutils container">
+           </div>
+           <div class="output_area docutils container">
+            <div class="highlight">
+             <pre>
+testing testing!
+</pre>
+            </div>
+           </div>
+          </div>
+          <div class="nbinput docutils container">
+           <div class="prompt highlight-none notranslate">
+            <div class="highlight">
+             <pre><span></span>[ ]:
+</pre>
+            </div>
+           </div>
+           <div class="input_area highlight-ipython3 notranslate">
+            <div class="highlight">
+             <pre>
+<span></span><span class="nb">print</span><span class="p">(</span><span class="s2">"Se!"</span><span class="p">,</span> <span class="s2">"Vad händer?"</span><span class="p">)</span>
+</pre>
+            </div>
+           </div>
+          </div>
+          <div class="nboutput nblast docutils container">
+           <div class="prompt empty docutils container">
+           </div>
+           <div class="output_area docutils container">
+            <div class="highlight">
+             <pre>
+Se! Vad händer?
+</pre>
+            </div>
+           </div>
+          </div>
+          <div class="section" id="Uppgift-1">
+           <h3>
+            Uppgift 1
+            <a class="headerlink" href="#Uppgift-1" title="Permalink till denna rubrik">
+             ¶
+            </a>
+           </h3>
+           <div class="admonition note">
+            <p class="admonition-title fa fa-exclamation-circle">
+             Hello, World!
+            </p>
+            <p>
+             Få programmet att skriva ut
+            </p>
+            <p>
+             <code class="docutils literal notranslate">
+              <span class="pre">
+               Hello,
+              </span>
+              <span class="pre">
+               World!
+              </span>
+             </code>
+            </p>
+            <p>
+             <a class="reference external" href="https://sv.wikipedia.org/wiki/Hello_World">
+              Det är ett klassiskt program att börja med.
+             </a>
+            </p>
+           </div>
+          </div>
+         </div>
+         <div class="section" id="id1">
+          <h2>
+           Variabler
+           <a class="headerlink" href="#id1" title="Permalink till denna rubrik">
+            ¶
+           </a>
+          </h2>
+          <div class="nbinput nblast docutils container">
+           <div class="prompt highlight-none notranslate">
+            <div class="highlight">
+             <pre><span></span>[ ]:
+</pre>
+            </div>
+           </div>
+           <div class="input_area highlight-ipython3 notranslate">
+            <div class="highlight">
+             <pre>
+<span></span><span class="n">a</span> <span class="o">=</span> <span class="mi">1</span>
+</pre>
+            </div>
+           </div>
+          </div>
+         </div>
+         <div class="section" id="Funktioner">
+          <h2>
+           Funktioner
+           <a class="headerlink" href="#Funktioner" title="Permalink till denna rubrik">
+            ¶
+           </a>
+          </h2>
+          <div class="nbinput docutils container">
+           <div class="prompt highlight-none notranslate">
+            <div class="highlight">
+             <pre><span></span>[ ]:
+</pre>
+            </div>
+           </div>
+           <div class="input_area highlight-ipython3 notranslate">
+            <div class="highlight">
+             <pre>
+<span></span><span class="k">def</span> <span class="nf">skriv_hej</span><span class="p">():</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">"Hej!"</span><span class="p">)</span>
+
+<span class="n">skriv_hej</span><span class="p">()</span>
+</pre>
+            </div>
+           </div>
+          </div>
+          <div class="nboutput nblast docutils container">
+           <div class="prompt empty docutils container">
+           </div>
+           <div class="output_area docutils container">
+            <div class="highlight">
+             <pre>
+Hej!
+</pre>
+            </div>
+           </div>
+          </div>
+          <div class="nbinput docutils container">
+           <div class="prompt highlight-none notranslate">
+            <div class="highlight">
+             <pre><span></span>[ ]:
+</pre>
+            </div>
+           </div>
+           <div class="input_area highlight-ipython3 notranslate">
+            <div class="highlight">
+             <pre>
+<span></span><span class="k">def</span> <span class="nf">ge_mening</span><span class="p">():</span>
+    <span class="k">return</span> <span class="s2">"Hmm, intressant"</span>
+
+<span class="n">mening</span> <span class="o">=</span> <span class="n">ge_mening</span><span class="p">()</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="n">mening</span><span class="p">)</span>
+</pre>
+            </div>
+           </div>
+          </div>
+          <div class="nboutput nblast docutils container">
+           <div class="prompt empty docutils container">
+           </div>
+           <div class="output_area docutils container">
+            <div class="highlight">
+             <pre>
+Hmm, intressant
+</pre>
+            </div>
+           </div>
+          </div>
+          <div class="nbinput docutils container">
+           <div class="prompt highlight-none notranslate">
+            <div class="highlight">
+             <pre><span></span>[ ]:
+</pre>
+            </div>
+           </div>
+           <div class="input_area highlight-ipython3 notranslate">
+            <div class="highlight">
+             <pre>
+<span></span><span class="k">def</span> <span class="nf">addera_utropstecken</span><span class="p">(</span><span class="n">mening</span><span class="p">):</span>
+    <span class="k">return</span> <span class="n">mening</span> <span class="o">+</span> <span class="s2">"!"</span>
+
+<span class="n">kommando</span> <span class="o">=</span> <span class="n">addera_utropstecken</span><span class="p">(</span><span class="s2">"Var bestämd"</span><span class="p">)</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="n">kommando</span><span class="p">)</span>
+</pre>
+            </div>
+           </div>
+          </div>
+          <div class="nboutput nblast docutils container">
+           <div class="prompt empty docutils container">
+           </div>
+           <div class="output_area docutils container">
+            <div class="highlight">
+             <pre>
+Var bestämd!
+</pre>
+            </div>
+           </div>
+          </div>
+          <div class="section" id="Uppgift-2">
+           <h3>
+            Uppgift 2
+            <a class="headerlink" href="#Uppgift-2" title="Permalink till denna rubrik">
+             ¶
+            </a>
+           </h3>
+           <div class="admonition note">
+            <p class="admonition-title fa fa-exclamation-circle">
+             Addition
+            </p>
+            <p>
+             Försök få additionsfunktionen att fungera:
+            </p>
+            <div class="highlight-default notranslate">
+             <div class="highlight">
+              <pre><span></span><span class="k">def</span> <span class="nf">addera</span><span class="p">(</span><span class="n">a</span><span class="p">,</span> <span class="n">b</span><span class="p">):</span>
+    <span class="k">return</span> <span class="n">____</span>
+
+<span class="n">summa</span> <span class="o">=</span> <span class="n">addera</span><span class="p">(</span><span class="mi">3</span><span class="p">,</span> <span class="mi">7</span><span class="p">)</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="n">summa</span><span class="p">)</span>
+</pre>
+             </div>
+            </div>
+            <p>
+             Programmet borde spotta ut
+             <code class="docutils literal notranslate">
+              <span class="pre">
+               10
+              </span>
+             </code>
+             när
+             <code class="docutils literal notranslate">
+              <span class="pre">
+               a
+              </span>
+              <span class="pre">
+               =
+              </span>
+              <span class="pre">
+               3
+              </span>
+             </code>
+             och
+             <code class="docutils literal notranslate">
+              <span class="pre">
+               b
+              </span>
+              <span class="pre">
+               =
+              </span>
+              <span class="pre">
+               7
+              </span>
+             </code>
+             .
+            </p>
+           </div>
+          </div>
+         </div>
+         <div class="section" id="Ge-in-variabler">
+          <h2>
+           Ge in variabler
+           <a class="headerlink" href="#Ge-in-variabler" title="Permalink till denna rubrik">
+            ¶
+           </a>
+          </h2>
+          <div class="nbinput docutils container">
+           <div class="prompt highlight-none notranslate">
+            <div class="highlight">
+             <pre><span></span>[ ]:
+</pre>
+            </div>
+           </div>
+           <div class="input_area highlight-ipython3 notranslate">
+            <div class="highlight">
+             <pre>
+<span></span><span class="n">namn</span> <span class="o">=</span> <span class="nb">input</span><span class="p">(</span><span class="s2">"Vem där? "</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">"Hej"</span><span class="p">,</span> <span class="n">namn</span><span class="p">)</span>
+</pre>
+            </div>
+           </div>
+          </div>
+          <div class="nboutput docutils container">
+           <div class="prompt empty docutils container">
+           </div>
+           <div class="output_area docutils container">
+            <div class="highlight">
+             <pre>
+Vem där?  Kodare Ankan
+</pre>
+            </div>
+           </div>
+          </div>
+          <div class="nboutput nblast docutils container">
+           <div class="prompt empty docutils container">
+           </div>
+           <div class="output_area docutils container">
+            <div class="highlight">
+             <pre>
+Hej Kodare Ankan
+</pre>
+            </div>
+           </div>
+          </div>
+          <hr class="docutils"/>
+          <div class="admonition warning">
+           <p>
+            Första delen är avklarad när du har kommit så här långt! 🎉
+           </p>
+          </div>
+          <div class="nbinput nblast docutils container">
+           <div class="prompt highlight-none notranslate">
+            <div class="highlight">
+             <pre><span></span>[ ]:
+</pre>
+            </div>
+           </div>
+           <div class="input_area highlight-ipython3 notranslate">
+            <div class="highlight">
+             <pre>
+<span></span>
+</pre>
+            </div>
+           </div>
+          </div>
+         </div>
+        </div>
+       </div>
+      </div>
+      <footer>
+       <div aria-label="footer navigation" class="rst-footer-buttons" role="navigation">
+        <a accesskey="n" class="btn btn-neutral float-right" href="latex.html" rel="next" title="LaTeX">
+         Next
+         <span class="fa fa-arrow-circle-right">
+         </span>
+        </a>
+        <a accesskey="p" class="btn btn-neutral float-left" href="faq.html" rel="prev" title="FAQ">
+         <span class="fa fa-arrow-circle-left">
+         </span>
+         Previous
+        </a>
+       </div>
+       <hr/>
+       <div role="contentinfo">
+        <p>
+         © Copyright 2020, Kodanka
+        </p>
+       </div>
+       Byggt med
+       <a href="http://sphinx-doc.org/">
+        Sphinx
+       </a>
+       med ett
+       <a href="https://github.com/rtfd/sphinx_rtd_theme">
+        tema
+       </a>
+       av
+       <a href="https://readthedocs.org">
+        Read the Docs.
+       </a>
+      </footer>
+     </div>
+    </div>
+   </section>
+  </div>
+  <script type="text/javascript">
+   jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+ </body>
+</html>
