@@ -22,7 +22,7 @@ copyright = '2020, Kodanka'
 author = 'Daniel Holmberg'
 
 # The full version, including alpha/beta/rc tags
-release = '0.1'
+# release = '0.1'
 
 
 # -- General configuration ---------------------------------------------------
@@ -61,8 +61,8 @@ exclude_patterns = ['_build', '**.ipynb_checkpoints']
 # a list of builtin themes.
 #
 html_theme = 'sphinx_rtd_theme'
-html_logo = 'images/duck.png'
-html_favicon = 'images/duck.png'
+html_logo = '_static/logo.png'
+html_favicon = '_static/logo.png'
 
 # Add any paths that contain custom static files (such as style sheets) here,
 # relative to this directory. They are copied after the builtin static files,

@@ -27,3 +27,4 @@ jobs:
     - name: Build sphinx documentation
       run: |
         python -m sphinx . _build/ -b html
+        python pagemods.py
