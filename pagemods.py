@@ -23,6 +23,20 @@ for file in os.listdir("_build"):
             else:
                 soup.title.string = "Kodanka"
 
+            # Translate navigation buttons to swedish
+            next_button = soup.find("a", attrs={"accesskey": "n"})
+            if next_button:
+                next_button.clear()
+                next_button.insert(0, "Nästa")
+                next_arrow = soup.new_tag("span", attrs={"class": "fa fa-arrow-circle-right"})
+                next_button.insert(1, next_arrow)
+            previous_button = soup.find("a", attrs={"accesskey": "p"})
+            if previous_button:
+                previous_button.clear()
+                previous_button.insert(1, "Föregående")
+                previous_arrow = soup.new_tag("span", attrs={"class": "fa fa-arrow-circle-left"})
+                previous_button.insert(0, previous_arrow)
+
             # Translate search functionality to swedish
             soup = bs(str(soup).replace("placeholder=\"Search docs\"", "placeholder=\"Sök\""))
 
