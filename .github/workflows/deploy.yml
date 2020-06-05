@@ -32,9 +32,9 @@ jobs:
         python -m sphinx . _build/ -b html
         python pagemods.py
         touch _build/.nojekyll
+
     - name: Create CNAME
-      run: 'echo "kodanka.fi" > CNAME'
-      shell: bash
+      run: echo "kodanka.fi" > _build/CNAME
 
     - name: Deploy
       uses: peaceiris/actions-gh-pages@v3
