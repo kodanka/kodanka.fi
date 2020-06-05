@@ -1,0 +1,147 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   width="233.98622mm"
+   height="39.997623mm"
+   viewBox="0 0 233.98623 39.997624"
+   version="1.1"
+   id="svg8"
+   inkscape:version="0.92.3 (2405546, 2018-03-11)"
+   sodipodi:docname="colab-badge_V1.svg">
+  <defs
+     id="defs2" />
+  <sodipodi:namedview
+     id="base"
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1.0"
+     inkscape:pageopacity="0.0"
+     inkscape:pageshadow="2"
+     inkscape:zoom="1.4142136"
+     inkscape:cx="559.144"
+     inkscape:cy="111.02899"
+     inkscape:document-units="mm"
+     inkscape:current-layer="g3747"
+     showgrid="false"
+     inkscape:window-width="1920"
+     inkscape:window-height="1017"
+     inkscape:window-x="1912"
+     inkscape:window-y="-8"
+     inkscape:window-maximized="1"
+     inkscape:pagecheckerboard="true"
+     fit-margin-top="0"
+     fit-margin-left="0"
+     fit-margin-right="0"
+     fit-margin-bottom="0"
+     inkscape:snap-page="false" />
+  <metadata
+     id="metadata5">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:title></dc:title>
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <g
+     inkscape:label="Layer 1"
+     inkscape:groupmode="layer"
+     id="layer1"
+     transform="translate(287.6213,-120.71309)">
+    <g
+       id="g3771"
+       transform="matrix(1.9998811,0,0,1.9998811,-287.62116,120.71309)">
+      <g
+         id="g3727"
+         clip-path="url(#a)">
+        <path
+           id="path3721"
+           d="M 0,0 H 30 V 20 H 0 Z"
+           inkscape:connector-curvature="0"
+           style="fill:#555555" />
+        <path
+           id="path3723"
+           d="m 30,0 h 87 V 20 H 30 Z"
+           inkscape:connector-curvature="0"
+           style="fill:#007ec6" />
+        <path
+           id="path3725"
+           d="M 0,0 H 117 V 20 H 0 Z"
+           inkscape:connector-curvature="0"
+           style="fill:url(#b)" />
+      </g>
+      <g
+         id="g3747"
+         font-size="110"
+         style="font-size:110px;font-family:'DejaVu Sans', Verdana, Geneva, sans-serif;text-anchor:middle;fill:#ffffff">
+        <svg
+           id="svg3739"
+           version="1.1"
+           viewBox="-2 0 28 24"
+           height="20"
+           width="22"
+           y="0px"
+           x="4">
+          <path
+             id="path3729"
+             d="m 1.977,16.77 c -2.667,-2.277 -2.605,-7.079 0,-9.357 0.942,0.644 1.545,1.662 2.513,2.278 -1.152,1.6 -1.146,3.201 -0.004,4.803 -0.964,0.617 -1.568,1.632 -2.509,2.276 z"
+             style="fill:#ef9008"
+             inkscape:connector-curvature="0" />
+          <path
+             id="path3731"
+             d="M 12.257,17.114 C 10.49,15.481 9.772,13.456 10.139,11.094 10.59,8.184 12.278,6.201 15.085,5.416 17.65,4.698 20.049,5.199 21.963,7.235 21.079,7.978 20.256,8.782 19.529,9.681 18.488,8.827 17.319,8.435 16,8.856 c -2.404,0.767 -3.046,3.241 -1.494,5.644 -0.241,0.275 -0.493,0.541 -0.721,0.826 -0.49,0.613 -1.274,0.974 -1.528,1.788 z"
+             style="fill:#fdba18"
+             inkscape:connector-curvature="0" />
+          <path
+             id="path3733"
+             d="m 19.529,9.682 c 0.727,-0.899 1.55,-1.703 2.434,-2.446 2.703,2.783 2.701,7.031 -0.005,9.764 -2.648,2.674 -6.936,2.725 -9.701,0.115 0.254,-0.814 1.038,-1.175 1.528,-1.788 0.228,-0.285 0.48,-0.552 0.721,-0.826 1.053,0.916 2.254,1.268 3.6,0.83 2.396,-0.78 3.045,-3.404 1.423,-5.649 z"
+             style="fill:#ef9008"
+             inkscape:connector-curvature="0" />
+          <path
+             id="path3735"
+             d="M 4.49,9.691 C 3.522,9.075 2.919,8.057 1.977,7.413 4.186,5.015 7.698,4.471 10.453,6.058 11.008,6.378 11.172,6.664 10.738,7.186 10.581,7.374 10.48,7.608 10.347,7.817 10.048,8.287 9.838,8.884 9.418,9.188 8.933,9.539 8.523,8.847 8.021,8.746 6.673,8.475 5.509,8.787 4.49,9.691 Z"
+             style="fill:#fdba18"
+             inkscape:connector-curvature="0" />
+          <path
+             id="path3737"
+             d="m 1.977,16.77 c 0.941,-0.644 1.545,-1.659 2.509,-2.277 1.373,1.152 2.85,1.433 4.45,0.499 0.332,-0.194 0.503,-0.088 0.673,0.19 0.386,0.635 0.753,1.285 1.181,1.89 0.34,0.48 0.222,0.715 -0.253,1.006 -2.697,1.652 -6.332,1.11 -8.56,-1.308 z"
+             style="fill:#fdba18"
+             inkscape:connector-curvature="0" />
+        </svg>
+        <text
+           id="text3741"
+           textLength="30"
+           transform="scale(0.1)"
+           y="140"
+           x="245"
+           lengthAdjust="spacing" />
+        <text
+           id="text3743"
+           textLength="770"
+           transform="scale(0.1)"
+           y="150"
+           x="725"
+           lengthAdjust="spacing"
+           style="fill:#010101;fill-opacity:0.3">Öppna i Colab</text>
+        <text
+           id="text3745"
+           textLength="770"
+           transform="scale(0.1)"
+           y="140"
+           x="725"
+           lengthAdjust="spacing">Öppna i Colab</text>
+      </g>
+    </g>
+  </g>
+</svg>

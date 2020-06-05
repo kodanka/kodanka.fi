@@ -49,7 +49,7 @@ for file in os.listdir("_build"):
             if os.path.isfile(f"{name}.ipynb"):
                 colab = bs(f"<a target=\"_blank\" rel=\"noopener noreferrer\" \
                              href=\"https://colab.research.google.com/github/kodanka/kodanka.fi/blob/master/{notebook}\"> \
-                             <img alt=\"Öppna i Colab\" src=\"_static/colab-badge.png\"/></a>")
+                             <img alt=\"Öppna i Colab\" src=\"_static/colab-badge.svg\" style=\"width:117px;height:20px;\"/></a>")
                 wy_list = soup.find("ul", attrs={"class": "wy-breadcrumbs"}).find_all("li")
                 if wy_list:
                     for li in wy_list:
