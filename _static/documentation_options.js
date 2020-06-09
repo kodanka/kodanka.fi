@@ -3,7 +3,7 @@ var DOCUMENTATION_OPTIONS = {
     VERSION: '',
     LANGUAGE: 'sv',
     COLLAPSE_INDEX: false,
-    BUILDER: 'html',
+    BUILDER: 'dirhtml',
     FILE_SUFFIX: '.html',
     LINK_SUFFIX: '.html',
     HAS_SOURCE: true,
