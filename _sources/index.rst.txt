@@ -13,7 +13,6 @@ Ankdammen Kodar
    :maxdepth: 1
    :caption: Grunder:
 
-   latex
    1-inledning
    6_listor
 
