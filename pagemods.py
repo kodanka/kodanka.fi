@@ -11,9 +11,12 @@ for root, dirs, files in os.walk("_build"):
         if file.endswith(".html"):
 
             filename = f"{root}/{file}"
-            name = file.split(".")[0]
-            notebook = f"{name}.ipynb"
-
+            if "/" in root:
+                name = root.split("/")[1]
+                notebook = f"{name}.ipynb"
+            else:
+                notebook = "index.ipynb"
+            print(notebook)
             # Open all html files for modification
             with open(filename, "r") as page:
                 soup = bs(page)
@@ -44,14 +47,14 @@ for root, dirs, files in os.walk("_build"):
 
                 # Modify page footer
                 old_footer = "Built with <a href=\"http://sphinx-doc.org/\">Sphinx</a> using a <a href=\"https://github.com/rtfd/sphinx_rtd_theme\">theme</a> provided by <a href=\"https://readthedocs.org\">Read the Docs</a>."
-                new_footer = "Byggt med <a href=\"http://sphinx-doc.org/\">Sphinx</a> med ett <a href=\"https://github.com/rtfd/sphinx_rtd_theme\">tema</a> av <a href=\"https://readthedocs.org\">Read the Docs.</a>"
+                new_footer = "Byggd med <a href=\"http://sphinx-doc.org/\">Sphinx</a> med ett <a href=\"https://github.com/rtfd/sphinx_rtd_theme\">tema</a> av <a href=\"https://readthedocs.org\">Read the Docs.</a>"
                 soup = bs(str(soup).replace(old_footer, new_footer))
 
                 # Modify page header
-                if os.path.isfile(f"{name}.ipynb"):
+                if os.path.isfile(notebook):
                     colab = bs(f"<a target=\"_blank\" rel=\"noopener noreferrer\" \
                                 href=\"https://colab.research.google.com/github/kodanka/kodanka.fi/blob/master/{notebook}\"> \
-                                <img alt=\"Öppna i Colab\" src=\"_static/colab-badge.svg\" style=\"width:117px;height:20px;\"/></a>")
+                                <img alt=\"Öppna i Colab\" src=\"../_static/colab-badge.svg\" style=\"width:117px;height:20px;\"/></a>")
                     wy_list = soup.find("ul", attrs={"class": "wy-breadcrumbs"}).find_all("li")
                     if wy_list:
                         for li in wy_list:

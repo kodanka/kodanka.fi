@@ -24,5 +24,8 @@ build:
 	python -m sphinx . _build/ -b dirhtml
 	python pagemods.py
 
+serve:
+	python -m http.server 8000
+
 browse:
-	xdg-open _build/index.html
+	xdg-open http://0.0.0.0:8000/_build
