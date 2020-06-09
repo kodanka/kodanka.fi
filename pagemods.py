@@ -15,8 +15,8 @@ for root, dirs, files in os.walk("_build"):
                 name = root.split("/")[1]
                 notebook = f"{name}.ipynb"
             else:
-                notebook = "index.ipynb"
-            print(notebook)
+                notebook = None
+
             # Open all html files for modification
             with open(filename, "r") as page:
                 soup = bs(page)
@@ -51,19 +51,20 @@ for root, dirs, files in os.walk("_build"):
                 soup = bs(str(soup).replace(old_footer, new_footer))
 
                 # Modify page header
-                if os.path.isfile(notebook):
-                    colab = bs(f"<a target=\"_blank\" rel=\"noopener noreferrer\" \
-                                href=\"https://colab.research.google.com/github/kodanka/kodanka.fi/blob/master/{notebook}\"> \
-                                <img alt=\"Öppna i Colab\" src=\"../_static/colab-badge.svg\" style=\"width:117px;height:20px;\"/></a>")
-                    wy_list = soup.find("ul", attrs={"class": "wy-breadcrumbs"}).find_all("li")
-                    if wy_list:
-                        for li in wy_list:
-                            li.decompose()
-                        soup.find("ul", attrs={"class": "wy-breadcrumbs"}).insert(0, colab)
-                else:
-                    header = soup.find("div", attrs={"aria-label": "breadcrumbs navigation"})
-                    if header:
-                        header.decompose()
+                if notebook != None:
+                    if os.path.isfile(notebook):
+                        colab = bs(f"<a target=\"_blank\" rel=\"noopener noreferrer\" \
+                                    href=\"https://colab.research.google.com/github/kodanka/kodanka.fi/blob/master/{notebook}\"> \
+                                    <img alt=\"Öppna i Colab\" src=\"../_static/colab-badge.svg\" style=\"width:117px;height:20px;\"/></a>")
+                        wy_list = soup.find("ul", attrs={"class": "wy-breadcrumbs"}).find_all("li")
+                        if wy_list:
+                            for li in wy_list:
+                                li.decompose()
+                            soup.find("ul", attrs={"class": "wy-breadcrumbs"}).insert(0, colab)
+                    else:
+                        header = soup.find("div", attrs={"aria-label": "breadcrumbs navigation"})
+                        if header:
+                            header.decompose()
 
             with open(filename, "w") as page:
                 # Write changes
