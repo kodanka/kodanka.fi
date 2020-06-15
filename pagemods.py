@@ -47,7 +47,7 @@ for root, dirs, files in os.walk("_build"):
 
                 # Modify page footer
                 old_footer = "Built with <a href=\"http://sphinx-doc.org/\">Sphinx</a> using a <a href=\"https://github.com/rtfd/sphinx_rtd_theme\">theme</a> provided by <a href=\"https://readthedocs.org\">Read the Docs</a>."
-                new_footer = "Byggd med <a href=\"http://sphinx-doc.org/\">Sphinx</a> med ett <a href=\"https://github.com/rtfd/sphinx_rtd_theme\">tema</a> av <a href=\"https://readthedocs.org\">Read the Docs.</a>"
+                new_footer = "Byggd med <a href=\"http://sphinx-doc.org/\">Sphinx</a> med ett <a href=\"https://github.com/rtfd/sphinx_rtd_theme\">tema</a> av <a href=\"https://readthedocs.org\">Read the Docs.</a> Online konsol från <a href=\"http://www.pythonanywhere.com\">PythonAnywhere.</a>"
                 soup = bs(str(soup).replace(old_footer, new_footer))
 
                 # Modify page header
@@ -65,6 +65,18 @@ for root, dirs, files in os.walk("_build"):
                         header = soup.find("div", attrs={"aria-label": "breadcrumbs navigation"})
                         if header:
                             header.decompose()
+
+                # Insert python console
+                if notebook != None:
+                    if os.path.isfile(notebook):
+                        footer = soup.find("footer")
+                        console_header = soup.new_tag("h2")
+                        console_header.string = "Python konsol"
+                        footer.insert_before(console_header)
+                        console = soup.new_tag("iframe", 
+                                               style="border: none; width: 100%; height: 300px; padding-bottom: 20px;",
+                                               src="https://console.python.org/python-dot-org-console/console_frame/")
+                        footer.insert_before(console)
 
             with open(filename, "w") as page:
                 # Write changes
