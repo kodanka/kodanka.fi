@@ -11,11 +11,12 @@ for root, dirs, files in os.walk("_build"):
         if file.endswith(".html"):
 
             filename = f"{root}/{file}"
+            print(filename)
             if "/" in root:
                 name = root.split("/")[1]
                 notebook = f"{name}.ipynb"
             else:
-                notebook = None
+                notebook = "index.ipynb"
 
             # Open all html files for modification
             with open(filename, "r") as page:
@@ -38,45 +39,53 @@ for root, dirs, files in os.walk("_build"):
                 previous_button = soup.find("a", attrs={"accesskey": "p"})
                 if previous_button:
                     previous_button.clear()
-                    previous_button.insert(1, "Föregående")
                     previous_arrow = soup.new_tag("span", attrs={"class": "fa fa-arrow-circle-left"})
                     previous_button.insert(0, previous_arrow)
+                    previous_button.insert(1, "Föregående")
 
                 # Translate search functionality to swedish
                 soup = bs(str(soup).replace("placeholder=\"Search docs\"", "placeholder=\"Sök\""))
 
                 # Modify page footer
                 old_footer = "Built with <a href=\"http://sphinx-doc.org/\">Sphinx</a> using a <a href=\"https://github.com/rtfd/sphinx_rtd_theme\">theme</a> provided by <a href=\"https://readthedocs.org\">Read the Docs</a>."
-                new_footer = "Byggd med <a href=\"http://sphinx-doc.org/\">Sphinx</a> med ett <a href=\"https://github.com/rtfd/sphinx_rtd_theme\">tema</a> av <a href=\"https://readthedocs.org\">Read the Docs.</a> Online konsol från <a href=\"http://www.pythonanywhere.com\">PythonAnywhere.</a>"
-                soup = bs(str(soup).replace(old_footer, new_footer))
+                soup = bs(str(soup).replace(old_footer, ""))
 
                 # Modify page header
-                if notebook != None:
-                    if os.path.isfile(notebook):
-                        colab = bs(f"<a target=\"_blank\" rel=\"noopener noreferrer\" \
-                                    href=\"https://colab.research.google.com/github/kodanka/kodanka.fi/blob/master/{notebook}\"> \
-                                    <img alt=\"Öppna i Colab\" src=\"../_static/colab-badge.svg\" style=\"width:117px;height:20px;\"/></a>")
-                        wy_list = soup.find("ul", attrs={"class": "wy-breadcrumbs"}).find_all("li")
-                        if wy_list:
-                            for li in wy_list:
-                                li.decompose()
-                            soup.find("ul", attrs={"class": "wy-breadcrumbs"}).insert(0, colab)
-                    else:
-                        header = soup.find("div", attrs={"aria-label": "breadcrumbs navigation"})
-                        if header:
-                            header.decompose()
+                if os.path.isfile(notebook):
+                    colab = soup.new_tag("a",
+                                         target="_blank",
+                                         rel="noopener noreferrer",
+                                         href=f"https://colab.research.google.com/github/kodanka/kodanka.fi/blob/master/{notebook}")
+                    colab_icon = soup.new_tag("img",
+                                              alt="Öppna i Colab",
+                                              src="../_static/colab-badge.svg",
+                                              style="width: 117px; height: 20px;")
+                    colab.insert(0, colab_icon)
+                    wy_list = soup.find("ul", attrs={"class": "wy-breadcrumbs"}).find_all("li")
+                    if wy_list:
+                        for li in wy_list:
+                            li.decompose()
+                        soup.find("ul", attrs={"class": "wy-breadcrumbs"}).insert(0, colab)
+                else:
+                    header = soup.find("div", attrs={"aria-label": "breadcrumbs navigation"})
+                    if header:
+                        header.decompose()
 
                 # Insert python console
-                if notebook != None:
-                    if os.path.isfile(notebook):
-                        footer = soup.find("footer")
-                        console_header = soup.new_tag("h2")
-                        console_header.string = "Python konsol"
-                        footer.insert_before(console_header)
-                        console = soup.new_tag("iframe", 
-                                               style="border: none; width: 100%; height: 300px; padding-bottom: 20px;",
-                                               src="https://console.python.org/python-dot-org-console/console_frame/")
-                        footer.insert_before(console)
+                if os.path.isfile(notebook):
+                    footer = soup.find("footer")
+                    console_header = soup.new_tag("h2")
+                    console_header.string = "Python konsol"
+                    footer.insert_before(console_header)
+                    console = soup.new_tag("iframe", 
+                                           style="border: none; width: 100%; height: 600px; padding-bottom: 20px;",
+                                           scrolling="no",
+                                           frameborder="no",
+                                           allowtransparency="true",
+                                           allowfullscreen="true",
+                                           sandbox="allow-forms allow-pointer-lock allow-same-origin allow-scripts",
+                                           src="https://repl.it/@hd4niel/kodanka?lite=true")
+                    footer.insert_before(console)
 
             with open(filename, "w") as page:
                 # Write changes

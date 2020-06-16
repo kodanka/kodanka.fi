@@ -1,13 +1,15 @@
 
-Ankdammen Kodar
-===============
+Kodanka
+=======
+
+Här kan man lära sig programmera! **</>** + 🦆 = sant
 
 .. toctree::
    :maxdepth: 2
    :caption: Info:
 
    instruktioner
-   faq
+   om-kodanka
 
 .. toctree::
    :maxdepth: 1
