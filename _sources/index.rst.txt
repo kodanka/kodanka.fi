@@ -9,17 +9,24 @@ Här kan man lära sig programmera! **</>** + 🦆 = sant
    :caption: Info:
 
    instruktioner
+   installationer
    om-kodanka
 
 .. toctree::
    :maxdepth: 1
    :caption: Grunder:
 
-   1-inledning
-   6_listor
+   inledning
+   listor
 
 .. toctree::
    :maxdepth: 1
-   :caption: Bonus:
+   :caption: Fördjupat:
+
+   latex
+
+.. toctree::
+   :maxdepth: 1
+   :caption: Projekt:
 
    latex
