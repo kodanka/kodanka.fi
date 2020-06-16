@@ -83,8 +83,8 @@ for root, dirs, files in os.walk("_build"):
                                            frameborder="no",
                                            allowtransparency="true",
                                            allowfullscreen="true",
-                                           sandbox="allow-forms allow-pointer-lock allow-same-origin allow-scripts",
-                                           src="https://repl.it/@hd4niel/kodanka?lite=true")
+                                           sandbox="allow-forms allow-pointer-lock allow-popups allow-same-origin allow-scripts allow-modals",
+                                           src="https://repl.it/@kodanka/python?lite=true")
                     footer.insert_before(console)
 
             with open(filename, "w") as page:
