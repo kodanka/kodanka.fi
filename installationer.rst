@@ -3,11 +3,11 @@
 Installationer
 ==============
 
-Här finns instruktioner för hur man installerar **Python** samt den mest populära kod redigeraren, **Visual Studio Code.**
+Här finns instruktioner för hur man installerar **Python** samt den mest populära kod redigeraren, **Visual Studio Code**.
 Observera (detta gäller för alla operativsystem) att ifall man har Python färdigt på sin dator men det är en gammal version så
-kan man ändå göra allt i materialet. Vissa delar i **Fördjupat** och **Projekt** kräver mera funktioner som man kan ladda ned med 
-pakethanteraren **pip.** Den kommer färdigt med Python **3.4** och **nyare versioner**. Så har man en äldre version än det (vilket vi kommer att checka) 
-så kan man helt bra installera nyare så som instruktionerna visar för att vara på säkra sidan.
+kan man ändå göra allt i Kodanka materialet. Vissa delar i **Fördjupat** och **Projekt** kräver mera funktioner som man kan ladda ned med 
+pakethanteraren **pip**. Den kommer färdigt med Python **3.4** och **nyare versioner**. Så har man en äldre version än det 
+så kan man helt bra installera en nyare så som instruktionerna visar för att vara på säkra sidan.
 
 Windows
 #######
@@ -18,29 +18,20 @@ det är trots allt Microsoft som har skapat det.
 Python
 ******
 
-- Börja med att öppna **Command Prompt** och se om Python är installerat genom att skriva:
-
-::
-
-  python --version
-
-och
-
-::
-
-  python3 --version
-
-Om båda säger "not recognized as an internal or external command" så kan man installera Python så här:
-
-- Öppna **Microsoft Store**
+- Öppna **Microsoft Store** genom att söka i nedre balken
 - Sök på **Python 3.8** och tryck på **Hämta**
-- När det är klart kan du igen öppna Command Prompt och skriva samma sak för att se att det fungerade
+
+.. image:: _static/python-windows.png
+   :width: 500
+   :alt: Python Windows
+   :align: center
 
 Visual Studio Code
 ******************
 
 - Gå till https://code.visualstudio.com/download och tryck på ladda ner för Windows
-- Kör **.exe** installeraren när det har laddat klart
+- Kör **.exe** installeraren när det har laddat klart och välj var du vill installera det
+- Nu är det bara att starta **Visual Studio Code** när du vill koda
 
 Mac
 ###
@@ -51,18 +42,15 @@ men här är instruktioner för hur man installerar en nyare version.
 Python
 ******
 
-- Börja med att öppna **Terminal**
-- Kolla om en ny version av Python redan är installerad genom att skriva:
+- Gå till https://www.python.org/downloads
+- Tryck på **Download Python** knappen som laddar ner den senaste Python versionen för Mac OS
 
-::
+.. image:: _static/python-mac.png
+   :width: 500
+   :alt: Python Mac
+   :align: center
 
-  python --version
-  python3 --version
-
-- Om inte, gå till https://www.python.org/downloads
-- Tryck på **Download** knappen som laddar ner den senaste Python versionen för Mac Os
 - Kör den nerladdade **.pkg** filen och följ dialogen för att installera Python
-- Testa att det fungerar genom att skriva samma sak i **Terminal** igen, ena kommandot borde ge en Python 3.x version.
 
 Visual Studio Code
 ******************
@@ -83,7 +71,7 @@ Linux kommer ofta med Python färdigt installerat.
 Python
 ******
 
-- Börja med att öppna **Terminal**
+- Börja med att öppna terminalen (``Ctrl`` + ``Alt`` + ``t``)
 - Kolla om Python redan är installerat:
 
 ::
@@ -91,7 +79,7 @@ Python
   python --version
   python3 --version
 
-- Om ingetdera kommando visar en installerad Python version, eller om den är mindre än 3.4 kan man installera det så här:
+- Om ingetdera kommando visar en installerad Python version, eller om den är mindre än 3.4 kan man installera det så här i terminalen:
 
 ::
 
@@ -102,7 +90,7 @@ Python
 Visual Studio Code
 ******************
 
-- Det är lättast att ladda ned som ett Snap paket:
+- Det är lättast att ladda ned som ett Snap paket via terminalen:
 
 ::
   
