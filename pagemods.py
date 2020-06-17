@@ -33,7 +33,7 @@ for root, dirs, files in os.walk("_build"):
                 next_button = soup.find("a", attrs={"accesskey": "n"})
                 if next_button:
                     next_button.clear()
-                    next_button.insert(0, "Nästa")
+                    next_button.insert(0, "Nästa ")
                     next_arrow = soup.new_tag("span", attrs={"class": "fa fa-arrow-circle-right"})
                     next_button.insert(1, next_arrow)
                 previous_button = soup.find("a", attrs={"accesskey": "p"})
@@ -41,7 +41,7 @@ for root, dirs, files in os.walk("_build"):
                     previous_button.clear()
                     previous_arrow = soup.new_tag("span", attrs={"class": "fa fa-arrow-circle-left"})
                     previous_button.insert(0, previous_arrow)
-                    previous_button.insert(1, "Föregående")
+                    previous_button.insert(1, " Föregående")
 
                 # Translate search functionality to swedish
                 soup = bs(str(soup).replace("placeholder=\"Search docs\"", "placeholder=\"Sök\""))
@@ -83,10 +83,10 @@ for root, dirs, files in os.walk("_build"):
                                            frameborder="no",
                                            allowtransparency="true",
                                            allowfullscreen="true",
-                                           sandbox="allow-forms allow-pointer-lock allow-popups allow-same-origin allow-scripts allow-modals",
+                                           sandbox="allow-forms allow-pointer-lock allow-popups allow-same-origin allow-scripts",
                                            src="https://repl.it/@kodanka/python?lite=true")
                     footer.insert_before(console)
 
             with open(filename, "w") as page:
                 # Write changes
-                page.write(str(soup.prettify()))
+                page.write(str(soup))
