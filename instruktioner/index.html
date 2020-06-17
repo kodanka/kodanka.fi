@@ -1,167 +1,94 @@
+
 <!DOCTYPE html>
+
 <!--[if IE 8]><html class="no-js lt-ie9" lang="sv" > <![endif]-->
-<!--[if gt IE 8]><!-->
-<html class="no-js" lang="sv">
- <!--<![endif]-->
- <head>
-  <meta charset="utf-8"/>
-  <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
-  <title>
-   Kodanka - Instruktioner
-  </title>
-  <link href="../_static/logo.png" rel="shortcut icon"/>
-  <script src="../_static/js/modernizr.min.js" type="text/javascript">
-  </script>
-  <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js" type="text/javascript">
-  </script>
-  <script src="../_static/jquery.js">
-  </script>
-  <script src="../_static/underscore.js">
-  </script>
-  <script src="../_static/doctools.js">
-  </script>
-  <script src="../_static/language_data.js">
-  </script>
-  <script src="../_static/translations.js">
-  </script>
-  <script crossorigin="anonymous" integrity="sha256-Ae2Vz/4ePdIu6ZyI/5ZGsYnb+m0JlOmKPjt6XZ9JJkA=" src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js">
-  </script>
-  <script async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/latest.js?config=TeX-AMS-MML_HTMLorMML">
-  </script>
-  <script type="text/x-mathjax-config">
-   MathJax.Hub.Config({"TeX": {"equationNumbers": {"autoNumber": "AMS", "useLabelIds": true}}, "tex2jax": {"inlineMath": [["$", "$"], ["\\(", "\\)"]], "processEscapes": true, "ignoreClass": "document", "processClass": "math|output_area"}})
-  </script>
-  <script src="../_static/js/theme.js" type="text/javascript">
-  </script>
-  <link href="../_static/css/theme.css" rel="stylesheet" type="text/css"/>
-  <link href="../_static/pygments.css" rel="stylesheet" type="text/css"/>
-  <link href="../genindex/" rel="index" title="Index"/>
-  <link href="../search/" rel="search" title="Sök"/>
-  <link href="../installationer/" rel="next" title="Installationer"/>
-  <link href="../" rel="prev" title="Kodanka"/>
- </head>
- <body class="wy-body-for-nav">
-  <div class="wy-grid-for-nav">
-   <nav class="wy-nav-side" data-toggle="wy-nav-shift">
-    <div class="wy-side-scroll">
-     <div class="wy-side-nav-search">
-      <a class="icon icon-home" href="../">
-       Kodanka
-       <img alt="Logo" class="logo" src="../_static/logo.png"/>
-      </a>
-      <div role="search">
-       <form action="../search/" class="wy-form" id="rtd-search-form" method="get">
-        <input name="q" placeholder="Sök" type="text"/>
-        <input name="check_keywords" type="hidden" value="yes"/>
-        <input name="area" type="hidden" value="default"/>
-       </form>
-      </div>
-     </div>
-     <div aria-label="main navigation" class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation">
-      <p class="caption">
-       <span class="caption-text">
-        Info:
-       </span>
-      </p>
-      <ul class="current">
-       <li class="toctree-l1 current">
-        <a class="current reference internal" href="#">
-         Instruktioner
-        </a>
-        <ul>
-         <li class="toctree-l2">
-          <a class="reference internal" href="#ovningar">
-           Övningar
-          </a>
-          <ul>
-           <li class="toctree-l3">
-            <a class="reference internal" href="#borja-koda">
-             Börja koda
-            </a>
-           </li>
-           <li class="toctree-l3">
-            <a class="reference internal" href="#python-online">
-             Python online
-            </a>
-           </li>
-          </ul>
-         </li>
-         <li class="toctree-l2">
-          <a class="reference internal" href="#for-larare">
-           För lärare
-          </a>
-         </li>
-        </ul>
-       </li>
-       <li class="toctree-l1">
-        <a class="reference internal" href="../installationer/">
-         Installationer
-        </a>
-       </li>
-       <li class="toctree-l1">
-        <a class="reference internal" href="../om-kodanka/">
-         Om Kodanka
-        </a>
-       </li>
-      </ul>
-      <p class="caption">
-       <span class="caption-text">
-        Grunder:
-       </span>
-      </p>
-      <ul>
-       <li class="toctree-l1">
-        <a class="reference internal" href="../inledning/">
-         Inledning
-        </a>
-       </li>
-       <li class="toctree-l1">
-        <a class="reference internal" href="../listor/">
-         Listor
-        </a>
-       </li>
-      </ul>
-      <p class="caption">
-       <span class="caption-text">
-        Fördjupat:
-       </span>
-      </p>
-      <ul>
-       <li class="toctree-l1">
-        <a class="reference internal" href="../latex/">
-         LaTeX
-        </a>
-       </li>
-      </ul>
-      <p class="caption">
-       <span class="caption-text">
-        Projekt:
-       </span>
-      </p>
-      <ul>
-       <li class="toctree-l1">
-        <a class="reference internal" href="../latex/">
-         LaTeX
-        </a>
-       </li>
-      </ul>
-     </div>
-    </div>
-   </nav>
-   <section class="wy-nav-content-wrap" data-toggle="wy-nav-shift">
-    <nav aria-label="top navigation" class="wy-nav-top">
-     <i class="fa fa-bars" data-toggle="wy-nav-top">
-     </i>
-     <a href="../">
-      Kodanka
-     </a>
-    </nav>
-    <div class="wy-nav-content">
-     <div class="rst-content">
-      <div class="document" itemscope="itemscope" itemtype="http://schema.org/Article" role="main">
-       <div itemprop="articleBody">
-        <style>
-         /* CSS overrides for sphinx_rtd_theme */
+<!--[if gt IE 8]><!--> <html class="no-js" lang="sv"> <!--<![endif]-->
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Kodanka - Instruktioner</title>
+<link href="../_static/logo.png" rel="shortcut icon"/>
+<script src="../_static/js/modernizr.min.js" type="text/javascript"></script>
+<script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js" type="text/javascript"></script>
+<script src="../_static/jquery.js"></script>
+<script src="../_static/underscore.js"></script>
+<script src="../_static/doctools.js"></script>
+<script src="../_static/language_data.js"></script>
+<script src="../_static/translations.js"></script>
+<script crossorigin="anonymous" integrity="sha256-Ae2Vz/4ePdIu6ZyI/5ZGsYnb+m0JlOmKPjt6XZ9JJkA=" src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
+<script async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+<script type="text/x-mathjax-config">MathJax.Hub.Config({"TeX": {"equationNumbers": {"autoNumber": "AMS", "useLabelIds": true}}, "tex2jax": {"inlineMath": [["$", "$"], ["\\(", "\\)"]], "processEscapes": true, "ignoreClass": "document", "processClass": "math|output_area"}})</script>
+<script src="../_static/js/theme.js" type="text/javascript"></script>
+<link href="../_static/css/theme.css" rel="stylesheet" type="text/css"/>
+<link href="../_static/pygments.css" rel="stylesheet" type="text/css"/>
+<link href="../genindex/" rel="index" title="Index"/>
+<link href="../search/" rel="search" title="Sök"/>
+<link href="../installationer/" rel="next" title="Installationer"/>
+<link href="../" rel="prev" title="Kodanka"/>
+</head>
+<body class="wy-body-for-nav">
+<div class="wy-grid-for-nav">
+<nav class="wy-nav-side" data-toggle="wy-nav-shift">
+<div class="wy-side-scroll">
+<div class="wy-side-nav-search">
+<a class="icon icon-home" href="../"> Kodanka
+          
+
+          
+            
+            <img alt="Logo" class="logo" src="../_static/logo.png"/>
+</a>
+<div role="search">
+<form action="../search/" class="wy-form" id="rtd-search-form" method="get">
+<input name="q" placeholder="Sök" type="text"/>
+<input name="check_keywords" type="hidden" value="yes"/>
+<input name="area" type="hidden" value="default"/>
+</form>
+</div>
+</div>
+<div aria-label="main navigation" class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation">
+<p class="caption"><span class="caption-text">Info:</span></p>
+<ul class="current">
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Instruktioner</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#ovningar">Övningar</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#borja-koda">Börja koda</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#python-online">Python online</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#for-larare">För lärare</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../installationer/">Installationer</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../om-kodanka/">Om Kodanka</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Grunder:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../inledning/">Inledning</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../listor/">Listor</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Fördjupat:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../latex/">LaTeX</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Projekt:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../latex/">LaTeX</a></li>
+</ul>
+</div>
+</div>
+</nav>
+<section class="wy-nav-content-wrap" data-toggle="wy-nav-shift">
+<nav aria-label="top navigation" class="wy-nav-top">
+<i class="fa fa-bars" data-toggle="wy-nav-top"></i>
+<a href="../">Kodanka</a>
+</nav>
+<div class="wy-nav-content">
+<div class="rst-content">
+
+<div class="document" itemscope="itemscope" itemtype="http://schema.org/Article" role="main">
+<div itemprop="articleBody">
+<style>
+/* CSS overrides for sphinx_rtd_theme */
 
 /* 24px margin */
 .nbinput.nblast.container,
@@ -182,284 +109,99 @@
 .math {
     text-align: unset;
 }
-        </style>
-        <div class="section" id="instruktioner">
-         <h1>
-          Instruktioner
-          <a class="headerlink" href="#instruktioner" title="Permalink till denna rubrik">
-           ¶
-          </a>
-         </h1>
-         <p>
-          Materialet är indelat i kapitlen
-          <strong>
-           grunder
-          </strong>
-          ,
-          <strong>
-           fördjupat
-          </strong>
-          och
-          <strong>
-           projekt
-          </strong>
-          .
+</style>
+<div class="section" id="instruktioner">
+<h1>Instruktioner<a class="headerlink" href="#instruktioner" title="Permalink till denna rubrik">¶</a></h1>
+<p>Materialet är indelat i kapitlen <strong>grunder</strong>, <strong>fördjupat</strong> och <strong>projekt</strong>.
 Det går i naturlig ordning från lättare till mer avancerat, vi börjar med helt grundläggande koncept i första kapitlet som alla program bygger på.
 I den fördjupade delen ser vi hur programmering kan användas för att utföra algoritmer (systematiskt lösa problem), göra grafer, bygga artficiell intelligens m.m.
 Till sist har vi projekt delen där vi går igenom lite längre program som visar hur skojiga saker man faktiskt kan göra med kod.
-Det är bara att välja de stycken man tycker att intresserar, men observera att de i början bygger på varandra.
-         </p>
-         <div class="section" id="ovningar">
-          <h2>
-           Övningar
-           <a class="headerlink" href="#ovningar" title="Permalink till denna rubrik">
-            ¶
-           </a>
-          </h2>
-          <p>
-           Utöver själva innehållet finns det även övningar, de kommer med jämna mellanrum efter att man har lärt sig något nytt.
-Det finns lite olika sätt att gå tillväga när man ska göra dem, endera gör man dem på sin dator eller på nätet.
-          </p>
-          <ul class="simple">
-           <li>
-            <p>
-             <a class="reference internal" href="../installationer/#installationer">
-              <span class="std std-ref">
-               Installationer
-              </span>
-             </a>
-             - Vi rekommenderar att man installerar Python på sin dator, här finns förklarat hur.
-            </p>
-           </li>
-           <li>
-            <p>
-             <a class="reference internal" href="#python-online">
-              <span class="std std-ref">
-               Python online
-              </span>
-             </a>
-             - Det går att koda på nätet också!
-            </p>
-           </li>
-          </ul>
-          <p>
-           Fördelar med att ha Python nerladdat över att koda i en programredigerare
+Det är bara att välja de stycken man tycker att intresserar, men observera att de i början bygger på varandra.</p>
+<div class="section" id="ovningar">
+<h2>Övningar<a class="headerlink" href="#ovningar" title="Permalink till denna rubrik">¶</a></h2>
+<p>Utöver själva innehållet finns det även övningar, de kommer med jämna mellanrum efter att man har lärt sig något nytt.
+Det finns lite olika sätt att gå tillväga när man ska göra dem, endera gör man dem på sin dator eller på nätet.</p>
+<ul class="simple">
+<li><p><a class="reference internal" href="../installationer/#installationer"><span class="std std-ref">Installationer</span></a> - Vi rekommenderar att man installerar Python på sin dator, här finns förklarat hur.</p></li>
+<li><p><a class="reference internal" href="#python-online"><span class="std std-ref">Python online</span></a> - Det går att koda på nätet också!</p></li>
+</ul>
+<p>Fördelar med att ha Python nerladdat över att koda i en programredigerare
 online är att kodandet går snabbare och smidigare på datorn, man sparar lättare de resultat programmet producerar och
 en del mer avancerade grejer går helt enkelt inte att göra online.
-Med tanke på om man vill fortsätta koda Python lönar det sig att kunna installera det.
-          </p>
-          <p>
-           Fördelen med koda Python online är att man kan börja genast.
-          </p>
-          <div class="section" id="borja-koda">
-           <h3>
-            Börja koda
-            <a class="headerlink" href="#borja-koda" title="Permalink till denna rubrik">
-             ¶
-            </a>
-           </h3>
-           <p>
-            Efter att man har laddat ner Python och VS Code enligt instruktionerna under
-            <a class="reference internal" href="../installationer/#installationer">
-             <span class="std std-ref">
-              Installationer
-             </span>
-            </a>
-           </p>
-           <ul class="simple">
-            <li>
-             <p>
-              Öppna
-              <strong>
-               Visual Studio Code
-              </strong>
-             </p>
-            </li>
-            <li>
-             <p>
-              Tryck på
-              <strong>
-               File
-              </strong>
-              &gt;
-              <strong>
-               Open Folder…
-              </strong>
-              och välj eller skapa en mapp där du vill jobba
-             </p>
-            </li>
-            <li>
-             <p>
-              Skapa sedan en Python fil, d.v.s den ska sluta med
-              <strong>
-               .py
-              </strong>
-             </p>
-            </li>
-           </ul>
-           <a class="reference internal image-reference" href="../_images/vs-code-screenshot.png">
-            <img alt="Ny fil" class="align-center" src="../_images/vs-code-screenshot.png" style="width: 400px;"/>
-           </a>
-           <ul class="simple">
-            <li>
-             <p>
-              Testa Python genom att skriva en kodsnutt i filen:
-              <code class="docutils literal notranslate">
-               <span class="pre">
-                print("Kvack,
-               </span>
-               <span class="pre">
-                kvack!")
-               </span>
-              </code>
-             </p>
-            </li>
-            <li>
-             <p>
-              Spara filen
-             </p>
-            </li>
-            <li>
-             <p>
-              Öppna terminalen,
-              <strong>
-               Terminal
-              </strong>
-              &gt;
-              <strong>
-               New Terminal
-              </strong>
-             </p>
-            </li>
-            <li>
-             <p>
-              Kör programmet genom att skriva
-              <strong>
-               python programmets_namn.py
-              </strong>
-              i terminalen:
-             </p>
-            </li>
-           </ul>
-           <div class="highlight-default notranslate">
-            <div class="highlight">
-             <pre><span></span><span class="n">python</span> <span class="n">ankor</span><span class="o">.</span><span class="n">py</span>
-</pre>
-            </div>
-           </div>
-           <p>
-            eller
-           </p>
-           <div class="highlight-default notranslate">
-            <div class="highlight">
-             <pre><span></span><span class="n">python3</span> <span class="n">ankor</span><span class="o">.</span><span class="n">py</span>
-</pre>
-            </div>
-           </div>
-           <p>
-            beroende på vilkendera Python du har på din dator.
-           </p>
-          </div>
-          <div class="section" id="python-online">
-           <span id="id1">
-           </span>
-           <h3>
-            Python online
-            <a class="headerlink" href="#python-online" title="Permalink till denna rubrik">
-             ¶
-            </a>
-           </h3>
-           <p>
-            Man kan inte neka att det är väldigt lätt att inleda sin programmeringskarriär online, enda som krävs är en webbläsare, så därför stöder vi även det alternativet i vårt material.
+Med tanke på om man vill fortsätta koda Python lönar det sig att kunna installera det.</p>
+<p>Fördelen med programmera Python online är att man kan börja genast och koden nås via nätet utan extra åtgärder.</p>
+<div class="section" id="borja-koda">
+<h3>Börja koda<a class="headerlink" href="#borja-koda" title="Permalink till denna rubrik">¶</a></h3>
+<p>Efter att man har laddat ner Python och VS Code enligt instruktionerna i <a class="reference internal" href="../installationer/#installationer"><span class="std std-ref">Installationer</span></a> delen</p>
+<ul class="simple">
+<li><p>Öppna <strong>Visual Studio Code</strong></p></li>
+<li><p>Tryck på <strong>File</strong> &gt; <strong>Open Folder…</strong> och välj eller skapa en mapp där du vill jobba</p></li>
+<li><p>Skapa sedan en Python fil, d.v.s den ska sluta med <strong>.py</strong></p></li>
+</ul>
+<a class="reference internal image-reference" href="../_images/vs-code-screenshot.png"><img alt="Ny fil" class="align-center" src="../_images/vs-code-screenshot.png" style="width: 400px;"/></a>
+<ul class="simple">
+<li><p>Testa Python genom att skriva en kodsnutt i filen: <code class="docutils literal notranslate"><span class="pre">print("Kvack,</span> <span class="pre">kvack!")</span></code></p></li>
+<li><p>Spara filen (<code class="docutils literal notranslate"><span class="pre">Ctrl</span></code> + <code class="docutils literal notranslate"><span class="pre">s</span></code> på Windows) eller (<code class="docutils literal notranslate"><span class="pre">Cmd</span></code> + <code class="docutils literal notranslate"><span class="pre">s</span></code> på Mac)</p></li>
+<li><p>Tryck på <strong>Terminal</strong> &gt; <strong>New Terminal</strong></p></li>
+<li><p>Kör programmet genom att skriva <code class="docutils literal notranslate"><span class="pre">python</span> <span class="pre">programmets_namn.py</span></code> och trycka <code class="docutils literal notranslate"><span class="pre">Enter</span></code> i terminalen som nyss öppnades, d.v.s:</p></li>
+</ul>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">python</span> <span class="n">ankor</span><span class="o">.</span><span class="n">py</span>
+</pre></div>
+</div>
+<p>eller</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">python3</span> <span class="n">ankor</span><span class="o">.</span><span class="n">py</span>
+</pre></div>
+</div>
+<p>beroende på vilkendera Python du har på din dator. Resultatet borde bli följande:</p>
+<a class="reference internal image-reference" href="../_images/vs-code-final.png"><img alt="VS Code" class="align-center" src="../_images/vs-code-final.png" style="width: 1911px;"/></a>
+</div>
+<div class="section" id="python-online">
+<span id="id1"></span><h3>Python online<a class="headerlink" href="#python-online" title="Permalink till denna rubrik">¶</a></h3>
+<p>Man kan inte neka att det är väldigt lätt att inleda sin programmeringskarriär online, enda som krävs är en webbläsare, så därför stöder vi även det alternativet i vårt material.
 Vi inser också att det inte är möjligt att installera Python för alla, t.ex. om man är på en skoldator som inte har det färdigt nerladdat eller något liknande,
-då finns möjligheten att göra allt på nätet.
-           </p>
-           <p>
-            I början av varje stycke finns en knapp som vi ser här under. Den öppnar materialet i
-            <a class="reference external" href="http://colab.research.google.com">
-             Google Colab
-            </a>
-            som erbjuder ett sätt att blanda text och kod. Om man vill är det möjligt att direkt testa den kod som finns i läromaterialet
-genom att välja valfri cell och trycka på play-ikonen. Man kan även skriva ny kod genom att lägga till fler celler,
+då finns möjligheten att göra allt på nätet.</p>
+<p>I början av varje stycke finns en knapp som vi ser här under. Den öppnar materialet i <a class="reference external" href="http://colab.research.google.com">Google Colab</a>
+som erbjuder ett sätt att blanda text och kod. Om man vill är det möjligt att direkt testa den kod som finns i läromaterialet
+genom att välja valfri cell i Colab och trycka på play-ikonen. Man kan även skriva ny kod genom att lägga till fler celler,
 och skapa samt spara helt nya Colab filer ifall man har ett Google konto. Colab har bra stöd för det mesta Python har att erbjuda och framför allt är det lätt!
-            <em>
-             Pro tip:
-            </em>
-            man kan göra snygga skolrapporter där om man t.ex. behöver grafer i dem ;)
-           </p>
-           <a class="reference external image-reference" href="https://colab.research.google.com/github/kodanka/kodanka.fi/blob/master/inledning.ipynb">
-            <img alt="Colab" class="align-center" src="../_images/colab-badge.svg" width="175"/>
-           </a>
-           <p>
-            Det finns dessutom en integrerad kodredigerare av
-            <a class="reference external" href="http://repl.it">
-             Repl.it
-            </a>
-            i styckena
-            <strong>
-             grunder
-            </strong>
-            och
-            <strong>
-             fördjupat
-            </strong>
-            .
+<em>Pro tip:</em> man kan göra snygga skolrapporter där om man t.ex. behöver grafer i dem ;)</p>
+<a class="reference external image-reference" href="https://colab.research.google.com/github/kodanka/kodanka.fi/blob/master/inledning.ipynb"><img alt="Colab" class="align-center" src="../_images/colab-badge.svg" width="175"/></a>
+<p>Det finns dessutom en integrerad kodredigerare av <a class="reference external" href="http://repl.it">Repl.it</a> i styckena <strong>grunder</strong> och <strong>fördjupat</strong>.
 Där kan man snabbt testa sina idéer och försöka på uppgifter om man kodar allt på nätet.
-Knappen
-            <cite>
-             open in repl.it
-            </cite>
-            uppe i högra hörnet öppnar en helskärmsversion av editorn i en ny flik. Tryck på den gröna pilen
-för att köra kod.
-           </p>
-           <iframe allowfullscreen="true" allowtransparency="true" frameborder="no" height="400px" sandbox="allow-forms allow-pointer-lock allow-popups allow-same-origin allow-scripts allow-modals" scrolling="no" src="https://repl.it/@kodanka/python?lite=true" width="100%">
-           </iframe>
-           <div class="line-block">
-            <div class="line">
-             <br/>
-            </div>
-           </div>
-          </div>
-         </div>
-         <div class="section" id="for-larare">
-          <h2>
-           För lärare
-           <a class="headerlink" href="#for-larare" title="Permalink till denna rubrik">
-            ¶
-           </a>
-          </h2>
-         </div>
-        </div>
-       </div>
-      </div>
-      <footer>
-       <div aria-label="footer navigation" class="rst-footer-buttons" role="navigation">
-        <a accesskey="n" class="btn btn-neutral float-right" href="../installationer/" rel="next" title="Installationer">
-         Nästa
-         <span class="fa fa-arrow-circle-right">
-         </span>
-        </a>
-        <a accesskey="p" class="btn btn-neutral float-left" href="../" rel="prev" title="Kodanka">
-         <span class="fa fa-arrow-circle-left">
-         </span>
-         Föregående
-        </a>
-       </div>
-       <hr/>
-       <div role="contentinfo">
-        <p>
-         © Copyright 2020, Kodanka
-        </p>
-       </div>
-      </footer>
-     </div>
-    </div>
-   </section>
-  </div>
-  <script type="text/javascript">
-   jQuery(function () {
+Knappen <code class="docutils literal notranslate"><span class="pre">open</span> <span class="pre">in</span> <span class="pre">repl.it</span></code> uppe i högra hörnet öppnar en helskärmsversion av editorn i en ny flik. Tryck på den gröna pilen
+för att köra kod.</p>
+<iframe allowfullscreen="true" allowtransparency="true" frameborder="no" height="400px" sandbox="allow-forms allow-pointer-lock allow-popups allow-same-origin allow-scripts" scrolling="no" src="https://repl.it/@kodanka/python?lite=true" width="100%"></iframe><div class="line-block">
+<div class="line"><br/></div>
+</div>
+</div>
+</div>
+<div class="section" id="for-larare">
+<h2>För lärare<a class="headerlink" href="#for-larare" title="Permalink till denna rubrik">¶</a></h2>
+</div>
+</div>
+</div>
+</div>
+<footer>
+<div aria-label="footer navigation" class="rst-footer-buttons" role="navigation">
+<a accesskey="n" class="btn btn-neutral float-right" href="../installationer/" rel="next" title="Installationer">Nästa <span class="fa fa-arrow-circle-right"></span></a>
+<a accesskey="p" class="btn btn-neutral float-left" href="../" rel="prev" title="Kodanka"><span class="fa fa-arrow-circle-left"></span> Föregående</a>
+</div>
+<hr/>
+<div role="contentinfo">
+<p>
+        © Copyright 2020, Kodanka
+
+    </p>
+</div>
+</footer>
+</div>
+</div>
+</section>
+</div>
+<script type="text/javascript">
+      jQuery(function () {
           SphinxRtdTheme.Navigation.enable(true);
       });
   </script>
- </body>
+</body>
 </html>

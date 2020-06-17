@@ -21,12 +21,12 @@ online är att kodandet går snabbare och smidigare på datorn, man sparar lätt
 en del mer avancerade grejer går helt enkelt inte att göra online.
 Med tanke på om man vill fortsätta koda Python lönar det sig att kunna installera det.
 
-Fördelen med koda Python online är att man kan börja genast.
+Fördelen med programmera Python online är att man kan börja genast och koden nås via nätet utan extra åtgärder.
 
 Börja koda
 **********
 
-Efter att man har laddat ner Python och VS Code enligt instruktionerna under :ref:`installationer`
+Efter att man har laddat ner Python och VS Code enligt instruktionerna i :ref:`installationer` delen
 
 - Öppna **Visual Studio Code**
 - Tryck på **File** > **Open Folder...** och välj eller skapa en mapp där du vill jobba
@@ -38,9 +38,9 @@ Efter att man har laddat ner Python och VS Code enligt instruktionerna under :re
    :align: center
 
 - Testa Python genom att skriva en kodsnutt i filen: ``print("Kvack, kvack!")``
-- Spara filen
-- Öppna terminalen, **Terminal** > **New Terminal**
-- Kör programmet genom att skriva **python programmets_namn.py** i terminalen:
+- Spara filen (``Ctrl`` + ``s`` på Windows) eller (``Cmd`` + ``s`` på Mac)
+- Tryck på **Terminal** > **New Terminal**
+- Kör programmet genom att skriva ``python programmets_namn.py`` och trycka ``Enter`` i terminalen som nyss öppnades, d.v.s:
 
 ::
 
@@ -52,7 +52,12 @@ eller
 
   python3 ankor.py
 
-beroende på vilkendera Python du har på din dator.
+beroende på vilkendera Python du har på din dator. Resultatet borde bli följande:
+
+.. image:: _static/vs-code-final.png
+   :width: 1911
+   :alt: VS Code
+   :align: center
 
 .. _python-online:
 
@@ -65,7 +70,7 @@ då finns möjligheten att göra allt på nätet.
 
 I början av varje stycke finns en knapp som vi ser här under. Den öppnar materialet i `Google Colab <http://colab.research.google.com>`_
 som erbjuder ett sätt att blanda text och kod. Om man vill är det möjligt att direkt testa den kod som finns i läromaterialet 
-genom att välja valfri cell och trycka på play-ikonen. Man kan även skriva ny kod genom att lägga till fler celler, 
+genom att välja valfri cell i Colab och trycka på play-ikonen. Man kan även skriva ny kod genom att lägga till fler celler, 
 och skapa samt spara helt nya Colab filer ifall man har ett Google konto. Colab har bra stöd för det mesta Python har att erbjuda och framför allt är det lätt! 
 *Pro tip:* man kan göra snygga skolrapporter där om man t.ex. behöver grafer i dem ;)
 
@@ -77,12 +82,12 @@ och skapa samt spara helt nya Colab filer ifall man har ett Google konto. Colab 
 
 Det finns dessutom en integrerad kodredigerare av `Repl.it <http://repl.it>`_ i styckena **grunder** och **fördjupat**. 
 Där kan man snabbt testa sina idéer och försöka på uppgifter om man kodar allt på nätet.  
-Knappen `open in repl.it` uppe i högra hörnet öppnar en helskärmsversion av editorn i en ny flik. Tryck på den gröna pilen
+Knappen ``open in repl.it`` uppe i högra hörnet öppnar en helskärmsversion av editorn i en ny flik. Tryck på den gröna pilen
 för att köra kod.
 
 .. raw:: html
 
-    <iframe height="400px" width="100%" src="https://repl.it/@kodanka/python?lite=true" scrolling="no" frameborder="no" allowtransparency="true" allowfullscreen="true" sandbox="allow-forms allow-pointer-lock allow-popups allow-same-origin allow-scripts allow-modals"></iframe>
+    <iframe height="400px" width="100%" src="https://repl.it/@kodanka/python?lite=true" scrolling="no" frameborder="no" allowtransparency="true" allowfullscreen="true" sandbox="allow-forms allow-pointer-lock allow-popups allow-same-origin allow-scripts"></iframe>
 
 |
 
