@@ -83,7 +83,7 @@ for root, dirs, files in os.walk("_build"):
                     console_header.string = "Python kompilator"
                     footer.insert_before(console_header)
                     console = soup.new_tag("iframe", 
-                        style="border: none; width: 100%; height: 600px; padding-bottom: 20px;",
+                        style="border: none; width: 100%; height: 500px; padding-bottom: 20px;",
                         scrolling="no",
                         frameborder="no",
                         allowtransparency="true",
@@ -101,7 +101,7 @@ for root, dirs, files in os.walk("_build"):
                         form_header.string = "Quiz"
                         footer.insert_before(form_header)
                         form = soup.new_tag("iframe",
-                            style="border: none; width: 100%; height: 500px;",
+                            style="border: none; width: 100%; height: 500px; padding-bottom: 20px;",
                             src=src)
                         footer.insert_before(form)
                     except KeyError as e:

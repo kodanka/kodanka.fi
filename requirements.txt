@@ -1,4 +1,4 @@
-nbsphinx
-sphinx_rtd_theme
-ipykernel
-beautifulsoup4
+nbsphinx==0.6.0
+sphinx_rtd_theme==0.4.3
+ipykernel==5.2.0
+beautifulsoup4==4.9.0
