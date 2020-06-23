@@ -38,7 +38,7 @@ Efter att man har laddat ner Python och VS Code enligt instruktionerna i :ref:`i
    :align: center
 
 - Testa Python genom att skriva en kodsnutt i filen: ``print("Kvack, kvack!")``
-- Spara filen (``Ctrl`` + ``s`` på Windows) eller (``Cmd`` + ``s`` på Mac)
+- Spara filen (``Ctrl`` + ``S`` på Windows och Linux) eller (``Cmd`` + ``S`` på Mac)
 - Tryck på **Terminal** > **New Terminal**
 - Kör programmet genom att skriva ``python programmets_namn.py`` och trycka ``Enter`` i terminalen som nyss öppnades, d.v.s:
 
@@ -65,19 +65,27 @@ Python online
 *************
 
 Man kan inte neka att det är väldigt lätt att inleda sin programmeringskarriär online, enda som krävs är en webbläsare, så därför stöder vi även det alternativet i vårt material. 
-Vi inser också att det inte är möjligt att installera Python för alla, t.ex. om man är på en skoldator som inte har det färdigt nerladdat eller något liknande, 
+Det är inte möjligt att installera Python för alla, t.ex. om man är på en skoldator som inte har det färdigt nerladdat eller något liknande, 
 då finns möjligheten att göra allt på nätet.
 
 I början av varje stycke finns en knapp som vi ser här under. Den öppnar materialet i `Google Colab <http://colab.research.google.com>`_
-som erbjuder ett sätt att blanda text och kod. Om man vill är det möjligt att direkt testa den kod som finns i läromaterialet 
-genom att välja valfri cell i Colab och trycka på play-ikonen. Man kan även skriva ny kod genom att lägga till fler celler, 
-och skapa samt spara helt nya Colab filer ifall man har ett Google konto. Colab har bra stöd för det mesta Python har att erbjuda och framför allt är det lätt! 
-*Pro tip:* man kan göra snygga skolrapporter där om man t.ex. behöver grafer i dem ;)
+som erbjuder ett sätt att blanda text och kod. 
 
 .. image:: _static/colab-badge.svg
    :width: 175
-   :alt: Colab
+   :alt: Colab Länk
    :target: https://colab.research.google.com/github/kodanka/kodanka.fi/blob/master/inledning.ipynb
+   :align: center
+
+- Man kan då testa den kod som finns i läromaterialet genom att välja valfri cell i Colab och trycka på play (▶️) ikonen som syns i bilden nedan. 
+- Det går även skriva ny kod/text genom att lägga till fler celler (``+ Code``/``+ Text``), och ta bort celler på soptunnan (🗑️). 
+- Man kan skapa samt spara (**File** > **Save a copy in Drive**) helt nya Colab filer ifall man har ett Google konto. 
+- Colab har bra stöd för det mesta Python har att erbjuda och framför allt är det lätt! 
+- *Pro tip:* man kan göra snygga skolrapporter där om man behöver räkna och göra grafer i dem ;)
+
+.. image:: _static/use-colab.png
+   :width: 1292
+   :alt: Använd Colab
    :align: center
 
 Det finns dessutom en integrerad kodredigerare av `Repl.it <http://repl.it>`_ i styckena **grunder** och **fördjupat**. 

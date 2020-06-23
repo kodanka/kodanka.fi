@@ -71,8 +71,8 @@ Linux kommer ofta med Python färdigt installerat.
 Python
 ******
 
-- Börja med att öppna terminalen (``Ctrl`` + ``Alt`` + ``t``)
-- Kolla om Python redan är installerat:
+- Börja med att öppna terminalen (``Ctrl`` + ``Alt`` + ``T``)
+- Kolla om Python redan är installerat genom att i terminalen skriva:
 
 ::
 

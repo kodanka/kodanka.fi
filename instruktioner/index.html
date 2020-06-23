@@ -1,14 +1,17 @@
 
 <!DOCTYPE html>
 
-<!--[if IE 8]><html class="no-js lt-ie9" lang="sv" > <![endif]-->
-<!--[if gt IE 8]><!--> <html class="no-js" lang="sv"> <!--<![endif]-->
+<html class="writer-html5" lang="sv">
 <head>
 <meta charset="utf-8"/>
 <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
 <title>Kodanka - Instruktioner</title>
+<link href="../_static/css/theme.css" rel="stylesheet" type="text/css"/>
+<link href="../_static/pygments.css" rel="stylesheet" type="text/css"/>
 <link href="../_static/logo.png" rel="shortcut icon"/>
-<script src="../_static/js/modernizr.min.js" type="text/javascript"></script>
+<!--[if lt IE 9]>
+    <script src="../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
 <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js" type="text/javascript"></script>
 <script src="../_static/jquery.js"></script>
 <script src="../_static/underscore.js"></script>
@@ -19,8 +22,6 @@
 <script async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
 <script type="text/x-mathjax-config">MathJax.Hub.Config({"TeX": {"equationNumbers": {"autoNumber": "AMS", "useLabelIds": true}}, "tex2jax": {"inlineMath": [["$", "$"], ["\\(", "\\)"]], "processEscapes": true, "ignoreClass": "document", "processClass": "math|output_area"}})</script>
 <script src="../_static/js/theme.js" type="text/javascript"></script>
-<link href="../_static/css/theme.css" rel="stylesheet" type="text/css"/>
-<link href="../_static/pygments.css" rel="stylesheet" type="text/css"/>
 <link href="../genindex/" rel="index" title="Index"/>
 <link href="../search/" rel="search" title="Sök"/>
 <link href="../installationer/" rel="next" title="Installationer"/>
@@ -31,7 +32,7 @@
 <nav class="wy-nav-side" data-toggle="wy-nav-shift">
 <div class="wy-side-scroll">
 <div class="wy-side-nav-search">
-<a class="icon icon-home" href="../"> Kodanka
+<a alt="Documentation Home" class="icon icon-home" href="../"> Kodanka
           
 
           
@@ -141,7 +142,7 @@ Med tanke på om man vill fortsätta koda Python lönar det sig att kunna instal
 <a class="reference internal image-reference" href="../_images/vs-code-screenshot.png"><img alt="Ny fil" class="align-center" src="../_images/vs-code-screenshot.png" style="width: 400px;"/></a>
 <ul class="simple">
 <li><p>Testa Python genom att skriva en kodsnutt i filen: <code class="docutils literal notranslate"><span class="pre">print("Kvack,</span> <span class="pre">kvack!")</span></code></p></li>
-<li><p>Spara filen (<code class="docutils literal notranslate"><span class="pre">Ctrl</span></code> + <code class="docutils literal notranslate"><span class="pre">s</span></code> på Windows) eller (<code class="docutils literal notranslate"><span class="pre">Cmd</span></code> + <code class="docutils literal notranslate"><span class="pre">s</span></code> på Mac)</p></li>
+<li><p>Spara filen (<code class="docutils literal notranslate"><span class="pre">Ctrl</span></code> + <code class="docutils literal notranslate"><span class="pre">S</span></code> på Windows och Linux) eller (<code class="docutils literal notranslate"><span class="pre">Cmd</span></code> + <code class="docutils literal notranslate"><span class="pre">S</span></code> på Mac)</p></li>
 <li><p>Tryck på <strong>Terminal</strong> &gt; <strong>New Terminal</strong></p></li>
 <li><p>Kör programmet genom att skriva <code class="docutils literal notranslate"><span class="pre">python</span> <span class="pre">programmets_namn.py</span></code> och trycka <code class="docutils literal notranslate"><span class="pre">Enter</span></code> i terminalen som nyss öppnades, d.v.s:</p></li>
 </ul>
@@ -158,14 +159,19 @@ Med tanke på om man vill fortsätta koda Python lönar det sig att kunna instal
 <div class="section" id="python-online">
 <span id="id1"></span><h3>Python online<a class="headerlink" href="#python-online" title="Permalink till denna rubrik">¶</a></h3>
 <p>Man kan inte neka att det är väldigt lätt att inleda sin programmeringskarriär online, enda som krävs är en webbläsare, så därför stöder vi även det alternativet i vårt material.
-Vi inser också att det inte är möjligt att installera Python för alla, t.ex. om man är på en skoldator som inte har det färdigt nerladdat eller något liknande,
+Det är inte möjligt att installera Python för alla, t.ex. om man är på en skoldator som inte har det färdigt nerladdat eller något liknande,
 då finns möjligheten att göra allt på nätet.</p>
 <p>I början av varje stycke finns en knapp som vi ser här under. Den öppnar materialet i <a class="reference external" href="http://colab.research.google.com">Google Colab</a>
-som erbjuder ett sätt att blanda text och kod. Om man vill är det möjligt att direkt testa den kod som finns i läromaterialet
-genom att välja valfri cell i Colab och trycka på play-ikonen. Man kan även skriva ny kod genom att lägga till fler celler,
-och skapa samt spara helt nya Colab filer ifall man har ett Google konto. Colab har bra stöd för det mesta Python har att erbjuda och framför allt är det lätt!
-<em>Pro tip:</em> man kan göra snygga skolrapporter där om man t.ex. behöver grafer i dem ;)</p>
-<a class="reference external image-reference" href="https://colab.research.google.com/github/kodanka/kodanka.fi/blob/master/inledning.ipynb"><img alt="Colab" class="align-center" src="../_images/colab-badge.svg" width="175"/></a>
+som erbjuder ett sätt att blanda text och kod.</p>
+<a class="reference external image-reference" href="https://colab.research.google.com/github/kodanka/kodanka.fi/blob/master/inledning.ipynb"><img alt="Colab Länk" class="align-center" src="../_images/colab-badge.svg" width="175"/></a>
+<ul class="simple">
+<li><p>Man kan då testa den kod som finns i läromaterialet genom att välja valfri cell i Colab och trycka på play (▶️) ikonen som syns i bilden nedan.</p></li>
+<li><p>Det går även skriva ny kod/text genom att lägga till fler celler (<code class="docutils literal notranslate"><span class="pre">+</span> <span class="pre">Code</span></code>/<code class="docutils literal notranslate"><span class="pre">+</span> <span class="pre">Text</span></code>), och ta bort celler på soptunnan (🗑️).</p></li>
+<li><p>Man kan skapa samt spara (<strong>File</strong> &gt; <strong>Save a copy in Drive</strong>) helt nya Colab filer ifall man har ett Google konto.</p></li>
+<li><p>Colab har bra stöd för det mesta Python har att erbjuda och framför allt är det lätt!</p></li>
+<li><p><em>Pro tip:</em> man kan göra snygga skolrapporter där om man behöver räkna och göra grafer i dem ;)</p></li>
+</ul>
+<a class="reference internal image-reference" href="../_images/use-colab.png"><img alt="Använd Colab" class="align-center" src="../_images/use-colab.png" style="width: 1292px;"/></a>
 <p>Det finns dessutom en integrerad kodredigerare av <a class="reference external" href="http://repl.it">Repl.it</a> i styckena <strong>grunder</strong> och <strong>fördjupat</strong>.
 Där kan man snabbt testa sina idéer och försöka på uppgifter om man kodar allt på nätet.
 Knappen <code class="docutils literal notranslate"><span class="pre">open</span> <span class="pre">in</span> <span class="pre">repl.it</span></code> uppe i högra hörnet öppnar en helskärmsversion av editorn i en ny flik. Tryck på den gröna pilen
@@ -189,10 +195,20 @@ för att köra kod.</p>
 <hr/>
 <div role="contentinfo">
 <p>
+        
         © Copyright 2020, Kodanka
 
     </p>
 </div>
+    
+    
+    
+    Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a
+    
+    <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a>
+    
+    provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
 </footer>
 </div>
 </div>
