@@ -4,6 +4,11 @@ from bs4 import BeautifulSoup
 
 bs = lambda x: BeautifulSoup(x, 'html.parser')
 
+forms = {
+    "inledning": "https://docs.google.com/forms/d/e/1FAIpQLSffI7Jy2O-49nxunVk3OHKpr4XeypX9OSQFFzX1Sg0lf5nZBA/viewform?embedded=true",
+    "listor": "https://docs.google.com/forms/d/e/1FAIpQLSeb6ntlHgATI0pLBQ0w3KD6-iQeRVavkDAV_yRb8FKnZLFPtQ/viewform?embedded=true"
+}
+
 for root, dirs, files in os.walk("_build"):
 
     for file in files:
@@ -53,13 +58,13 @@ for root, dirs, files in os.walk("_build"):
                 # Modify page header
                 if os.path.isfile(notebook):
                     colab = soup.new_tag("a",
-                                         target="_blank",
-                                         rel="noopener noreferrer",
-                                         href=f"https://colab.research.google.com/github/kodanka/kodanka.fi/blob/master/{notebook}")
+                        target="_blank",
+                        rel="noopener noreferrer",
+                        href=f"https://colab.research.google.com/github/kodanka/kodanka.fi/blob/master/{notebook}")
                     colab_icon = soup.new_tag("img",
-                                              alt="Öppna i Colab",
-                                              src="../_static/colab-badge.svg",
-                                              style="width: 117px; height: 20px;")
+                        alt="Öppna i Colab",
+                        src="../_static/colab-badge.svg",
+                        style="width: 117px; height: 20px;")
                     colab.insert(0, colab_icon)
                     wy_list = soup.find("ul", attrs={"class": "wy-breadcrumbs"}).find_all("li")
                     if wy_list:
@@ -75,17 +80,32 @@ for root, dirs, files in os.walk("_build"):
                 if os.path.isfile(notebook):
                     footer = soup.find("footer")
                     console_header = soup.new_tag("h2")
-                    console_header.string = "Python konsol"
+                    console_header.string = "Python kompilator"
                     footer.insert_before(console_header)
                     console = soup.new_tag("iframe", 
-                                           style="border: none; width: 100%; height: 600px; padding-bottom: 20px;",
-                                           scrolling="no",
-                                           frameborder="no",
-                                           allowtransparency="true",
-                                           allowfullscreen="true",
-                                           sandbox="allow-forms allow-pointer-lock allow-popups allow-same-origin allow-scripts",
-                                           src="https://repl.it/@kodanka/python?lite=true")
+                        style="border: none; width: 100%; height: 600px; padding-bottom: 20px;",
+                        scrolling="no",
+                        frameborder="no",
+                        allowtransparency="true",
+                        allowfullscreen="true",
+                        sandbox="allow-forms allow-pointer-lock allow-popups allow-same-origin allow-scripts",
+                        src="https://repl.it/@kodanka/python?lite=true")
                     footer.insert_before(console)
+
+                # Insert forms
+                if os.path.isfile(notebook):
+                    try:
+                        src = forms[name]
+                        footer = soup.find("footer")
+                        form_header = soup.new_tag("h2")
+                        form_header.string = "Quiz"
+                        footer.insert_before(form_header)
+                        form = soup.new_tag("iframe",
+                            style="border: none; width: 100%; height: 500px;",
+                            src=src)
+                        footer.insert_before(form)
+                    except KeyError as e:
+                        print(e, "lacks form")
 
             with open(filename, "w") as page:
                 # Write changes
