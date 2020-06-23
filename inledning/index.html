@@ -1,17 +1,14 @@
 
 <!DOCTYPE html>
 
-<html class="writer-html5" lang="sv">
+<!--[if IE 8]><html class="no-js lt-ie9" lang="sv" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="sv"> <!--<![endif]-->
 <head>
 <meta charset="utf-8"/>
 <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
 <title>Kodanka - Inledning</title>
-<link href="../_static/css/theme.css" rel="stylesheet" type="text/css"/>
-<link href="../_static/pygments.css" rel="stylesheet" type="text/css"/>
 <link href="../_static/logo.png" rel="shortcut icon"/>
-<!--[if lt IE 9]>
-    <script src="../_static/js/html5shiv.min.js"></script>
-  <![endif]-->
+<script src="../_static/js/modernizr.min.js" type="text/javascript"></script>
 <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js" type="text/javascript"></script>
 <script src="../_static/jquery.js"></script>
 <script src="../_static/underscore.js"></script>
@@ -22,6 +19,8 @@
 <script async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
 <script type="text/x-mathjax-config">MathJax.Hub.Config({"TeX": {"equationNumbers": {"autoNumber": "AMS", "useLabelIds": true}}, "tex2jax": {"inlineMath": [["$", "$"], ["\\(", "\\)"]], "processEscapes": true, "ignoreClass": "document", "processClass": "math|output_area"}})</script>
 <script src="../_static/js/theme.js" type="text/javascript"></script>
+<link href="../_static/css/theme.css" rel="stylesheet" type="text/css"/>
+<link href="../_static/pygments.css" rel="stylesheet" type="text/css"/>
 <link href="../genindex/" rel="index" title="Index"/>
 <link href="../search/" rel="search" title="Sök"/>
 <link href="../listor/" rel="next" title="Listor"/>
@@ -32,7 +31,7 @@
 <nav class="wy-nav-side" data-toggle="wy-nav-shift">
 <div class="wy-side-scroll">
 <div class="wy-side-nav-search">
-<a alt="Documentation Home" class="icon icon-home" href="../"> Kodanka
+<a class="icon icon-home" href="../"> Kodanka
           
 
           
@@ -59,7 +58,6 @@
 <li class="toctree-l1 current"><a class="current reference internal" href="#">Inledning</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="#Vad-är-programmering?">Vad är programmering?</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#Vad-äro-Python?">Vad äro Python?</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#Input--&gt;-Output">Input -&gt; Output</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#Hello,-World!">Hello, World!</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#Variabler">Variabler</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#Skriva-ut-meningar">Skriva ut meningar</a><ul>
@@ -169,33 +167,20 @@ div.nboutput.container div.prompt pre {
 /* all prompts */
 div.nbinput.container div.prompt,
 div.nboutput.container div.prompt {
-    width: 4.5ex;
-    padding-top: 5px;
-    position: relative;
-    user-select: none;
+    min-width: 5ex;
+    padding-top: 0.3rem;
+    padding-right: 0.3rem;
+    text-align: right;
+    flex: 0;
 }
-
-div.nbinput.container div.prompt > div,
-div.nboutput.container div.prompt > div {
-    position: absolute;
-    right: 0;
-    margin-right: 0.3ex;
-}
-
 @media (max-width: 540px) {
     div.nbinput.container div.prompt,
     div.nboutput.container div.prompt {
-        width: unset;
         text-align: left;
         padding: 0.4em;
     }
     div.nboutput.container div.prompt.empty {
         padding: 0;
-    }
-
-    div.nbinput.container div.prompt > div,
-    div.nboutput.container div.prompt > div {
-        position: unset;
     }
 }
 
@@ -288,7 +273,7 @@ div.nboutput.container div.output_area div[class*=highlight].math,
 div.nboutput.container div.output_area.rendered_html,
 div.nboutput.container div.output_area > div.output_javascript,
 div.nboutput.container div.output_area:not(.rendered_html) > img{
-    padding: 5px;
+    padding: 0.3rem;
 }
 
 /* fix copybtn overflow problem in chromium (needed for 'sphinx_copybutton') */
@@ -358,7 +343,6 @@ div.rendered_html tbody tr:hover {
     text-align: unset;
 }
 </style>
-<p><img alt="Open In Colab" src="https://colab.research.google.com/assets/colab-badge.svg"/></p>
 <div class="section" id="Inledning">
 <h1>Inledning<a class="headerlink" href="#Inledning" title="Permalink till denna rubrik">¶</a></h1>
 <table class="docutils align-default">
@@ -380,10 +364,6 @@ språk. Därför har man hitta på en massa olika programmerings språk för att
 <div class="section" id="Vad-äro-Python?">
 <h2>Vad äro Python?<a class="headerlink" href="#Vad-äro-Python?" title="Permalink till denna rubrik">¶</a></h2>
 <p>Utöver att python är en orm så är det också en av de populäraste programmerings språken. Python används till många olika ändamål. Man kan göra websidor, appar, vetenskapliga beräkningar, animationer, spel och egentligen vad som helts annat som man kan tänka sig göra med en dator. Varför är python så populärt? En grund orsakt att python har bygts upp så att de är mycket lästbart och lätt att komma igång med.</p>
-</div>
-<div class="section" id="Input--&gt;-Output">
-<h2>Input -&gt; Output<a class="headerlink" href="#Input--&gt;-Output" title="Permalink till denna rubrik">¶</a></h2>
-<p>[skriv hit en beskrivning om vad input och ouput är]</p>
 </div>
 <div class="section" id="Hello,-World!">
 <h2>Hello, World!<a class="headerlink" href="#Hello,-World!" title="Permalink till denna rubrik">¶</a></h2>
@@ -623,7 +603,7 @@ Hej Kodare Ankan
 </div>
 </div>
 </div>
-<h2>Python kompilator</h2><iframe allowfullscreen="true" allowtransparency="true" frameborder="no" sandbox="allow-forms allow-pointer-lock allow-popups allow-same-origin allow-scripts" scrolling="no" src="https://repl.it/@kodanka/python?lite=true" style="border: none; width: 100%; height: 600px; padding-bottom: 20px;"></iframe><h2>Quiz</h2><iframe src="https://docs.google.com/forms/d/e/1FAIpQLSffI7Jy2O-49nxunVk3OHKpr4XeypX9OSQFFzX1Sg0lf5nZBA/viewform?embedded=true" style="border: none; width: 100%; height: 500px;"></iframe><footer>
+<h2>Python kompilator</h2><iframe allowfullscreen="true" allowtransparency="true" frameborder="no" sandbox="allow-forms allow-pointer-lock allow-popups allow-same-origin allow-scripts" scrolling="no" src="https://repl.it/@kodanka/python?lite=true" style="border: none; width: 100%; height: 500px; padding-bottom: 20px;"></iframe><h2>Quiz</h2><iframe src="https://docs.google.com/forms/d/e/1FAIpQLSffI7Jy2O-49nxunVk3OHKpr4XeypX9OSQFFzX1Sg0lf5nZBA/viewform?embedded=true" style="border: none; width: 100%; height: 500px; padding-bottom: 20px;"></iframe><footer>
 <div aria-label="footer navigation" class="rst-footer-buttons" role="navigation">
 <a accesskey="n" class="btn btn-neutral float-right" href="../listor/" rel="next" title="Listor">Nästa <span class="fa fa-arrow-circle-right"></span></a>
 <a accesskey="p" class="btn btn-neutral float-left" href="../om-kodanka/" rel="prev" title="Om Kodanka"><span class="fa fa-arrow-circle-left"></span> Föregående</a>
@@ -631,20 +611,10 @@ Hej Kodare Ankan
 <hr/>
 <div role="contentinfo">
 <p>
-        
         © Copyright 2020, Kodanka
 
     </p>
 </div>
-    
-    
-    
-    Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a
-    
-    <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a>
-    
-    provided by <a href="https://readthedocs.org">Read the Docs</a>. 
-
 </footer>
 </div>
 </div>

@@ -57,17 +57,6 @@
     {
       "cell_type": "markdown",
       "metadata": {
-        "id": "lXf4K5HhG7W_",
-        "colab_type": "text"
-      },
-      "source": [
-        "## Input -> Output\n",
-        "[skriv hit en beskrivning om vad input och ouput är]"
-      ]
-    },
-    {
-      "cell_type": "markdown",
-      "metadata": {
         "id": "6craL2w5EFMg",
         "colab_type": "text"
       },

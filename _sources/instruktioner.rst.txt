@@ -77,7 +77,7 @@ som erbjuder ett sätt att blanda text och kod.
    :target: https://colab.research.google.com/github/kodanka/kodanka.fi/blob/master/inledning.ipynb
    :align: center
 
-- Man kan då testa den kod som finns i läromaterialet genom att välja valfri cell i Colab och trycka på play (▶️) ikonen som syns i bilden nedan. 
+- Man kan testa den kod som finns i läromaterialet genom att välja valfri cell i Colab och trycka på play (▶️) ikonen som syns i bilden nedan. 
 - Det går även skriva ny kod/text genom att lägga till fler celler (``+ Code``/``+ Text``), och ta bort celler på soptunnan (🗑️). 
 - Man kan skapa samt spara (**File** > **Save a copy in Drive**) helt nya Colab filer ifall man har ett Google konto. 
 - Colab har bra stöd för det mesta Python har att erbjuda och framför allt är det lätt! 
