@@ -199,10 +199,7 @@
  ],
  "metadata": {
   "colab": {
-   "authorship_tag": "ABX9TyPxFEb3MrvFQDR4h4RmKWPl",
-   "collapsed_sections": [],
-   "name": "6-listor.ipynb",
-   "provenance": []
+   "name": "listor.ipynb"
   },
   "kernelspec": {
    "display_name": "Python 3",
