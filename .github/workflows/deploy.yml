@@ -29,7 +29,7 @@ jobs:
   
     - name: Build sphinx documentation
       run: |
-        jupyter nbconvert --execute --to notebook --inplace --allow-errors *.ipynb
+        python cellrunner.py
         python -m sphinx . _build/ -b dirhtml
         python pagemods.py
         touch _build/.nojekyll
