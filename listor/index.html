@@ -334,15 +334,15 @@ div.rendered_html tbody tr:hover {
 <h1>Listor<a class="headerlink" href="#Listor" title="Permalink till denna rubrik">¶</a></h1>
 <p>Listan (list) är en av de mest användbara datatyperna i Python för att förvara värden av olika datatyper. I detta kapitel behandlas grunderna i andvändning av listor, och några av de vanligaste metoderna i anknytning till dem. Men först, kan du lista (höhö) ut vad följande program gör, och varför utmatningen blir 10?</p>
 <div class="nbinput docutils container">
-<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[ ]:
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[1]:
 </pre></div>
 </div>
-<div class="input_area highlight-none notranslate"><div class="highlight"><pre>
-<span></span>lista1 = [1, 2, 3, 4, 5]
-lista2 = [6, 7, 8, 9, 10]
-lista3 = lista1 + lista2
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
+<span></span><span class="n">lista1</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">5</span><span class="p">]</span>
+<span class="n">lista2</span> <span class="o">=</span> <span class="p">[</span><span class="mi">6</span><span class="p">,</span> <span class="mi">7</span><span class="p">,</span> <span class="mi">8</span><span class="p">,</span> <span class="mi">9</span><span class="p">,</span> <span class="mi">10</span><span class="p">]</span>
+<span class="n">lista3</span> <span class="o">=</span> <span class="n">lista1</span> <span class="o">+</span> <span class="n">lista2</span>
 
-print(lista3[2]+lista3[6])
+<span class="nb">print</span><span class="p">(</span><span class="n">lista3</span><span class="p">[</span><span class="mi">2</span><span class="p">]</span><span class="o">+</span><span class="n">lista3</span><span class="p">[</span><span class="mi">6</span><span class="p">])</span>
 </pre></div>
 </div>
 </div>
@@ -356,17 +356,17 @@ print(lista3[2]+lista3[6])
 </div>
 <p>Listor är behändiga med tanke på att man kan förvara och manipulera data i dem. Låt oss till nästa skapa tre listor för att spara olika typer av data i dem:</p>
 <div class="nbinput docutils container">
-<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[ ]:
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[2]:
 </pre></div>
 </div>
-<div class="input_area highlight-none notranslate"><div class="highlight"><pre>
-<span></span>ankor = ['Hatte', 'Fnatte', 'Tjatte']
-heltal = [1, 2, 3]
-flyttal = [1.0, 2.0, 3.0]
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
+<span></span><span class="n">ankor</span> <span class="o">=</span> <span class="p">[</span><span class="s1">'Hatte'</span><span class="p">,</span> <span class="s1">'Fnatte'</span><span class="p">,</span> <span class="s1">'Tjatte'</span><span class="p">]</span>
+<span class="n">heltal</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">]</span>
+<span class="n">flyttal</span> <span class="o">=</span> <span class="p">[</span><span class="mf">1.0</span><span class="p">,</span> <span class="mf">2.0</span><span class="p">,</span> <span class="mf">3.0</span><span class="p">]</span>
 
-print(ankor)
-print(heltal)
-print(flyttal)
+<span class="nb">print</span><span class="p">(</span><span class="n">ankor</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">heltal</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">flyttal</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
@@ -383,13 +383,13 @@ print(flyttal)
 <p>Listan <code class="docutils literal notranslate"><span class="pre">ankor</span></code> håller tre strängar, <code class="docutils literal notranslate"><span class="pre">heltal</span></code> håller tre heltal, och <code class="docutils literal notranslate"><span class="pre">flyttal</span></code> håller tre flyttal.</p>
 <p>En lista i Python kan också hålla blandat olika datatyper:</p>
 <div class="nbinput docutils container">
-<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[ ]:
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[3]:
 </pre></div>
 </div>
-<div class="input_area highlight-none notranslate"><div class="highlight"><pre>
-<span></span>blandat = ['Kalle', 313, 313.313]
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
+<span></span><span class="n">blandat</span> <span class="o">=</span> <span class="p">[</span><span class="s1">'Kalle'</span><span class="p">,</span> <span class="mi">313</span><span class="p">,</span> <span class="mf">313.313</span><span class="p">]</span>
 
-print(blandat)
+<span class="nb">print</span><span class="p">(</span><span class="n">blandat</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
@@ -403,13 +403,13 @@ print(blandat)
 </div>
 <p>De enskilda värdena i listor kallas element. Varje element har en plats i listan vid ett specifikt index (ett heltal som anger platsen i ordning). Indexeringen i Python börjar från noll. Man kan komma åt specifika element i en lista med hjälp av indexeringen:</p>
 <div class="nbinput docutils container">
-<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[ ]:
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[4]:
 </pre></div>
 </div>
-<div class="input_area highlight-none notranslate"><div class="highlight"><pre>
-<span></span>print(ankor[0])
-print(heltal[1])
-print(blandat[2])
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
+<span></span><span class="nb">print</span><span class="p">(</span><span class="n">ankor</span><span class="p">[</span><span class="mi">0</span><span class="p">])</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">heltal</span><span class="p">[</span><span class="mi">1</span><span class="p">])</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">blandat</span><span class="p">[</span><span class="mi">2</span><span class="p">])</span>
 </pre></div>
 </div>
 </div>

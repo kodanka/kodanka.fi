@@ -1,218 +1,226 @@
 {
-  "cells": [
-    {
-      "cell_type": "markdown",
-      "metadata": {
-        "id": "9oulwIb99qMz",
-        "colab_type": "text"
-      },
-      "source": [
-        "# Listor"
-      ]
-    },
-    {
-      "cell_type": "markdown",
-      "metadata": {
-        "id": "JJWEenCkDgNv",
-        "colab_type": "text"
-      },
-      "source": [
-        "Listan (list) är en av de mest användbara datatyperna i Python för att förvara värden av olika datatyper. I detta kapitel behandlas grunderna i andvändning av listor, och några av de vanligaste metoderna i anknytning till dem. Men först, kan du lista (höhö) ut vad följande program gör, och varför utmatningen blir 10? \n"
-      ]
-    },
-    {
-      "cell_type": "code",
-      "metadata": {
-        "id": "JFA4rZxkGN9J",
-        "colab_type": "code",
-        "outputId": "89291da6-4660-4981-a6ff-cdc2d991ec29",
-        "colab": {
-          "base_uri": "https://localhost:8080/",
-          "height": 34
-        }
-      },
-      "source": [
-        "lista1 = [1, 2, 3, 4, 5]\n",
-        "lista2 = [6, 7, 8, 9, 10]\n",
-        "lista3 = lista1 + lista2\n",
-        "\n",
-        "print(lista3[2]+lista3[6])"
-      ],
-      "execution_count": 0,
-      "outputs": [
-        {
-          "output_type": "stream",
-          "text": [
-            "10\n"
-          ],
-          "name": "stdout"
-        }
-      ]
-    },
-    {
-      "cell_type": "markdown",
-      "metadata": {
-        "id": "C8cprOtBHlpw",
-        "colab_type": "text"
-      },
-      "source": [
-        "Listor är behändiga med tanke på att man kan förvara och manipulera data i dem. Låt oss till nästa skapa tre listor för att spara olika typer av data i dem:"
-      ]
-    },
-    {
-      "cell_type": "code",
-      "metadata": {
-        "id": "VqK-KeG99sVo",
-        "colab_type": "code",
-        "outputId": "3fe4b3b3-7b32-44d2-f84d-3b725540b783",
-        "colab": {
-          "base_uri": "https://localhost:8080/",
-          "height": 68
-        }
-      },
-      "source": [
-        "ankor = ['Hatte', 'Fnatte', 'Tjatte']\n",
-        "heltal = [1, 2, 3]\n",
-        "flyttal = [1.0, 2.0, 3.0]\n",
-        "\n",
-        "print(ankor)\n",
-        "print(heltal)\n",
-        "print(flyttal)"
-      ],
-      "execution_count": 0,
-      "outputs": [
-        {
-          "output_type": "stream",
-          "text": [
-            "['Hatte', 'Fnatte', 'Tjatte']\n",
-            "[1, 2, 3]\n",
-            "[1.0, 2.0, 3.0]\n"
-          ],
-          "name": "stdout"
-        }
-      ]
-    },
-    {
-      "cell_type": "markdown",
-      "metadata": {
-        "id": "XkTBM4-_JIbn",
-        "colab_type": "text"
-      },
-      "source": [
-        "Listan `ankor` håller tre strängar, `heltal` håller tre heltal, och `flyttal` håller tre flyttal.\n",
-        "\n",
-        "En lista i Python kan också hålla blandat olika datatyper:\n"
-      ]
-    },
-    {
-      "cell_type": "markdown",
-      "metadata": {
-        "id": "Xxz3MU8PAORh",
-        "colab_type": "text"
-      },
-      "source": [
-        ""
-      ]
-    },
-    {
-      "cell_type": "code",
-      "metadata": {
-        "id": "lYiEYEmkD4RR",
-        "colab_type": "code",
-        "outputId": "24a631b6-7020-4b2e-e426-07a29d2d5862",
-        "colab": {
-          "base_uri": "https://localhost:8080/",
-          "height": 34
-        }
-      },
-      "source": [
-        "blandat = ['Kalle', 313, 313.313]\n",
-        "\n",
-        "print(blandat)"
-      ],
-      "execution_count": 0,
-      "outputs": [
-        {
-          "output_type": "stream",
-          "text": [
-            "['Kalle', 313, 313.313]\n"
-          ],
-          "name": "stdout"
-        }
-      ]
-    },
-    {
-      "cell_type": "markdown",
-      "metadata": {
-        "id": "jU0wlF-lKuBc",
-        "colab_type": "text"
-      },
-      "source": [
-        "De enskilda värdena i listor kallas element. Varje element har en plats i listan vid ett specifikt index (ett heltal som anger platsen i ordning). Indexeringen i Python börjar från noll. Man kan komma åt specifika element i en lista med hjälp av indexeringen:"
-      ]
-    },
-    {
-      "cell_type": "code",
-      "metadata": {
-        "id": "6_y-sHu-LOZd",
-        "colab_type": "code",
-        "outputId": "9924a70f-3a59-4204-8478-9ec17d16e87b",
-        "colab": {
-          "base_uri": "https://localhost:8080/",
-          "height": 68
-        }
-      },
-      "source": [
-        "print(ankor[0])\n",
-        "print(heltal[1])\n",
-        "print(blandat[2])"
-      ],
-      "execution_count": 0,
-      "outputs": [
-        {
-          "output_type": "stream",
-          "text": [
-            "Hatte\n",
-            "2\n",
-            "313.313\n"
-          ],
-          "name": "stdout"
-        }
-      ]
-    },
-    {
-      "cell_type": "markdown",
-      "metadata": {
-        "id": "C5_ymltU_JvS",
-        "colab_type": "text"
-      },
-      "source": [
-        "#### Övning 1"
-      ]
-    },
-    {
-      "cell_type": "markdown",
-      "metadata": {
-        "id": "VkTKj_2L_Nav",
-        "colab_type": "text"
-      },
-      "source": [
-        ""
-      ]
-    }
-  ],
-  "metadata": {
-    "colab": {
-      "name": "6-listor.ipynb",
-      "provenance": [],
-      "collapsed_sections": [],
-      "authorship_tag": "ABX9TyPxFEb3MrvFQDR4h4RmKWPl"
-    },
-    "kernelspec": {
-      "name": "python3",
-      "display_name": "Python 3"
-    }
+ "cells": [
+  {
+   "cell_type": "markdown",
+   "metadata": {
+    "colab_type": "text",
+    "id": "9oulwIb99qMz"
+   },
+   "source": [
+    "# Listor"
+   ]
   },
-  "nbformat": 4,
-  "nbformat_minor": 0
+  {
+   "cell_type": "markdown",
+   "metadata": {
+    "colab_type": "text",
+    "id": "JJWEenCkDgNv"
+   },
+   "source": [
+    "Listan (list) är en av de mest användbara datatyperna i Python för att förvara värden av olika datatyper. I detta kapitel behandlas grunderna i andvändning av listor, och några av de vanligaste metoderna i anknytning till dem. Men först, kan du lista (höhö) ut vad följande program gör, och varför utmatningen blir 10? \n"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 1,
+   "metadata": {
+    "colab": {
+     "base_uri": "https://localhost:8080/",
+     "height": 34
+    },
+    "colab_type": "code",
+    "id": "JFA4rZxkGN9J",
+    "outputId": "89291da6-4660-4981-a6ff-cdc2d991ec29"
+   },
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "10\n"
+     ]
+    }
+   ],
+   "source": [
+    "lista1 = [1, 2, 3, 4, 5]\n",
+    "lista2 = [6, 7, 8, 9, 10]\n",
+    "lista3 = lista1 + lista2\n",
+    "\n",
+    "print(lista3[2]+lista3[6])"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {
+    "colab_type": "text",
+    "id": "C8cprOtBHlpw"
+   },
+   "source": [
+    "Listor är behändiga med tanke på att man kan förvara och manipulera data i dem. Låt oss till nästa skapa tre listor för att spara olika typer av data i dem:"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 2,
+   "metadata": {
+    "colab": {
+     "base_uri": "https://localhost:8080/",
+     "height": 68
+    },
+    "colab_type": "code",
+    "id": "VqK-KeG99sVo",
+    "outputId": "3fe4b3b3-7b32-44d2-f84d-3b725540b783"
+   },
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "['Hatte', 'Fnatte', 'Tjatte']\n",
+      "[1, 2, 3]\n",
+      "[1.0, 2.0, 3.0]\n"
+     ]
+    }
+   ],
+   "source": [
+    "ankor = ['Hatte', 'Fnatte', 'Tjatte']\n",
+    "heltal = [1, 2, 3]\n",
+    "flyttal = [1.0, 2.0, 3.0]\n",
+    "\n",
+    "print(ankor)\n",
+    "print(heltal)\n",
+    "print(flyttal)"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {
+    "colab_type": "text",
+    "id": "XkTBM4-_JIbn"
+   },
+   "source": [
+    "Listan `ankor` håller tre strängar, `heltal` håller tre heltal, och `flyttal` håller tre flyttal.\n",
+    "\n",
+    "En lista i Python kan också hålla blandat olika datatyper:\n"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {
+    "colab_type": "text",
+    "id": "Xxz3MU8PAORh"
+   },
+   "source": []
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 3,
+   "metadata": {
+    "colab": {
+     "base_uri": "https://localhost:8080/",
+     "height": 34
+    },
+    "colab_type": "code",
+    "id": "lYiEYEmkD4RR",
+    "outputId": "24a631b6-7020-4b2e-e426-07a29d2d5862"
+   },
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "['Kalle', 313, 313.313]\n"
+     ]
+    }
+   ],
+   "source": [
+    "blandat = ['Kalle', 313, 313.313]\n",
+    "\n",
+    "print(blandat)"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {
+    "colab_type": "text",
+    "id": "jU0wlF-lKuBc"
+   },
+   "source": [
+    "De enskilda värdena i listor kallas element. Varje element har en plats i listan vid ett specifikt index (ett heltal som anger platsen i ordning). Indexeringen i Python börjar från noll. Man kan komma åt specifika element i en lista med hjälp av indexeringen:"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 4,
+   "metadata": {
+    "colab": {
+     "base_uri": "https://localhost:8080/",
+     "height": 68
+    },
+    "colab_type": "code",
+    "id": "6_y-sHu-LOZd",
+    "outputId": "9924a70f-3a59-4204-8478-9ec17d16e87b"
+   },
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "Hatte\n",
+      "2\n",
+      "313.313\n"
+     ]
+    }
+   ],
+   "source": [
+    "print(ankor[0])\n",
+    "print(heltal[1])\n",
+    "print(blandat[2])"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {
+    "colab_type": "text",
+    "id": "C5_ymltU_JvS"
+   },
+   "source": [
+    "#### Övning 1"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {
+    "colab_type": "text",
+    "id": "VkTKj_2L_Nav"
+   },
+   "source": []
+  }
+ ],
+ "metadata": {
+  "colab": {
+   "authorship_tag": "ABX9TyPxFEb3MrvFQDR4h4RmKWPl",
+   "collapsed_sections": [],
+   "name": "6-listor.ipynb",
+   "provenance": []
+  },
+  "kernelspec": {
+   "display_name": "Python 3",
+   "name": "python3"
+  },
+  "language_info": {
+   "codemirror_mode": {
+    "name": "ipython",
+    "version": 3
+   },
+   "file_extension": ".py",
+   "mimetype": "text/x-python",
+   "name": "python",
+   "nbconvert_exporter": "python",
+   "pygments_lexer": "ipython3",
+   "version": "3.6.10"
+  }
+ },
+ "nbformat": 4,
+ "nbformat_minor": 0
 }
