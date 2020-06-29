@@ -54,6 +54,8 @@ language = 'sv'
 # This pattern also affects html_static_path and html_extra_path.
 exclude_patterns = ['_build', '**.ipynb_checkpoints']
 
+# Syntax highlighting
+nbsphinx_codecell_lexer = 'ipython3'
 
 # -- Options for HTML output -------------------------------------------------
 

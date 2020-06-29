@@ -20,6 +20,7 @@ help:
 	@$(SPHINXBUILD) -M $@ "$(SOURCEDIR)" "$(BUILDDIR)" $(SPHINXOPTS) $(O)
 
 build:
+	jupyter nbconvert --execute --to notebook --inplace --allow-errors *.ipynb
 	rm -rf _build
 	python -m sphinx . _build/ -b dirhtml
 	python pagemods.py
