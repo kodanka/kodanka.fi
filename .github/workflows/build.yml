@@ -13,17 +13,6 @@ jobs:
     # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
     - uses: actions/checkout@v2
 
-    - name: Merge with master
-      if: github.head_ref == 'material'
-      run: |
-        git config --global user.email "action@github.com"
-        git config --global user.name "GitHub Action"
-        git merge master
-        git checkout --ours *.ipynb
-        git add *.ipynb
-        git commit -m "Merge with master"
-        git push
-
     - name: Set up Python 3.6
       uses: actions/setup-python@v1
       with:
