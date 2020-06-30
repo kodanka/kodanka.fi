@@ -39,6 +39,20 @@
    "source": [
     "$\\text{e}^{i\\pi} = -1$"
    ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {},
+   "source": [
+    "## Konsol"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {},
+   "source": [
+    "## Quiz"
+   ]
   }
  ],
  "metadata": {
