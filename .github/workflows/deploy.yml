@@ -27,9 +27,16 @@ jobs:
         python -m pip install --upgrade pip
         pip install -r requirements.txt
   
-    - name: Build sphinx documentation
+    - name: Run cells, name colab files
       run: |
         python cellrunner.py
+        git config --local user.email "action@github.com"
+        git config --local user.name "GitHub Action"
+        git commit -am "Run cells"
+        git push
+
+    - name: Build sphinx documentation
+      run: |
         python -m sphinx . _build/ -b dirhtml
         python pagemods.py
         touch _build/.nojekyll
