@@ -12,6 +12,9 @@ jobs:
     steps:
     # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
     - uses: actions/checkout@v2
+      with:
+        persist-credentials: false
+        fetch-depth: 0
 
     - name: Set up Python 3.6
       uses: actions/setup-python@v1
@@ -28,3 +31,19 @@ jobs:
       run: |
         python -m sphinx . _build/ -b dirhtml
         python pagemods.py
+    
+    - name: Run cells, name colab files
+      run: |
+        python cellrunner.py
+
+    - name: Commit files
+      run: |
+        git config --local user.email "action@github.com"
+        git config --local user.name "GitHub Action"
+        git commit -am "Run cells"
+
+    - name: Push changes
+      uses: ad-m/github-push-action@master
+      with:
+        github_token: ${{ secrets.GITHUB_TOKEN }}
+        branch: ${{ github.head_ref }}
