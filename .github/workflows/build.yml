@@ -28,3 +28,11 @@ jobs:
       run: |
         python -m sphinx . _build/ -b dirhtml
         python pagemods.py
+    
+    - name: Run cells, name colab files
+      run: |
+        python cellrunner.py
+        git config --local user.email "action@github.com"
+        git config --local user.name "GitHub Action"
+        git commit -am "Run cells"
+        git push
