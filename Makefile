@@ -21,6 +21,7 @@ help:
 
 build:
 	python cellrunner.py
+	python prebuild.py
 	rm -rf _build
 	python -m sphinx . _build/ -b dirhtml
 	python pagemods.py
