@@ -1,25 +1,32 @@
 
-Ankdammen Kodar
-===============
+Kodanka
+=======
+
+Här kan man lära sig programmera! **</>** + 🦆 = sant
 
 .. toctree::
    :maxdepth: 2
    :caption: Info:
 
    instruktioner
-   faq
+   installationer
+   om-kodanka
 
 .. toctree::
-   :maxdepth: 2
+   :maxdepth: 1
    :caption: Grunder:
 
-   grunder
-   latex
-   1-inledning
-   6_listor
+   inledning
+   listor
 
 .. toctree::
-   :maxdepth: 2
-   :caption: Bonus:
+   :maxdepth: 1
+   :caption: Fördjupat:
+
+   latex
+
+.. toctree::
+   :maxdepth: 1
+   :caption: Projekt:
 
    latex

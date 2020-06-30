@@ -20,6 +20,13 @@ help:
 	@$(SPHINXBUILD) -M $@ "$(SOURCEDIR)" "$(BUILDDIR)" $(SPHINXOPTS) $(O)
 
 build:
-	python -m sphinx . _build/ -b html
+	python cellrunner.py
+	rm -rf _build
+	python -m sphinx . _build/ -b dirhtml
 	python pagemods.py
-	xdg-open _build/index.html
+
+serve:
+	python -m http.server 8000
+
+browse:
+	xdg-open http://0.0.0.0:8000/_build

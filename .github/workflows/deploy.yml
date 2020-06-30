@@ -29,9 +29,13 @@ jobs:
   
     - name: Build sphinx documentation
       run: |
-        python -m sphinx . _build/ -b html
+        python cellrunner.py
+        python -m sphinx . _build/ -b dirhtml
         python pagemods.py
         touch _build/.nojekyll
+
+    - name: Create CNAME
+      run: echo "kodanka.fi" > _build/CNAME
 
     - name: Deploy
       uses: peaceiris/actions-gh-pages@v3
