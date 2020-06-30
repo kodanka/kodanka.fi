@@ -29,6 +29,7 @@ jobs:
 
     - name: Build sphinx documentation
       run: |
+        python prebuild.py
         python -m sphinx . _build/ -b dirhtml
         python pagemods.py
         touch _build/.nojekyll
