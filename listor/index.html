@@ -57,7 +57,20 @@
 <ul class="current">
 <li class="toctree-l1"><a class="reference internal" href="../inledning/">Inledning</a></li>
 <li class="toctree-l1 current"><a class="current reference internal" href="#">Listor</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="#Övning-1">Övning 1</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#Datatyper-i-listor">Datatyper i listor</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#Element-och-index">Element och index</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#append,-pop-och-remove"><code class="docutils literal notranslate"><span class="pre">append</span></code>, <code class="docutils literal notranslate"><span class="pre">pop</span></code> och <code class="docutils literal notranslate"><span class="pre">remove</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="#Iterering-över-listor">Iterering över listor</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#min,-max-och-medelvärde"><code class="docutils literal notranslate"><span class="pre">min</span></code>, <code class="docutils literal notranslate"><span class="pre">max</span></code> och medelvärde</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#Övningar">Övningar</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#Övning-1">Övning 1</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#Övning-2">Övning 2</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#Övning-3">Övning 3</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#Övning-4">Övning 4</a></li>
+</ul>
+</li>
+</ul>
+</li>
 </ul>
 </li>
 </ul>
@@ -332,36 +345,36 @@ div.rendered_html tbody tr:hover {
 </style>
 <div class="section" id="Listor">
 <h1>Listor<a class="headerlink" href="#Listor" title="Permalink till denna rubrik">¶</a></h1>
-<p>Listan (list) är en av de mest användbara datatyperna i Python för att förvara värden av olika datatyper. I detta kapitel behandlas grunderna i andvändning av listor, och några av de vanligaste metoderna i anknytning till dem. Men först, kan du lista (höhö) ut vad följande program gör, och varför utmatningen blir 10?</p>
+<p>Listan (list) är en av de mest användbara datastrukturerna i Python för att förvara värden av olika datatyper. I detta kapitel behandlas grunderna i andvändning av listor, och några av de vanligaste metoderna i anknytning till dem. Men först, kan du lista ut (höhö) vad följande program gör, och varför blir outputen ”tvåtre”?</p>
 <div class="nbinput docutils container">
 <div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[1]:
 </pre></div>
 </div>
 <div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
-<span></span><span class="n">lista1</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">5</span><span class="p">]</span>
-<span class="n">lista2</span> <span class="o">=</span> <span class="p">[</span><span class="mi">6</span><span class="p">,</span> <span class="mi">7</span><span class="p">,</span> <span class="mi">8</span><span class="p">,</span> <span class="mi">9</span><span class="p">,</span> <span class="mi">10</span><span class="p">]</span>
-<span class="n">lista3</span> <span class="o">=</span> <span class="n">lista1</span> <span class="o">+</span> <span class="n">lista2</span>
-
-<span class="nb">print</span><span class="p">(</span><span class="n">lista3</span><span class="p">[</span><span class="mi">2</span><span class="p">]</span><span class="o">+</span><span class="n">lista3</span><span class="p">[</span><span class="mi">6</span><span class="p">])</span>
+<span></span><span class="n">lista</span> <span class="o">=</span> <span class="p">[</span><span class="s1">'ett'</span><span class="p">,</span> <span class="s1">'två'</span><span class="p">,</span> <span class="s1">'tre'</span><span class="p">]</span>
+<span class="n">lista</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="o">+</span> <span class="n">lista</span><span class="p">[</span><span class="mi">2</span><span class="p">]</span>
 </pre></div>
 </div>
 </div>
 <div class="nboutput nblast docutils container">
-<div class="prompt empty docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[1]:
+</pre></div>
 </div>
 <div class="output_area docutils container">
 <div class="highlight"><pre>
-10
+'tvåtre'
 </pre></div></div>
 </div>
+<div class="section" id="Datatyper-i-listor">
+<h2>Datatyper i listor<a class="headerlink" href="#Datatyper-i-listor" title="Permalink till denna rubrik">¶</a></h2>
 <p>Listor är behändiga med tanke på att man kan förvara och manipulera data i dem. Låt oss till nästa skapa tre listor för att spara olika typer av data i dem:</p>
 <div class="nbinput docutils container">
 <div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[2]:
 </pre></div>
 </div>
 <div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
-<span></span><span class="n">ankor</span> <span class="o">=</span> <span class="p">[</span><span class="s1">'Hatte'</span><span class="p">,</span> <span class="s1">'Fnatte'</span><span class="p">,</span> <span class="s1">'Tjatte'</span><span class="p">]</span>
-<span class="n">heltal</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">]</span>
+<span></span><span class="n">ankor</span> <span class="o">=</span> <span class="p">[</span><span class="s1">'Knatte'</span><span class="p">,</span> <span class="s1">'Fnatte'</span><span class="p">,</span> <span class="s1">'Tjatte'</span><span class="p">]</span>
+<span class="n">heltal</span> <span class="o">=</span> <span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">6</span><span class="p">,</span> <span class="mi">7</span><span class="p">,</span> <span class="mi">8</span><span class="p">,</span> <span class="mi">9</span><span class="p">]</span>
 <span class="n">flyttal</span> <span class="o">=</span> <span class="p">[</span><span class="mf">1.0</span><span class="p">,</span> <span class="mf">2.0</span><span class="p">,</span> <span class="mf">3.0</span><span class="p">]</span>
 
 <span class="nb">print</span><span class="p">(</span><span class="n">ankor</span><span class="p">)</span>
@@ -375,8 +388,8 @@ div.rendered_html tbody tr:hover {
 </div>
 <div class="output_area docutils container">
 <div class="highlight"><pre>
-['Hatte', 'Fnatte', 'Tjatte']
-[1, 2, 3]
+['Knatte', 'Fnatte', 'Tjatte']
+[0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
 [1.0, 2.0, 3.0]
 </pre></div></div>
 </div>
@@ -401,6 +414,9 @@ div.rendered_html tbody tr:hover {
 ['Kalle', 313, 313.313]
 </pre></div></div>
 </div>
+</div>
+<div class="section" id="Element-och-index">
+<h2>Element och index<a class="headerlink" href="#Element-och-index" title="Permalink till denna rubrik">¶</a></h2>
 <p>De enskilda värdena i listor kallas element. Varje element har en plats i listan vid ett specifikt index (ett heltal som anger platsen i ordning). Indexeringen i Python börjar från noll. Man kan komma åt specifika element i en lista med hjälp av indexeringen:</p>
 <div class="nbinput docutils container">
 <div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[4]:
@@ -418,13 +434,347 @@ div.rendered_html tbody tr:hover {
 </div>
 <div class="output_area docutils container">
 <div class="highlight"><pre>
-Hatte
-2
+Knatte
+1
 313.313
 </pre></div></div>
 </div>
+<p>Längden av en lista kan fås på samma sätt som längden av strängar, d.v.s. med <code class="docutils literal notranslate"><span class="pre">len</span></code> funktionen:</p>
+<div class="nbinput docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[5]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
+<span></span><span class="nb">print</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">ankor</span><span class="p">))</span>
+<span class="nb">print</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">heltal</span><span class="p">))</span>
+<span class="nb">print</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">blandat</span><span class="p">))</span>
+</pre></div>
+</div>
+</div>
+<div class="nboutput nblast docutils container">
+<div class="prompt empty docutils container">
+</div>
+<div class="output_area docutils container">
+<div class="highlight"><pre>
+3
+10
+3
+</pre></div></div>
+</div>
+</div>
+<div class="section" id="append,-pop-och-remove">
+<h2><code class="docutils literal notranslate"><span class="pre">append</span></code>, <code class="docutils literal notranslate"><span class="pre">pop</span></code> och <code class="docutils literal notranslate"><span class="pre">remove</span></code><a class="headerlink" href="#append,-pop-och-remove" title="Permalink till denna rubrik">¶</a></h2>
+<p>Vi skapar först en tom lista, och fyller den med hjälp av <code class="docutils literal notranslate"><span class="pre">append</span></code> metoden:</p>
+<div class="nbinput docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[6]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
+<span></span><span class="n">inkopslista</span> <span class="o">=</span> <span class="p">[]</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">inkopslista</span><span class="p">)</span>
+
+<span class="n">inkopslista</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="s1">'banan'</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">inkopslista</span><span class="p">)</span>
+
+<span class="n">inkopslista</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="s1">'mjölk'</span><span class="p">)</span>
+<span class="n">inkopslista</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="s1">'Nyaste HBL'</span><span class="p">)</span>
+<span class="n">inkopslista</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="s1">'ägg'</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">inkopslista</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="nboutput nblast docutils container">
+<div class="prompt empty docutils container">
+</div>
+<div class="output_area docutils container">
+<div class="highlight"><pre>
+[]
+['banan']
+['banan', 'mjölk', 'Nyaste HBL', 'ägg']
+</pre></div></div>
+</div>
+<p>Sedan kan vi ta bort element från listan med t.ex. <code class="docutils literal notranslate"><span class="pre">pop</span></code> metoden:</p>
+<div class="nbinput docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[7]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
+<span></span><span class="n">inkopslista</span><span class="o">.</span><span class="n">pop</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">inkopslista</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="nboutput nblast docutils container">
+<div class="prompt empty docutils container">
+</div>
+<div class="output_area docutils container">
+<div class="highlight"><pre>
+['banan', 'Nyaste HBL', 'ägg']
+</pre></div></div>
+</div>
+<p>Notera att ovan när vi ”poppar” index 1 tas det andra elementet bort (kom ihåg indexeringskonventionen!). Om <code class="docutils literal notranslate"><span class="pre">pop</span></code> metoden kallas utan ett index som argument kommer det sista elementet att tas bort:</p>
+<div class="nbinput docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[8]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
+<span></span><span class="n">inkopslista</span><span class="o">.</span><span class="n">pop</span><span class="p">()</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">inkopslista</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="nboutput nblast docutils container">
+<div class="prompt empty docutils container">
+</div>
+<div class="output_area docutils container">
+<div class="highlight"><pre>
+['banan', 'Nyaste HBL']
+</pre></div></div>
+</div>
+<p>Vi kan också ta bort element från listan med att ge namnet på elementet med <code class="docutils literal notranslate"><span class="pre">remove</span></code> metoden, t.ex.:</p>
+<div class="nbinput docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[9]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
+<span></span><span class="nb">print</span><span class="p">(</span><span class="n">inkopslista</span><span class="p">)</span>
+<span class="n">inkopslista</span><span class="o">.</span><span class="n">remove</span><span class="p">(</span><span class="s1">'banan'</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">inkopslista</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="nboutput nblast docutils container">
+<div class="prompt empty docutils container">
+</div>
+<div class="output_area docutils container">
+<div class="highlight"><pre>
+['banan', 'Nyaste HBL']
+['Nyaste HBL']
+</pre></div></div>
+</div>
+<p>Men notera att <code class="docutils literal notranslate"><span class="pre">remove</span></code> metoden tar endast bort det första elementet den stöter på med motsvarande argument:</p>
+<div class="nbinput docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[10]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
+<span></span><span class="n">inkopslista</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="s1">'äpple'</span><span class="p">)</span>
+<span class="n">inkopslista</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="s1">'citron'</span><span class="p">)</span>
+<span class="n">inkopslista</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="s1">'äpple'</span><span class="p">)</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="n">inkopslista</span><span class="p">)</span>
+<span class="n">inkopslista</span><span class="o">.</span><span class="n">remove</span><span class="p">(</span><span class="s1">'äpple'</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">inkopslista</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="nboutput nblast docutils container">
+<div class="prompt empty docutils container">
+</div>
+<div class="output_area docutils container">
+<div class="highlight"><pre>
+['Nyaste HBL', 'äpple', 'citron', 'äpple']
+['Nyaste HBL', 'citron', 'äpple']
+</pre></div></div>
+</div>
+</div>
+<div class="section" id="Iterering-över-listor">
+<h2>Iterering över listor<a class="headerlink" href="#Iterering-över-listor" title="Permalink till denna rubrik">¶</a></h2>
+<p>Man kan också manipulera element i listor, och iterera över dem med t.ex. en <code class="docutils literal notranslate"><span class="pre">for</span> <span class="pre">loop</span></code>:</p>
+<div class="nbinput docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[11]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
+<span></span><span class="nb">print</span><span class="p">(</span><span class="s1">'Gammal inköpslista:'</span><span class="p">,</span><span class="n">inkopslista</span><span class="p">)</span>
+<span class="n">inkopslista</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">=</span> <span class="s1">'Nyaste Kalle Ankan'</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">'Ny inköpslista:'</span><span class="p">,</span> <span class="n">inkopslista</span><span class="p">)</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="s1">'</span><span class="se">\n</span><span class="s1">Gamla heltal:'</span><span class="p">,</span> <span class="n">heltal</span><span class="p">)</span>
+<span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">heltal</span><span class="p">)):</span>
+  <span class="n">heltal</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">+=</span> <span class="mi">100</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">'Nya heltal:'</span><span class="p">,</span> <span class="n">heltal</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="nboutput nblast docutils container">
+<div class="prompt empty docutils container">
+</div>
+<div class="output_area docutils container">
+<div class="highlight"><pre>
+Gammal inköpslista: ['Nyaste HBL', 'citron', 'äpple']
+Ny inköpslista: ['Nyaste Kalle Ankan', 'citron', 'äpple']
+
+Gamla heltal: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
+Nya heltal: [100, 101, 102, 103, 104, 105, 106, 107, 108, 109]
+</pre></div></div>
+</div>
+<p>Man kan också iterera över listor utan att kalla på element vid specifika index:</p>
+<div class="nbinput docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[12]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
+<span></span><span class="k">for</span> <span class="n">inkop</span> <span class="ow">in</span> <span class="n">inkopslista</span><span class="p">:</span>
+  <span class="nb">print</span><span class="p">(</span><span class="n">inkop</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="nboutput nblast docutils container">
+<div class="prompt empty docutils container">
+</div>
+<div class="output_area docutils container">
+<div class="highlight"><pre>
+Nyaste Kalle Ankan
+citron
+äpple
+</pre></div></div>
+</div>
+<p><code class="docutils literal notranslate"><span class="pre">enumerate()</span></code> metoden är särskildt användbar om man vill iterera över element utan att kalla dem vid deras index, men också vill hålla reda på iterationsindexet:</p>
+<div class="nbinput docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[13]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
+<span></span><span class="n">livsskeden</span> <span class="o">=</span> <span class="p">[</span><span class="s1">'🥚'</span><span class="p">,</span> <span class="s1">'🐣'</span> <span class="p">,</span> <span class="s1">'🐤'</span> <span class="p">,</span> <span class="s1">'🦆'</span><span class="p">]</span>
+<span class="k">for</span> <span class="n">i</span><span class="p">,</span> <span class="n">anka</span> <span class="ow">in</span> <span class="nb">enumerate</span><span class="p">(</span><span class="n">livsskeden</span><span class="p">):</span>
+  <span class="nb">print</span><span class="p">(</span><span class="n">i</span><span class="p">,</span> <span class="s1">':'</span><span class="p">,</span> <span class="n">anka</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="nboutput nblast docutils container">
+<div class="prompt empty docutils container">
+</div>
+<div class="output_area docutils container">
+<div class="highlight"><pre>
+0 : 🥚
+1 : 🐣
+2 : 🐤
+3 : 🦆
+</pre></div></div>
+</div>
+</div>
+<div class="section" id="min,-max-och-medelvärde">
+<h2><code class="docutils literal notranslate"><span class="pre">min</span></code>, <code class="docutils literal notranslate"><span class="pre">max</span></code> och medelvärde<a class="headerlink" href="#min,-max-och-medelvärde" title="Permalink till denna rubrik">¶</a></h2>
+<p>Det är ofta bra att få reda på det minsta-, största- och medelvärdet av sin lista. Python har färdigt implementerat <code class="docutils literal notranslate"><span class="pre">min()</span></code> och <code class="docutils literal notranslate"><span class="pre">max()</span></code> funktionerna för att returnera det minsta, repsektive det största värdet av en mängd. Dessa funktioner kan ta som argument många värden av antingen heltal eller flyttal, t.ex. i formen av en lista.</p>
+<div class="nbinput docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[14]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
+<span></span><span class="n">flyttal</span> <span class="o">=</span> <span class="p">[</span><span class="mf">2.0</span><span class="p">,</span> <span class="mf">5.0</span><span class="p">,</span> <span class="mf">10.0</span><span class="p">,</span> <span class="mf">3.0</span><span class="p">,</span> <span class="mf">24.0</span><span class="p">,</span> <span class="mf">10.0</span><span class="p">,</span> <span class="mf">11.0</span><span class="p">]</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">"flyttalen:"</span><span class="p">,</span> <span class="n">flyttal</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">"Minsta:"</span><span class="p">,</span> <span class="nb">min</span><span class="p">(</span><span class="n">flyttal</span><span class="p">))</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">"Största:"</span><span class="p">,</span> <span class="nb">max</span><span class="p">(</span><span class="n">flyttal</span><span class="p">))</span>
+</pre></div>
+</div>
+</div>
+<div class="nboutput nblast docutils container">
+<div class="prompt empty docutils container">
+</div>
+<div class="output_area docutils container">
+<div class="highlight"><pre>
+flyttalen: [2.0, 5.0, 10.0, 3.0, 24.0, 10.0, 11.0]
+Minsta: 2.0
+Största: 24.0
+</pre></div></div>
+</div>
+<p>Medelvärdet av en lista kan man lätt räkna ut t.ex. som följer:</p>
+<div class="nbinput docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[15]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
+<span></span><span class="n">summa</span> <span class="o">=</span> <span class="mi">0</span>
+<span class="k">for</span> <span class="n">tal</span> <span class="ow">in</span> <span class="n">flyttal</span><span class="p">:</span>
+  <span class="n">summa</span> <span class="o">+=</span> <span class="n">tal</span>
+
+<span class="n">langd</span> <span class="o">=</span> <span class="nb">len</span><span class="p">(</span><span class="n">flyttal</span><span class="p">)</span>
+<span class="n">medelvarde</span> <span class="o">=</span> <span class="n">summa</span><span class="o">/</span><span class="n">langd</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="s2">"summa:"</span><span class="p">,</span> <span class="n">summa</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">"listans längd:"</span><span class="p">,</span> <span class="n">langd</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">"medelvärde:"</span><span class="p">,</span> <span class="n">medelvarde</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="nboutput nblast docutils container">
+<div class="prompt empty docutils container">
+</div>
+<div class="output_area docutils container">
+<div class="highlight"><pre>
+summa: 65.0
+listans längd: 7
+medelvärde: 9.285714285714286
+</pre></div></div>
+</div>
+<p>I exemplet ovan fyller vi en lista kallad <code class="docutils literal notranslate"><span class="pre">flyttal</span></code> med sju stycken godtyckliga flyttal. Sedan skapar vi en variabel med namnet <code class="docutils literal notranslate"><span class="pre">summa</span></code> som är i början noll. Vi adderar till <code class="docutils literal notranslate"><span class="pre">summa</span></code> variablen varje flyttal i listan, med hjälp av en <code class="docutils literal notranslate"><span class="pre">for</span> <span class="pre">loop</span></code>. Denna summa är sedan delad med längden av listan (<code class="docutils literal notranslate"><span class="pre">len(flyttal)</span></code>) för att få medelvärdet.</p>
+<div class="section" id="Övningar">
+<h3>Övningar<a class="headerlink" href="#Övningar" title="Permalink till denna rubrik">¶</a></h3>
 <div class="section" id="Övning-1">
-<h2>Övning 1<a class="headerlink" href="#Övning-1" title="Permalink till denna rubrik">¶</a></h2>
+<h4>Övning 1<a class="headerlink" href="#Övning-1" title="Permalink till denna rubrik">¶</a></h4>
+<p>Skapa en lista med heltalen 0-19, t.ex. så här:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">heltal</span> <span class="o">=</span> <span class="p">[]</span>
+<span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">20</span><span class="p">):</span>
+  <span class="n">heltal</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">i</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>Spjälk sedan upp denna lista i två nya listor: En med alla jämna heltal, och en annan med alla udda heltal. Skriv ut alla listor för att se att programmet fungerar. Resultatet borde se ut så här:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">Heltal</span><span class="p">:</span> <span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">6</span><span class="p">,</span> <span class="mi">7</span><span class="p">,</span> <span class="mi">8</span><span class="p">,</span> <span class="mi">9</span><span class="p">,</span> <span class="mi">10</span><span class="p">,</span> <span class="mi">11</span><span class="p">,</span> <span class="mi">12</span><span class="p">,</span> <span class="mi">13</span><span class="p">,</span> <span class="mi">14</span><span class="p">,</span> <span class="mi">15</span><span class="p">,</span> <span class="mi">16</span><span class="p">,</span> <span class="mi">17</span><span class="p">,</span> <span class="mi">18</span><span class="p">,</span> <span class="mi">19</span><span class="p">]</span>
+<span class="n">Jämna</span><span class="p">:</span> <span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">6</span><span class="p">,</span> <span class="mi">8</span><span class="p">,</span> <span class="mi">10</span><span class="p">,</span> <span class="mi">12</span><span class="p">,</span> <span class="mi">14</span><span class="p">,</span> <span class="mi">16</span><span class="p">,</span> <span class="mi">18</span><span class="p">]</span>
+<span class="n">Udda</span><span class="p">:</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">7</span><span class="p">,</span> <span class="mi">9</span><span class="p">,</span> <span class="mi">11</span><span class="p">,</span> <span class="mi">13</span><span class="p">,</span> <span class="mi">15</span><span class="p">,</span> <span class="mi">17</span><span class="p">,</span> <span class="mi">19</span><span class="p">]</span>
+</pre></div>
+</div>
+<p>Tips: Använd dig av indexeringen och iterering av listor.</p>
+</div>
+<div class="section" id="Övning-2">
+<h4>Övning 2<a class="headerlink" href="#Övning-2" title="Permalink till denna rubrik">¶</a></h4>
+<p>Högsta uppmätta temperaturen under dagarna 24.5-22.6 år 2020 var som följer:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">temperatur</span> <span class="o">=</span> <span class="p">[</span><span class="mf">13.0</span> <span class="mf">16.2</span> <span class="mf">16.7</span> <span class="mf">17.4</span> <span class="mf">15.7</span> <span class="mf">15.8</span> <span class="mf">18.5</span> <span class="mf">17.1</span> <span class="mf">13.7</span> <span class="mf">14.3</span> <span class="mf">15.8</span> <span class="mf">16.4</span> <span class="mf">13.8</span> <span class="mf">15.2</span> <span class="mf">16.5</span> <span class="mf">18.7</span> <span class="mf">17.0</span> <span class="mf">21.7</span> <span class="mf">20.0</span> <span class="mf">19.9</span> <span class="mf">19.5</span> <span class="mf">20.7</span> <span class="mf">21.6</span> <span class="mf">23.2</span> <span class="mf">21.7</span> <span class="mf">21.2</span> <span class="mf">24.4</span> <span class="mf">22.5</span> <span class="mf">18.9</span> <span class="mf">20.4</span><span class="p">]</span>
+</pre></div>
+</div>
+<p>Kopiera denna lista till din kod och ge följande information: Det minsta värdet, det högsta värdet, samt medeltalet av temperaturerna.</p>
+</div>
+<div class="section" id="Övning-3">
+<h4>Övning 3<a class="headerlink" href="#Övning-3" title="Permalink till denna rubrik">¶</a></h4>
+<p>Skriv ett program som skapar en inköpslista. Programmet skall ha tre funktionaliteter: Att lägga till produkter, ta bort produkter samt att printa ut produkterna som en lista.</p>
+<p>Programmet skall fungera så här när du kör det:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">Ge</span> <span class="n">kommando</span><span class="p">:</span> <span class="n">lägg</span> <span class="n">till</span>
+<span class="n">lägg</span> <span class="n">till</span> <span class="n">produkt</span><span class="p">:</span> <span class="n">ägg</span>
+<span class="n">Ge</span> <span class="n">kommando</span><span class="p">:</span> <span class="n">lägg</span> <span class="n">till</span>
+<span class="n">lägg</span> <span class="n">till</span> <span class="n">produkt</span><span class="p">:</span> <span class="n">mjölk</span>
+<span class="n">Ge</span> <span class="n">kommando</span><span class="p">:</span> <span class="n">lista</span>
+<span class="p">[</span><span class="s1">'ägg'</span><span class="p">,</span> <span class="s1">'mjölk'</span><span class="p">]</span>
+<span class="n">Ge</span> <span class="n">kommando</span><span class="p">:</span> <span class="n">ta</span> <span class="n">bort</span>
+<span class="n">ta</span> <span class="n">bort</span> <span class="n">produkt</span><span class="p">:</span> <span class="n">mjölk</span>
+<span class="n">Ge</span> <span class="n">kommando</span><span class="p">:</span> <span class="n">lista</span>
+<span class="p">[</span><span class="s1">'ägg'</span><span class="p">]</span>
+<span class="n">Ge</span> <span class="n">kommando</span><span class="p">:</span> <span class="n">sluta</span>
+</pre></div>
+</div>
+<p>Notera att allt efter ”:” är användarens input!</p>
+<p>Tips: <code class="docutils literal notranslate"><span class="pre">while</span></code> loopen och <code class="docutils literal notranslate"><span class="pre">input</span></code> funktionen från tidigare är nyttiga här.</p>
+</div>
+<div class="section" id="Övning-4">
+<h4>Övning 4<a class="headerlink" href="#Övning-4" title="Permalink till denna rubrik">¶</a></h4>
+<p>Fortsätt utveckla på programmet i föregående övning genom att lägga till en funktionalitet för att räkna ut priset för inköpen.</p>
+<p>Programmet skall fungera så här när du kör det:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>Ge kommando: lägg till
+lägg till produkt: ägg
+produktens pris (€): 1.25
+Ge kommando: lägg till
+lägg till produkt: olivolja
+produktens pris (€): 5.99
+Ge kommando: lista
+['ägg', 'olivolja']
+Ge kommando: pris
+totala summan: 7.24 €
+Ge kommando: sluta
+</pre></div>
+</div>
+<p>Notera här också att allt efter ”:” är användarens input!</p>
+</div>
+</div>
 </div>
 </div>
 </div>
