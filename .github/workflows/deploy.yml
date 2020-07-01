@@ -26,10 +26,11 @@ jobs:
         sudo apt install pandoc
         python -m pip install --upgrade pip
         pip install -r requirements.txt
-  
+
     - name: Build sphinx documentation
       run: |
         python cellrunner.py
+        python prebuild.py
         python -m sphinx . _build/ -b dirhtml
         python pagemods.py
         touch _build/.nojekyll
