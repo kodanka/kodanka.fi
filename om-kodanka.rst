@@ -15,7 +15,7 @@ länka till den ursprungliga licensen och berätta om förändringar. Målen få
 .. image:: _static/by-nc-sa.svg
    :width: 200
    :alt: CC-BY-NC-SA
-   :target: http://creativecommons.org/licenses/by-sa/4.0
+   :target: http://creativecommons.org/licenses/by-nc-sa/4.0
    :align: center
 
 Sidan
