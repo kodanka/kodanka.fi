@@ -48,4 +48,4 @@ Källa: [pngimg.com](https://pngimg.com/download/45750) under licensen [Creative
 
 ## Stoppord
 
-[stoppord.txt](_static/stoppord.txt) från [stopwords-iso](https://github.com/stopwords-iso/stopwords-sv) under [MIT Licens](https://opensource.org/licenses/MIT)
+[stoppord.txt](stoppord.txt) från [stopwords-iso](https://github.com/stopwords-iso/stopwords-sv) under [MIT Licens](https://opensource.org/licenses/MIT)
