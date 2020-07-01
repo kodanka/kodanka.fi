@@ -37,9 +37,12 @@ jobs:
 
     - name: Copy CNAME
       run: cp CNAME _build/CNAME
-
-    - name: Copy robots.txt
-      run: cp robots.txt _build/robots.txt
+    
+    - name: Copy material
+      run: |
+        cp *.txt _build/
+        cp *.png _build/
+        cp *.csv _build/
 
     - name: Deploy
       uses: peaceiris/actions-gh-pages@v3
