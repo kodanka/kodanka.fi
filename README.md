@@ -45,3 +45,7 @@ Vi valde en anka som symbol av tre orsaker
 - Finlandssvenskarna utgör en ankdam
 
 Källa: [pngimg.com](https://pngimg.com/download/45750) under licensen [Creative Commons 4.0 BY-NC](https://creativecommons.org/licenses/by-nc/4.0/)
+
+## Stoppord
+
+[stoppord.txt](_static/stoppord.txt) från [stopwords-iso](https://github.com/stopwords-iso/stopwords-sv) under [MIT Licens](https://opensource.org/licenses/MIT)
