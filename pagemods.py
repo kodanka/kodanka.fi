@@ -55,7 +55,15 @@ for root, dirs, files in os.walk("_build"):
                 # Copyright info
                 copyright = soup.new_tag("div", attrs={"role": "contentinfo"})
                 copyright.insert(0, soup.new_tag("p"))
-                copyright.string = "© Copyright 2020, Kodanka"
+                copyright.string = "© Copyright 2020, Kodanka | Sphinx tema av Read the Docs"
+
+                # License
+                license = soup.new_tag("a", attrs={"href": "http://creativecommons.org/licenses/by-nc-sa/4.0"})
+                license_image = soup.new_tag("img",
+                    alt="Visa licens",
+                    src="../_static/by-nc-sa.svg",
+                    style="width: 88px; height: 31px;")
+                license.insert(0, license_image)
 
                 # Insert into footer
                 footer = soup.find("footer")
@@ -64,6 +72,8 @@ for root, dirs, files in os.walk("_build"):
                     footer.insert(0, navigation)
                 footer.insert(1, soup.new_tag("hr"))
                 footer.insert(2, copyright)
+                footer.insert(3, soup.new_tag("br"))
+                footer.insert(4, license)
 
                 # Translate search functionality to swedish
                 soup = bs(str(soup).replace("placeholder=\"Search docs\"", "placeholder=\"Sök\""))
