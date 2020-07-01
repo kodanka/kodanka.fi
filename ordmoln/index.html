@@ -354,12 +354,86 @@ div.rendered_html tbody tr:hover {
 </div>
 <div class="output_area docutils container">
 <div class="highlight"><pre>
-0               Ted &amp; Kaj: Din mamma var en sköldpadda
-1                        Senaste nytt om coronaviruset
-2    Tusentals Hongkongbor ute på gatorna i protest...
-3    Hongkongborna uppmärksammade 23 år under kines...
-4    Att vara kvinna och jägare är att våga ta plat...
-Name: Rubrik, dtype: object
+<span class="ansi-red-fg">---------------------------------------------------------------------------</span>
+<span class="ansi-red-fg">HTTPError</span>                                 Traceback (most recent call last)
+<span class="ansi-green-fg">&lt;ipython-input-1-ebf230d84e79&gt;</span> in <span class="ansi-cyan-fg">&lt;module&gt;</span>
+<span class="ansi-green-intense-fg ansi-bold">      1</span> <span class="ansi-green-fg">import</span> pandas <span class="ansi-green-fg">as</span> pd
+<span class="ansi-green-intense-fg ansi-bold">      2</span>
+<span class="ansi-green-fg">----&gt; 3</span><span class="ansi-red-fg"> </span>nyheter <span class="ansi-blue-fg">=</span> pd<span class="ansi-blue-fg">.</span>read_csv<span class="ansi-blue-fg">(</span><span class="ansi-blue-fg">"https://kodanka.fi/_static/yle_nyheter.csv"</span><span class="ansi-blue-fg">)</span>
+<span class="ansi-green-intense-fg ansi-bold">      4</span> nyhetsrubriker <span class="ansi-blue-fg">=</span> nyheter<span class="ansi-blue-fg">[</span><span class="ansi-blue-fg">'Rubrik'</span><span class="ansi-blue-fg">]</span>
+<span class="ansi-green-intense-fg ansi-bold">      5</span> print<span class="ansi-blue-fg">(</span>nyhetsrubriker<span class="ansi-blue-fg">.</span>head<span class="ansi-blue-fg">(</span><span class="ansi-blue-fg">)</span><span class="ansi-blue-fg">)</span>
+
+<span class="ansi-green-fg">/opt/hostedtoolcache/Python/3.6.10/x64/lib/python3.6/site-packages/pandas/io/parsers.py</span> in <span class="ansi-cyan-fg">parser_f</span><span class="ansi-blue-fg">(filepath_or_buffer, sep, delimiter, header, names, index_col, usecols, squeeze, prefix, mangle_dupe_cols, dtype, engine, converters, true_values, false_values, skipinitialspace, skiprows, skipfooter, nrows, na_values, keep_default_na, na_filter, verbose, skip_blank_lines, parse_dates, infer_datetime_format, keep_date_col, date_parser, dayfirst, cache_dates, iterator, chunksize, compression, thousands, decimal, lineterminator, quotechar, quoting, doublequote, escapechar, comment, encoding, dialect, error_bad_lines, warn_bad_lines, delim_whitespace, low_memory, memory_map, float_precision)</span>
+<span class="ansi-green-intense-fg ansi-bold">    674</span>         )
+<span class="ansi-green-intense-fg ansi-bold">    675</span>
+<span class="ansi-green-fg">--&gt; 676</span><span class="ansi-red-fg">         </span><span class="ansi-green-fg">return</span> _read<span class="ansi-blue-fg">(</span>filepath_or_buffer<span class="ansi-blue-fg">,</span> kwds<span class="ansi-blue-fg">)</span>
+<span class="ansi-green-intense-fg ansi-bold">    677</span>
+<span class="ansi-green-intense-fg ansi-bold">    678</span>     parser_f<span class="ansi-blue-fg">.</span>__name__ <span class="ansi-blue-fg">=</span> name
+
+<span class="ansi-green-fg">/opt/hostedtoolcache/Python/3.6.10/x64/lib/python3.6/site-packages/pandas/io/parsers.py</span> in <span class="ansi-cyan-fg">_read</span><span class="ansi-blue-fg">(filepath_or_buffer, kwds)</span>
+<span class="ansi-green-intense-fg ansi-bold">    429</span>     <span class="ansi-red-fg"># See https://github.com/python/mypy/issues/1297</span>
+<span class="ansi-green-intense-fg ansi-bold">    430</span>     fp_or_buf, _, compression, should_close = get_filepath_or_buffer(
+<span class="ansi-green-fg">--&gt; 431</span><span class="ansi-red-fg">         </span>filepath_or_buffer<span class="ansi-blue-fg">,</span> encoding<span class="ansi-blue-fg">,</span> compression
+<span class="ansi-green-intense-fg ansi-bold">    432</span>     )
+<span class="ansi-green-intense-fg ansi-bold">    433</span>     kwds<span class="ansi-blue-fg">[</span><span class="ansi-blue-fg">"compression"</span><span class="ansi-blue-fg">]</span> <span class="ansi-blue-fg">=</span> compression
+
+<span class="ansi-green-fg">/opt/hostedtoolcache/Python/3.6.10/x64/lib/python3.6/site-packages/pandas/io/common.py</span> in <span class="ansi-cyan-fg">get_filepath_or_buffer</span><span class="ansi-blue-fg">(filepath_or_buffer, encoding, compression, mode)</span>
+<span class="ansi-green-intense-fg ansi-bold">    170</span>
+<span class="ansi-green-intense-fg ansi-bold">    171</span>     <span class="ansi-green-fg">if</span> isinstance<span class="ansi-blue-fg">(</span>filepath_or_buffer<span class="ansi-blue-fg">,</span> str<span class="ansi-blue-fg">)</span> <span class="ansi-green-fg">and</span> is_url<span class="ansi-blue-fg">(</span>filepath_or_buffer<span class="ansi-blue-fg">)</span><span class="ansi-blue-fg">:</span>
+<span class="ansi-green-fg">--&gt; 172</span><span class="ansi-red-fg">         </span>req <span class="ansi-blue-fg">=</span> urlopen<span class="ansi-blue-fg">(</span>filepath_or_buffer<span class="ansi-blue-fg">)</span>
+<span class="ansi-green-intense-fg ansi-bold">    173</span>         content_encoding <span class="ansi-blue-fg">=</span> req<span class="ansi-blue-fg">.</span>headers<span class="ansi-blue-fg">.</span>get<span class="ansi-blue-fg">(</span><span class="ansi-blue-fg">"Content-Encoding"</span><span class="ansi-blue-fg">,</span> <span class="ansi-green-fg">None</span><span class="ansi-blue-fg">)</span>
+<span class="ansi-green-intense-fg ansi-bold">    174</span>         <span class="ansi-green-fg">if</span> content_encoding <span class="ansi-blue-fg">==</span> <span class="ansi-blue-fg">"gzip"</span><span class="ansi-blue-fg">:</span>
+
+<span class="ansi-green-fg">/opt/hostedtoolcache/Python/3.6.10/x64/lib/python3.6/site-packages/pandas/io/common.py</span> in <span class="ansi-cyan-fg">urlopen</span><span class="ansi-blue-fg">(*args, **kwargs)</span>
+<span class="ansi-green-intense-fg ansi-bold">    139</span>     <span class="ansi-green-fg">import</span> urllib<span class="ansi-blue-fg">.</span>request
+<span class="ansi-green-intense-fg ansi-bold">    140</span>
+<span class="ansi-green-fg">--&gt; 141</span><span class="ansi-red-fg">     </span><span class="ansi-green-fg">return</span> urllib<span class="ansi-blue-fg">.</span>request<span class="ansi-blue-fg">.</span>urlopen<span class="ansi-blue-fg">(</span><span class="ansi-blue-fg">*</span>args<span class="ansi-blue-fg">,</span> <span class="ansi-blue-fg">**</span>kwargs<span class="ansi-blue-fg">)</span>
+<span class="ansi-green-intense-fg ansi-bold">    142</span>
+<span class="ansi-green-intense-fg ansi-bold">    143</span>
+
+<span class="ansi-green-fg">/opt/hostedtoolcache/Python/3.6.10/x64/lib/python3.6/urllib/request.py</span> in <span class="ansi-cyan-fg">urlopen</span><span class="ansi-blue-fg">(url, data, timeout, cafile, capath, cadefault, context)</span>
+<span class="ansi-green-intense-fg ansi-bold">    221</span>     <span class="ansi-green-fg">else</span><span class="ansi-blue-fg">:</span>
+<span class="ansi-green-intense-fg ansi-bold">    222</span>         opener <span class="ansi-blue-fg">=</span> _opener
+<span class="ansi-green-fg">--&gt; 223</span><span class="ansi-red-fg">     </span><span class="ansi-green-fg">return</span> opener<span class="ansi-blue-fg">.</span>open<span class="ansi-blue-fg">(</span>url<span class="ansi-blue-fg">,</span> data<span class="ansi-blue-fg">,</span> timeout<span class="ansi-blue-fg">)</span>
+<span class="ansi-green-intense-fg ansi-bold">    224</span>
+<span class="ansi-green-intense-fg ansi-bold">    225</span> <span class="ansi-green-fg">def</span> install_opener<span class="ansi-blue-fg">(</span>opener<span class="ansi-blue-fg">)</span><span class="ansi-blue-fg">:</span>
+
+<span class="ansi-green-fg">/opt/hostedtoolcache/Python/3.6.10/x64/lib/python3.6/urllib/request.py</span> in <span class="ansi-cyan-fg">open</span><span class="ansi-blue-fg">(self, fullurl, data, timeout)</span>
+<span class="ansi-green-intense-fg ansi-bold">    530</span>         <span class="ansi-green-fg">for</span> processor <span class="ansi-green-fg">in</span> self<span class="ansi-blue-fg">.</span>process_response<span class="ansi-blue-fg">.</span>get<span class="ansi-blue-fg">(</span>protocol<span class="ansi-blue-fg">,</span> <span class="ansi-blue-fg">[</span><span class="ansi-blue-fg">]</span><span class="ansi-blue-fg">)</span><span class="ansi-blue-fg">:</span>
+<span class="ansi-green-intense-fg ansi-bold">    531</span>             meth <span class="ansi-blue-fg">=</span> getattr<span class="ansi-blue-fg">(</span>processor<span class="ansi-blue-fg">,</span> meth_name<span class="ansi-blue-fg">)</span>
+<span class="ansi-green-fg">--&gt; 532</span><span class="ansi-red-fg">             </span>response <span class="ansi-blue-fg">=</span> meth<span class="ansi-blue-fg">(</span>req<span class="ansi-blue-fg">,</span> response<span class="ansi-blue-fg">)</span>
+<span class="ansi-green-intense-fg ansi-bold">    533</span>
+<span class="ansi-green-intense-fg ansi-bold">    534</span>         <span class="ansi-green-fg">return</span> response
+
+<span class="ansi-green-fg">/opt/hostedtoolcache/Python/3.6.10/x64/lib/python3.6/urllib/request.py</span> in <span class="ansi-cyan-fg">http_response</span><span class="ansi-blue-fg">(self, request, response)</span>
+<span class="ansi-green-intense-fg ansi-bold">    640</span>         <span class="ansi-green-fg">if</span> <span class="ansi-green-fg">not</span> <span class="ansi-blue-fg">(</span><span class="ansi-cyan-fg">200</span> <span class="ansi-blue-fg">&lt;=</span> code <span class="ansi-blue-fg">&lt;</span> <span class="ansi-cyan-fg">300</span><span class="ansi-blue-fg">)</span><span class="ansi-blue-fg">:</span>
+<span class="ansi-green-intense-fg ansi-bold">    641</span>             response = self.parent.error(
+<span class="ansi-green-fg">--&gt; 642</span><span class="ansi-red-fg">                 'http', request, response, code, msg, hdrs)
+</span><span class="ansi-green-intense-fg ansi-bold">    643</span>
+<span class="ansi-green-intense-fg ansi-bold">    644</span>         <span class="ansi-green-fg">return</span> response
+
+<span class="ansi-green-fg">/opt/hostedtoolcache/Python/3.6.10/x64/lib/python3.6/urllib/request.py</span> in <span class="ansi-cyan-fg">error</span><span class="ansi-blue-fg">(self, proto, *args)</span>
+<span class="ansi-green-intense-fg ansi-bold">    568</span>         <span class="ansi-green-fg">if</span> http_err<span class="ansi-blue-fg">:</span>
+<span class="ansi-green-intense-fg ansi-bold">    569</span>             args <span class="ansi-blue-fg">=</span> <span class="ansi-blue-fg">(</span>dict<span class="ansi-blue-fg">,</span> <span class="ansi-blue-fg">'default'</span><span class="ansi-blue-fg">,</span> <span class="ansi-blue-fg">'http_error_default'</span><span class="ansi-blue-fg">)</span> <span class="ansi-blue-fg">+</span> orig_args
+<span class="ansi-green-fg">--&gt; 570</span><span class="ansi-red-fg">             </span><span class="ansi-green-fg">return</span> self<span class="ansi-blue-fg">.</span>_call_chain<span class="ansi-blue-fg">(</span><span class="ansi-blue-fg">*</span>args<span class="ansi-blue-fg">)</span>
+<span class="ansi-green-intense-fg ansi-bold">    571</span>
+<span class="ansi-green-intense-fg ansi-bold">    572</span> <span class="ansi-red-fg"># XXX probably also want an abstract factory that knows when it makes</span>
+
+<span class="ansi-green-fg">/opt/hostedtoolcache/Python/3.6.10/x64/lib/python3.6/urllib/request.py</span> in <span class="ansi-cyan-fg">_call_chain</span><span class="ansi-blue-fg">(self, chain, kind, meth_name, *args)</span>
+<span class="ansi-green-intense-fg ansi-bold">    502</span>         <span class="ansi-green-fg">for</span> handler <span class="ansi-green-fg">in</span> handlers<span class="ansi-blue-fg">:</span>
+<span class="ansi-green-intense-fg ansi-bold">    503</span>             func <span class="ansi-blue-fg">=</span> getattr<span class="ansi-blue-fg">(</span>handler<span class="ansi-blue-fg">,</span> meth_name<span class="ansi-blue-fg">)</span>
+<span class="ansi-green-fg">--&gt; 504</span><span class="ansi-red-fg">             </span>result <span class="ansi-blue-fg">=</span> func<span class="ansi-blue-fg">(</span><span class="ansi-blue-fg">*</span>args<span class="ansi-blue-fg">)</span>
+<span class="ansi-green-intense-fg ansi-bold">    505</span>             <span class="ansi-green-fg">if</span> result <span class="ansi-green-fg">is</span> <span class="ansi-green-fg">not</span> <span class="ansi-green-fg">None</span><span class="ansi-blue-fg">:</span>
+<span class="ansi-green-intense-fg ansi-bold">    506</span>                 <span class="ansi-green-fg">return</span> result
+
+<span class="ansi-green-fg">/opt/hostedtoolcache/Python/3.6.10/x64/lib/python3.6/urllib/request.py</span> in <span class="ansi-cyan-fg">http_error_default</span><span class="ansi-blue-fg">(self, req, fp, code, msg, hdrs)</span>
+<span class="ansi-green-intense-fg ansi-bold">    648</span> <span class="ansi-green-fg">class</span> HTTPDefaultErrorHandler<span class="ansi-blue-fg">(</span>BaseHandler<span class="ansi-blue-fg">)</span><span class="ansi-blue-fg">:</span>
+<span class="ansi-green-intense-fg ansi-bold">    649</span>     <span class="ansi-green-fg">def</span> http_error_default<span class="ansi-blue-fg">(</span>self<span class="ansi-blue-fg">,</span> req<span class="ansi-blue-fg">,</span> fp<span class="ansi-blue-fg">,</span> code<span class="ansi-blue-fg">,</span> msg<span class="ansi-blue-fg">,</span> hdrs<span class="ansi-blue-fg">)</span><span class="ansi-blue-fg">:</span>
+<span class="ansi-green-fg">--&gt; 650</span><span class="ansi-red-fg">         </span><span class="ansi-green-fg">raise</span> HTTPError<span class="ansi-blue-fg">(</span>req<span class="ansi-blue-fg">.</span>full_url<span class="ansi-blue-fg">,</span> code<span class="ansi-blue-fg">,</span> msg<span class="ansi-blue-fg">,</span> hdrs<span class="ansi-blue-fg">,</span> fp<span class="ansi-blue-fg">)</span>
+<span class="ansi-green-intense-fg ansi-bold">    651</span>
+<span class="ansi-green-intense-fg ansi-bold">    652</span> <span class="ansi-green-fg">class</span> HTTPRedirectHandler<span class="ansi-blue-fg">(</span>BaseHandler<span class="ansi-blue-fg">)</span><span class="ansi-blue-fg">:</span>
+
+<span class="ansi-red-fg">HTTPError</span>: HTTP Error 404: Not Found
 </pre></div></div>
 </div>
 <div class="nbinput docutils container">
@@ -377,15 +451,86 @@ Name: Rubrik, dtype: object
 </div>
 <div class="output_area docutils container">
 <div class="highlight"><pre>
-0    adertonde
-1         adjö
-2       aldrig
-3         alla
-4        allas
-Name: aderton, dtype: object
+<span class="ansi-red-fg">---------------------------------------------------------------------------</span>
+<span class="ansi-red-fg">HTTPError</span>                                 Traceback (most recent call last)
+<span class="ansi-green-fg">&lt;ipython-input-2-8d837ab88b52&gt;</span> in <span class="ansi-cyan-fg">&lt;module&gt;</span>
+<span class="ansi-green-fg">----&gt; 1</span><span class="ansi-red-fg"> </span>stoppord <span class="ansi-blue-fg">=</span> pd<span class="ansi-blue-fg">.</span>read_csv<span class="ansi-blue-fg">(</span><span class="ansi-blue-fg">'https://kodanka.fi/_static/stoppord.txt'</span><span class="ansi-blue-fg">,</span> squeeze<span class="ansi-blue-fg">=</span><span class="ansi-green-fg">True</span><span class="ansi-blue-fg">)</span>
+<span class="ansi-green-intense-fg ansi-bold">      2</span> print<span class="ansi-blue-fg">(</span>stoppord<span class="ansi-blue-fg">.</span>head<span class="ansi-blue-fg">(</span><span class="ansi-blue-fg">)</span><span class="ansi-blue-fg">)</span>
+
+<span class="ansi-green-fg">/opt/hostedtoolcache/Python/3.6.10/x64/lib/python3.6/site-packages/pandas/io/parsers.py</span> in <span class="ansi-cyan-fg">parser_f</span><span class="ansi-blue-fg">(filepath_or_buffer, sep, delimiter, header, names, index_col, usecols, squeeze, prefix, mangle_dupe_cols, dtype, engine, converters, true_values, false_values, skipinitialspace, skiprows, skipfooter, nrows, na_values, keep_default_na, na_filter, verbose, skip_blank_lines, parse_dates, infer_datetime_format, keep_date_col, date_parser, dayfirst, cache_dates, iterator, chunksize, compression, thousands, decimal, lineterminator, quotechar, quoting, doublequote, escapechar, comment, encoding, dialect, error_bad_lines, warn_bad_lines, delim_whitespace, low_memory, memory_map, float_precision)</span>
+<span class="ansi-green-intense-fg ansi-bold">    674</span>         )
+<span class="ansi-green-intense-fg ansi-bold">    675</span>
+<span class="ansi-green-fg">--&gt; 676</span><span class="ansi-red-fg">         </span><span class="ansi-green-fg">return</span> _read<span class="ansi-blue-fg">(</span>filepath_or_buffer<span class="ansi-blue-fg">,</span> kwds<span class="ansi-blue-fg">)</span>
+<span class="ansi-green-intense-fg ansi-bold">    677</span>
+<span class="ansi-green-intense-fg ansi-bold">    678</span>     parser_f<span class="ansi-blue-fg">.</span>__name__ <span class="ansi-blue-fg">=</span> name
+
+<span class="ansi-green-fg">/opt/hostedtoolcache/Python/3.6.10/x64/lib/python3.6/site-packages/pandas/io/parsers.py</span> in <span class="ansi-cyan-fg">_read</span><span class="ansi-blue-fg">(filepath_or_buffer, kwds)</span>
+<span class="ansi-green-intense-fg ansi-bold">    429</span>     <span class="ansi-red-fg"># See https://github.com/python/mypy/issues/1297</span>
+<span class="ansi-green-intense-fg ansi-bold">    430</span>     fp_or_buf, _, compression, should_close = get_filepath_or_buffer(
+<span class="ansi-green-fg">--&gt; 431</span><span class="ansi-red-fg">         </span>filepath_or_buffer<span class="ansi-blue-fg">,</span> encoding<span class="ansi-blue-fg">,</span> compression
+<span class="ansi-green-intense-fg ansi-bold">    432</span>     )
+<span class="ansi-green-intense-fg ansi-bold">    433</span>     kwds<span class="ansi-blue-fg">[</span><span class="ansi-blue-fg">"compression"</span><span class="ansi-blue-fg">]</span> <span class="ansi-blue-fg">=</span> compression
+
+<span class="ansi-green-fg">/opt/hostedtoolcache/Python/3.6.10/x64/lib/python3.6/site-packages/pandas/io/common.py</span> in <span class="ansi-cyan-fg">get_filepath_or_buffer</span><span class="ansi-blue-fg">(filepath_or_buffer, encoding, compression, mode)</span>
+<span class="ansi-green-intense-fg ansi-bold">    170</span>
+<span class="ansi-green-intense-fg ansi-bold">    171</span>     <span class="ansi-green-fg">if</span> isinstance<span class="ansi-blue-fg">(</span>filepath_or_buffer<span class="ansi-blue-fg">,</span> str<span class="ansi-blue-fg">)</span> <span class="ansi-green-fg">and</span> is_url<span class="ansi-blue-fg">(</span>filepath_or_buffer<span class="ansi-blue-fg">)</span><span class="ansi-blue-fg">:</span>
+<span class="ansi-green-fg">--&gt; 172</span><span class="ansi-red-fg">         </span>req <span class="ansi-blue-fg">=</span> urlopen<span class="ansi-blue-fg">(</span>filepath_or_buffer<span class="ansi-blue-fg">)</span>
+<span class="ansi-green-intense-fg ansi-bold">    173</span>         content_encoding <span class="ansi-blue-fg">=</span> req<span class="ansi-blue-fg">.</span>headers<span class="ansi-blue-fg">.</span>get<span class="ansi-blue-fg">(</span><span class="ansi-blue-fg">"Content-Encoding"</span><span class="ansi-blue-fg">,</span> <span class="ansi-green-fg">None</span><span class="ansi-blue-fg">)</span>
+<span class="ansi-green-intense-fg ansi-bold">    174</span>         <span class="ansi-green-fg">if</span> content_encoding <span class="ansi-blue-fg">==</span> <span class="ansi-blue-fg">"gzip"</span><span class="ansi-blue-fg">:</span>
+
+<span class="ansi-green-fg">/opt/hostedtoolcache/Python/3.6.10/x64/lib/python3.6/site-packages/pandas/io/common.py</span> in <span class="ansi-cyan-fg">urlopen</span><span class="ansi-blue-fg">(*args, **kwargs)</span>
+<span class="ansi-green-intense-fg ansi-bold">    139</span>     <span class="ansi-green-fg">import</span> urllib<span class="ansi-blue-fg">.</span>request
+<span class="ansi-green-intense-fg ansi-bold">    140</span>
+<span class="ansi-green-fg">--&gt; 141</span><span class="ansi-red-fg">     </span><span class="ansi-green-fg">return</span> urllib<span class="ansi-blue-fg">.</span>request<span class="ansi-blue-fg">.</span>urlopen<span class="ansi-blue-fg">(</span><span class="ansi-blue-fg">*</span>args<span class="ansi-blue-fg">,</span> <span class="ansi-blue-fg">**</span>kwargs<span class="ansi-blue-fg">)</span>
+<span class="ansi-green-intense-fg ansi-bold">    142</span>
+<span class="ansi-green-intense-fg ansi-bold">    143</span>
+
+<span class="ansi-green-fg">/opt/hostedtoolcache/Python/3.6.10/x64/lib/python3.6/urllib/request.py</span> in <span class="ansi-cyan-fg">urlopen</span><span class="ansi-blue-fg">(url, data, timeout, cafile, capath, cadefault, context)</span>
+<span class="ansi-green-intense-fg ansi-bold">    221</span>     <span class="ansi-green-fg">else</span><span class="ansi-blue-fg">:</span>
+<span class="ansi-green-intense-fg ansi-bold">    222</span>         opener <span class="ansi-blue-fg">=</span> _opener
+<span class="ansi-green-fg">--&gt; 223</span><span class="ansi-red-fg">     </span><span class="ansi-green-fg">return</span> opener<span class="ansi-blue-fg">.</span>open<span class="ansi-blue-fg">(</span>url<span class="ansi-blue-fg">,</span> data<span class="ansi-blue-fg">,</span> timeout<span class="ansi-blue-fg">)</span>
+<span class="ansi-green-intense-fg ansi-bold">    224</span>
+<span class="ansi-green-intense-fg ansi-bold">    225</span> <span class="ansi-green-fg">def</span> install_opener<span class="ansi-blue-fg">(</span>opener<span class="ansi-blue-fg">)</span><span class="ansi-blue-fg">:</span>
+
+<span class="ansi-green-fg">/opt/hostedtoolcache/Python/3.6.10/x64/lib/python3.6/urllib/request.py</span> in <span class="ansi-cyan-fg">open</span><span class="ansi-blue-fg">(self, fullurl, data, timeout)</span>
+<span class="ansi-green-intense-fg ansi-bold">    530</span>         <span class="ansi-green-fg">for</span> processor <span class="ansi-green-fg">in</span> self<span class="ansi-blue-fg">.</span>process_response<span class="ansi-blue-fg">.</span>get<span class="ansi-blue-fg">(</span>protocol<span class="ansi-blue-fg">,</span> <span class="ansi-blue-fg">[</span><span class="ansi-blue-fg">]</span><span class="ansi-blue-fg">)</span><span class="ansi-blue-fg">:</span>
+<span class="ansi-green-intense-fg ansi-bold">    531</span>             meth <span class="ansi-blue-fg">=</span> getattr<span class="ansi-blue-fg">(</span>processor<span class="ansi-blue-fg">,</span> meth_name<span class="ansi-blue-fg">)</span>
+<span class="ansi-green-fg">--&gt; 532</span><span class="ansi-red-fg">             </span>response <span class="ansi-blue-fg">=</span> meth<span class="ansi-blue-fg">(</span>req<span class="ansi-blue-fg">,</span> response<span class="ansi-blue-fg">)</span>
+<span class="ansi-green-intense-fg ansi-bold">    533</span>
+<span class="ansi-green-intense-fg ansi-bold">    534</span>         <span class="ansi-green-fg">return</span> response
+
+<span class="ansi-green-fg">/opt/hostedtoolcache/Python/3.6.10/x64/lib/python3.6/urllib/request.py</span> in <span class="ansi-cyan-fg">http_response</span><span class="ansi-blue-fg">(self, request, response)</span>
+<span class="ansi-green-intense-fg ansi-bold">    640</span>         <span class="ansi-green-fg">if</span> <span class="ansi-green-fg">not</span> <span class="ansi-blue-fg">(</span><span class="ansi-cyan-fg">200</span> <span class="ansi-blue-fg">&lt;=</span> code <span class="ansi-blue-fg">&lt;</span> <span class="ansi-cyan-fg">300</span><span class="ansi-blue-fg">)</span><span class="ansi-blue-fg">:</span>
+<span class="ansi-green-intense-fg ansi-bold">    641</span>             response = self.parent.error(
+<span class="ansi-green-fg">--&gt; 642</span><span class="ansi-red-fg">                 'http', request, response, code, msg, hdrs)
+</span><span class="ansi-green-intense-fg ansi-bold">    643</span>
+<span class="ansi-green-intense-fg ansi-bold">    644</span>         <span class="ansi-green-fg">return</span> response
+
+<span class="ansi-green-fg">/opt/hostedtoolcache/Python/3.6.10/x64/lib/python3.6/urllib/request.py</span> in <span class="ansi-cyan-fg">error</span><span class="ansi-blue-fg">(self, proto, *args)</span>
+<span class="ansi-green-intense-fg ansi-bold">    568</span>         <span class="ansi-green-fg">if</span> http_err<span class="ansi-blue-fg">:</span>
+<span class="ansi-green-intense-fg ansi-bold">    569</span>             args <span class="ansi-blue-fg">=</span> <span class="ansi-blue-fg">(</span>dict<span class="ansi-blue-fg">,</span> <span class="ansi-blue-fg">'default'</span><span class="ansi-blue-fg">,</span> <span class="ansi-blue-fg">'http_error_default'</span><span class="ansi-blue-fg">)</span> <span class="ansi-blue-fg">+</span> orig_args
+<span class="ansi-green-fg">--&gt; 570</span><span class="ansi-red-fg">             </span><span class="ansi-green-fg">return</span> self<span class="ansi-blue-fg">.</span>_call_chain<span class="ansi-blue-fg">(</span><span class="ansi-blue-fg">*</span>args<span class="ansi-blue-fg">)</span>
+<span class="ansi-green-intense-fg ansi-bold">    571</span>
+<span class="ansi-green-intense-fg ansi-bold">    572</span> <span class="ansi-red-fg"># XXX probably also want an abstract factory that knows when it makes</span>
+
+<span class="ansi-green-fg">/opt/hostedtoolcache/Python/3.6.10/x64/lib/python3.6/urllib/request.py</span> in <span class="ansi-cyan-fg">_call_chain</span><span class="ansi-blue-fg">(self, chain, kind, meth_name, *args)</span>
+<span class="ansi-green-intense-fg ansi-bold">    502</span>         <span class="ansi-green-fg">for</span> handler <span class="ansi-green-fg">in</span> handlers<span class="ansi-blue-fg">:</span>
+<span class="ansi-green-intense-fg ansi-bold">    503</span>             func <span class="ansi-blue-fg">=</span> getattr<span class="ansi-blue-fg">(</span>handler<span class="ansi-blue-fg">,</span> meth_name<span class="ansi-blue-fg">)</span>
+<span class="ansi-green-fg">--&gt; 504</span><span class="ansi-red-fg">             </span>result <span class="ansi-blue-fg">=</span> func<span class="ansi-blue-fg">(</span><span class="ansi-blue-fg">*</span>args<span class="ansi-blue-fg">)</span>
+<span class="ansi-green-intense-fg ansi-bold">    505</span>             <span class="ansi-green-fg">if</span> result <span class="ansi-green-fg">is</span> <span class="ansi-green-fg">not</span> <span class="ansi-green-fg">None</span><span class="ansi-blue-fg">:</span>
+<span class="ansi-green-intense-fg ansi-bold">    506</span>                 <span class="ansi-green-fg">return</span> result
+
+<span class="ansi-green-fg">/opt/hostedtoolcache/Python/3.6.10/x64/lib/python3.6/urllib/request.py</span> in <span class="ansi-cyan-fg">http_error_default</span><span class="ansi-blue-fg">(self, req, fp, code, msg, hdrs)</span>
+<span class="ansi-green-intense-fg ansi-bold">    648</span> <span class="ansi-green-fg">class</span> HTTPDefaultErrorHandler<span class="ansi-blue-fg">(</span>BaseHandler<span class="ansi-blue-fg">)</span><span class="ansi-blue-fg">:</span>
+<span class="ansi-green-intense-fg ansi-bold">    649</span>     <span class="ansi-green-fg">def</span> http_error_default<span class="ansi-blue-fg">(</span>self<span class="ansi-blue-fg">,</span> req<span class="ansi-blue-fg">,</span> fp<span class="ansi-blue-fg">,</span> code<span class="ansi-blue-fg">,</span> msg<span class="ansi-blue-fg">,</span> hdrs<span class="ansi-blue-fg">)</span><span class="ansi-blue-fg">:</span>
+<span class="ansi-green-fg">--&gt; 650</span><span class="ansi-red-fg">         </span><span class="ansi-green-fg">raise</span> HTTPError<span class="ansi-blue-fg">(</span>req<span class="ansi-blue-fg">.</span>full_url<span class="ansi-blue-fg">,</span> code<span class="ansi-blue-fg">,</span> msg<span class="ansi-blue-fg">,</span> hdrs<span class="ansi-blue-fg">,</span> fp<span class="ansi-blue-fg">)</span>
+<span class="ansi-green-intense-fg ansi-bold">    651</span>
+<span class="ansi-green-intense-fg ansi-bold">    652</span> <span class="ansi-green-fg">class</span> HTTPRedirectHandler<span class="ansi-blue-fg">(</span>BaseHandler<span class="ansi-blue-fg">)</span><span class="ansi-blue-fg">:</span>
+
+<span class="ansi-red-fg">HTTPError</span>: HTTP Error 404: Not Found
 </pre></div></div>
 </div>
-<div class="nbinput nblast docutils container">
+<div class="nbinput docutils container">
 <div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[3]:
 </pre></div>
 </div>
@@ -397,7 +542,23 @@ Name: aderton, dtype: object
 </pre></div>
 </div>
 </div>
-<div class="nbinput nblast docutils container">
+<div class="nboutput nblast docutils container">
+<div class="prompt empty docutils container">
+</div>
+<div class="output_area docutils container">
+<div class="highlight"><pre>
+<span class="ansi-red-fg">---------------------------------------------------------------------------</span>
+<span class="ansi-red-fg">NameError</span>                                 Traceback (most recent call last)
+<span class="ansi-green-fg">&lt;ipython-input-3-c31193fb277c&gt;</span> in <span class="ansi-cyan-fg">&lt;module&gt;</span>
+<span class="ansi-green-intense-fg ansi-bold">      1</span> <span class="ansi-green-fg">from</span> wordcloud <span class="ansi-green-fg">import</span> WordCloud
+<span class="ansi-green-intense-fg ansi-bold">      2</span>
+<span class="ansi-green-fg">----&gt; 3</span><span class="ansi-red-fg"> ordmoln = WordCloud(stopwords=set(stoppord), width=1000, height=1000,
+</span><span class="ansi-green-intense-fg ansi-bold">      4</span>                     background_color="white")
+
+<span class="ansi-red-fg">NameError</span>: name 'stoppord' is not defined
+</pre></div></div>
+</div>
+<div class="nbinput docutils container">
 <div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[4]:
 </pre></div>
 </div>
@@ -405,6 +566,19 @@ Name: aderton, dtype: object
 <span></span><span class="n">ordmoln</span> <span class="o">=</span> <span class="n">ordmoln</span><span class="o">.</span><span class="n">generate</span><span class="p">((</span><span class="s1">' '</span><span class="p">)</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">nyhetsrubriker</span><span class="p">))</span>
 </pre></div>
 </div>
+</div>
+<div class="nboutput nblast docutils container">
+<div class="prompt empty docutils container">
+</div>
+<div class="output_area docutils container">
+<div class="highlight"><pre>
+<span class="ansi-red-fg">---------------------------------------------------------------------------</span>
+<span class="ansi-red-fg">NameError</span>                                 Traceback (most recent call last)
+<span class="ansi-green-fg">&lt;ipython-input-4-53c8922b100d&gt;</span> in <span class="ansi-cyan-fg">&lt;module&gt;</span>
+<span class="ansi-green-fg">----&gt; 1</span><span class="ansi-red-fg"> </span>ordmoln <span class="ansi-blue-fg">=</span> ordmoln<span class="ansi-blue-fg">.</span>generate<span class="ansi-blue-fg">(</span><span class="ansi-blue-fg">(</span><span class="ansi-blue-fg">' '</span><span class="ansi-blue-fg">)</span><span class="ansi-blue-fg">.</span>join<span class="ansi-blue-fg">(</span>nyhetsrubriker<span class="ansi-blue-fg">)</span><span class="ansi-blue-fg">)</span>
+
+<span class="ansi-red-fg">NameError</span>: name 'ordmoln' is not defined
+</pre></div></div>
 </div>
 <div class="nbinput docutils container">
 <div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[5]:
@@ -420,14 +594,32 @@ Name: aderton, dtype: object
 </pre></div>
 </div>
 </div>
+<div class="nboutput docutils container">
+<div class="prompt empty docutils container">
+</div>
+<div class="output_area docutils container">
+<div class="highlight"><pre>
+<span class="ansi-red-fg">---------------------------------------------------------------------------</span>
+<span class="ansi-red-fg">NameError</span>                                 Traceback (most recent call last)
+<span class="ansi-green-fg">&lt;ipython-input-5-d8c5a6e37b91&gt;</span> in <span class="ansi-cyan-fg">&lt;module&gt;</span>
+<span class="ansi-green-intense-fg ansi-bold">      2</span>
+<span class="ansi-green-intense-fg ansi-bold">      3</span> plt<span class="ansi-blue-fg">.</span>figure<span class="ansi-blue-fg">(</span>figsize<span class="ansi-blue-fg">=</span><span class="ansi-blue-fg">(</span><span class="ansi-cyan-fg">10</span><span class="ansi-blue-fg">,</span> <span class="ansi-cyan-fg">10</span><span class="ansi-blue-fg">)</span><span class="ansi-blue-fg">)</span>
+<span class="ansi-green-fg">----&gt; 4</span><span class="ansi-red-fg"> </span>plt<span class="ansi-blue-fg">.</span>imshow<span class="ansi-blue-fg">(</span>ordmoln<span class="ansi-blue-fg">)</span>
+<span class="ansi-green-intense-fg ansi-bold">      5</span> plt<span class="ansi-blue-fg">.</span>axis<span class="ansi-blue-fg">(</span><span class="ansi-blue-fg">"off"</span><span class="ansi-blue-fg">)</span>
+<span class="ansi-green-intense-fg ansi-bold">      6</span> plt<span class="ansi-blue-fg">.</span>show<span class="ansi-blue-fg">(</span><span class="ansi-blue-fg">)</span>
+
+<span class="ansi-red-fg">NameError</span>: name 'ordmoln' is not defined
+</pre></div></div>
+</div>
 <div class="nboutput nblast docutils container">
 <div class="prompt empty docutils container">
 </div>
 <div class="output_area docutils container">
-<img alt="../_images/ordmoln_5_0.png" src="../_images/ordmoln_5_0.png"/>
+<div class="highlight"><pre>
+&lt;Figure size 720x720 with 0 Axes&gt;
+</pre></div></div>
 </div>
-</div>
-<div class="nbinput nblast docutils container">
+<div class="nbinput docutils container">
 <div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[6]:
 </pre></div>
 </div>
@@ -441,6 +633,28 @@ Name: aderton, dtype: object
 </pre></div>
 </div>
 </div>
+<div class="nboutput nblast docutils container">
+<div class="prompt empty docutils container">
+</div>
+<div class="output_area docutils container">
+<div class="highlight"><pre>
+<span class="ansi-red-fg">---------------------------------------------------------------------------</span>
+<span class="ansi-red-fg">UnidentifiedImageError</span>                    Traceback (most recent call last)
+<span class="ansi-green-fg">&lt;ipython-input-6-12ba96b88011&gt;</span> in <span class="ansi-cyan-fg">&lt;module&gt;</span>
+<span class="ansi-green-intense-fg ansi-bold">      4</span>
+<span class="ansi-green-intense-fg ansi-bold">      5</span> png <span class="ansi-blue-fg">=</span> requests<span class="ansi-blue-fg">.</span>get<span class="ansi-blue-fg">(</span><span class="ansi-blue-fg">'https://kodanka.fi/_static/anka.png'</span><span class="ansi-blue-fg">)</span>
+<span class="ansi-green-fg">----&gt; 6</span><span class="ansi-red-fg"> </span>anka <span class="ansi-blue-fg">=</span> Image<span class="ansi-blue-fg">.</span>open<span class="ansi-blue-fg">(</span>BytesIO<span class="ansi-blue-fg">(</span>png<span class="ansi-blue-fg">.</span>content<span class="ansi-blue-fg">)</span><span class="ansi-blue-fg">)</span>
+
+<span class="ansi-green-fg">/opt/hostedtoolcache/Python/3.6.10/x64/lib/python3.6/site-packages/PIL/Image.py</span> in <span class="ansi-cyan-fg">open</span><span class="ansi-blue-fg">(fp, mode)</span>
+<span class="ansi-green-intense-fg ansi-bold">   2894</span>         warnings<span class="ansi-blue-fg">.</span>warn<span class="ansi-blue-fg">(</span>message<span class="ansi-blue-fg">)</span>
+<span class="ansi-green-intense-fg ansi-bold">   2895</span>     raise UnidentifiedImageError(
+<span class="ansi-green-fg">-&gt; 2896</span><span class="ansi-red-fg">         </span><span class="ansi-blue-fg">"cannot identify image file %r"</span> <span class="ansi-blue-fg">%</span> <span class="ansi-blue-fg">(</span>filename <span class="ansi-green-fg">if</span> filename <span class="ansi-green-fg">else</span> fp<span class="ansi-blue-fg">)</span>
+<span class="ansi-green-intense-fg ansi-bold">   2897</span>     )
+<span class="ansi-green-intense-fg ansi-bold">   2898</span>
+
+<span class="ansi-red-fg">UnidentifiedImageError</span>: cannot identify image file &lt;_io.BytesIO object at 0x7f4763247e60&gt;
+</pre></div></div>
+</div>
 <div class="nbinput docutils container">
 <div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[7]:
 </pre></div>
@@ -451,12 +665,17 @@ Name: aderton, dtype: object
 </div>
 </div>
 <div class="nboutput nblast docutils container">
-<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[7]:
-</pre></div>
+<div class="prompt empty docutils container">
 </div>
 <div class="output_area docutils container">
-<img alt="../_images/ordmoln_7_0.png" src="../_images/ordmoln_7_0.png"/>
-</div>
+<div class="highlight"><pre>
+<span class="ansi-red-fg">---------------------------------------------------------------------------</span>
+<span class="ansi-red-fg">NameError</span>                                 Traceback (most recent call last)
+<span class="ansi-green-fg">&lt;ipython-input-7-1bbc6bb0125e&gt;</span> in <span class="ansi-cyan-fg">&lt;module&gt;</span>
+<span class="ansi-green-fg">----&gt; 1</span><span class="ansi-red-fg"> </span>anka
+
+<span class="ansi-red-fg">NameError</span>: name 'anka' is not defined
+</pre></div></div>
 </div>
 <div class="nbinput docutils container">
 <div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[8]:
@@ -475,13 +694,15 @@ Name: aderton, dtype: object
 </div>
 <div class="output_area docutils container">
 <div class="highlight"><pre>
-[[255 255 255 255]
- [255 255 255 255]
- [255 255 255 255]
- ...
- [255 255 255 255]
- [255 255 255 255]
- [255 255 255 255]]
+<span class="ansi-red-fg">---------------------------------------------------------------------------</span>
+<span class="ansi-red-fg">NameError</span>                                 Traceback (most recent call last)
+<span class="ansi-green-fg">&lt;ipython-input-8-771402e25a62&gt;</span> in <span class="ansi-cyan-fg">&lt;module&gt;</span>
+<span class="ansi-green-intense-fg ansi-bold">      1</span> <span class="ansi-green-fg">import</span> numpy <span class="ansi-green-fg">as</span> np
+<span class="ansi-green-intense-fg ansi-bold">      2</span>
+<span class="ansi-green-fg">----&gt; 3</span><span class="ansi-red-fg"> </span>mask <span class="ansi-blue-fg">=</span> np<span class="ansi-blue-fg">.</span>array<span class="ansi-blue-fg">(</span>anka<span class="ansi-blue-fg">)</span>
+<span class="ansi-green-intense-fg ansi-bold">      4</span> print<span class="ansi-blue-fg">(</span>mask<span class="ansi-blue-fg">[</span><span class="ansi-cyan-fg">0</span><span class="ansi-blue-fg">]</span><span class="ansi-blue-fg">)</span>
+
+<span class="ansi-red-fg">NameError</span>: name 'anka' is not defined
 </pre></div></div>
 </div>
 <div class="nbinput docutils container">
@@ -504,8 +725,18 @@ Name: aderton, dtype: object
 <div class="prompt empty docutils container">
 </div>
 <div class="output_area docutils container">
-<img alt="../_images/ordmoln_9_0.png" src="../_images/ordmoln_9_0.png"/>
-</div>
+<div class="highlight"><pre>
+<span class="ansi-red-fg">---------------------------------------------------------------------------</span>
+<span class="ansi-red-fg">NameError</span>                                 Traceback (most recent call last)
+<span class="ansi-green-fg">&lt;ipython-input-9-57c043b1f0ef&gt;</span> in <span class="ansi-cyan-fg">&lt;module&gt;</span>
+<span class="ansi-green-fg">----&gt; 1</span><span class="ansi-red-fg"> ordmoln = WordCloud(stopwords=set(stoppord), width=1000, height=1000,
+</span><span class="ansi-green-intense-fg ansi-bold">      2</span>                     background_color<span class="ansi-blue-fg">=</span><span class="ansi-blue-fg">"white"</span><span class="ansi-blue-fg">,</span>
+<span class="ansi-green-intense-fg ansi-bold">      3</span>                     mask=mask, contour_width=3, contour_color='steelblue')
+<span class="ansi-green-intense-fg ansi-bold">      4</span> ordmoln <span class="ansi-blue-fg">=</span> ordmoln<span class="ansi-blue-fg">.</span>generate<span class="ansi-blue-fg">(</span><span class="ansi-blue-fg">(</span><span class="ansi-blue-fg">' '</span><span class="ansi-blue-fg">)</span><span class="ansi-blue-fg">.</span>join<span class="ansi-blue-fg">(</span>nyhetsrubriker<span class="ansi-blue-fg">)</span><span class="ansi-blue-fg">)</span>
+<span class="ansi-green-intense-fg ansi-bold">      5</span> plt<span class="ansi-blue-fg">.</span>figure<span class="ansi-blue-fg">(</span>figsize<span class="ansi-blue-fg">=</span><span class="ansi-blue-fg">(</span><span class="ansi-cyan-fg">10</span><span class="ansi-blue-fg">,</span> <span class="ansi-cyan-fg">10</span><span class="ansi-blue-fg">)</span><span class="ansi-blue-fg">)</span>
+
+<span class="ansi-red-fg">NameError</span>: name 'stoppord' is not defined
+</pre></div></div>
 </div>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
 <span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
