@@ -91,10 +91,7 @@ for root, dirs, files in os.walk("_build"):
 
                 # Insert python console
                 if os.path.isfile(notebook):
-                    footer = soup.find("footer")
-                    console_header = soup.new_tag("h2")
-                    console_header.string = "Python kompilator"
-                    footer.insert_before(console_header)
+                    console_header = soup.find("div", attrs={"class": "section", "id": "Konsol"})
                     console = soup.new_tag("iframe", 
                         style="border: none; width: 100%; height: 500px; padding-bottom: 20px;",
                         scrolling="no",
@@ -103,20 +100,17 @@ for root, dirs, files in os.walk("_build"):
                         allowfullscreen="true",
                         sandbox="allow-forms allow-pointer-lock allow-popups allow-same-origin allow-scripts",
                         src="https://repl.it/@kodanka/python?lite=true")
-                    footer.insert_before(console)
+                    console_header.insert_after(console)
 
                 # Insert forms
                 if os.path.isfile(notebook):
                     try:
                         src = forms[name]
-                        footer = soup.find("footer")
-                        form_header = soup.new_tag("h2")
-                        form_header.string = "Quiz"
-                        footer.insert_before(form_header)
+                        form_header = soup.find("div", attrs={"class": "section", "id": "Quiz"})
                         form = soup.new_tag("iframe",
                             style="border: none; width: 100%; height: 500px; padding-bottom: 20px;",
                             src=src)
-                        footer.insert_before(form)
+                        form_header.insert_after(form)
                     except KeyError as e:
                         print(e, "lacks form")
 
