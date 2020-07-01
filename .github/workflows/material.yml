@@ -1,0 +1,21 @@
+name: Update material
+
+on:
+  pull_request:
+    branches:
+      - material
+
+jobs:
+  merge-branch:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v2
+    - name: Merge and commit
+      run: |
+        git config --global user.email "action@github.com"
+        git config --global user.name "GitHub Action"
+        git merge master
+        git checkout --ours *.ipynb
+        git add *.ipynb
+        git commit -m "Merge with master"
+        git push
