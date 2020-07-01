@@ -526,7 +526,7 @@ Mitt konto          https://tunnus.yle.fi/#mina-uppgifter
 </pre></div>
 </div>
 <div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
-<span></span><span class="n">innehall</span> <span class="o">=</span> <span class="n">soppa</span><span class="o">.</span><span class="n">find</span><span class="p">(</span><span class="s2">"body"</span><span class="p">)</span>
+<span></span><span class="n">innehall</span> <span class="o">=</span> <span class="n">soppa</span><span class="o">.</span><span class="n">find</span><span class="p">(</span><span class="s1">'body'</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
@@ -715,13 +715,13 @@ programmeringstips. Det är bra att veta att alla programmerare konstant söker 
 </tr>
 <tr>
 <th>3</th>
-<td>Tusentals Hongkongbor ute på gatorna i protest mot ny inskränkande lag - polisen grep människor med hänvisning till lagen</td>
-<td>https://svenska.yle.fi/artikel/2020/07/01/tusentals-hongkongbor-ute-pa-gatorna-i-protest-mot-ny-inskrankande-lag-polisen</td>
+<td>Preliminära uppgifter: Förlängt Putinstyre i sikte</td>
+<td>https://svenska.yle.fi/artikel/2020/07/01/forlangt-putinstyre-i-sikte-enligt-preliminara-uppgifter</td>
 </tr>
 <tr>
 <th>4</th>
-<td>Hongkongborna uppmärksammade 23 år under kinesiskt styre i dystra tecken - nationell säkerhetslag trädde i kraft under årsdagen</td>
-<td>https://svenska.yle.fi/artikel/2020/07/01/hongkongborna-uppmarksammade-23-ar-under-kinesiskt-styre-i-dystra-tecken</td>
+<td>Kommentar: Så länge ryssarna sväljer maktfullkomlighet och valfusk sitter Putin stadigt kvar</td>
+<td>https://svenska.yle.fi/artikel/2020/07/01/kommentar-sa-lange-ryssarna-svaljer-maktfullkomlighet-och-valfusk-sitter-putin</td>
 </tr>
 <tr>
 <th>5</th>
@@ -730,13 +730,13 @@ programmeringstips. Det är bra att veta att alla programmerare konstant söker 
 </tr>
 <tr>
 <th>6</th>
-<td>Kanoncomeback av Rasmus Schüller i HJK – visade vägen för stora guldfavoriten i premiären</td>
-<td>https://svenska.yle.fi/artikel/2020/07/01/kanoncomeback-av-rasmus-schuller-i-hjk-visade-vagen-for-stora-guldfavoriten-i</td>
+<td>Trumps säkerhetsrådgivare: Uppgifter om ryska skottpengar så "vaga" att presidenten inte informerades</td>
+<td>https://svenska.yle.fi/artikel/2020/07/01/trumps-sakerhetsradgivare-uppgifter-om-ryska-skottpengar-sa-vaga-att-presidenten</td>
 </tr>
 <tr>
 <th>7</th>
-<td>Mystisk massdöd bland elefanter i Botswana - ny sjukdom eller gift?</td>
-<td>https://svenska.yle.fi/artikel/2020/07/01/mystisk-massdod-bland-elefanter-i-botswana-ny-sjukdom-eller-gift</td>
+<td>Tusentals Hongkongbor ute på gatorna i protest mot ny inskränkande lag - polisen grep människor med hänvisning till lagen</td>
+<td>https://svenska.yle.fi/artikel/2020/07/01/tusentals-hongkongbor-ute-pa-gatorna-i-protest-mot-ny-inskrankande-lag-polisen</td>
 </tr>
 <tr>
 <th>8</th>
@@ -745,14 +745,24 @@ programmeringstips. Det är bra att veta att alla programmerare konstant söker 
 </tr>
 <tr>
 <th>9</th>
-<td>Talvivaaraledare friades - inget insiderbrott när teckningsrätter såldes</td>
-<td>https://svenska.yle.fi/artikel/2020/07/01/talvivaaraledare-friades-inget-insiderbrott-nar-teckningsratter-saldes</td>
+<td>Stor blunder av Tim Krul när Norwich åkte på ny förlust – Teemu Pukki fick bara spela en halvlek</td>
+<td>https://svenska.yle.fi/artikel/2020/07/01/stor-blunder-av-tim-krul-nar-norwich-akte-pa-ny-forlust-teemu-pukki-fick-bara</td>
 </tr>
 </tbody>
 </table>
 </div></div>
 </div>
-<p>Man kan spara nyheterna t.ex. som en <code class="docutils literal notranslate"><span class="pre">csv</span></code> fil med <code class="docutils literal notranslate"><span class="pre">pandas</span></code> funktionen <code class="docutils literal notranslate"><span class="pre">to_csv()</span></code> ifall man tänker använda datan man skrapar från nätet till något mer. Man kan t.ex. räkna statistik om man skrapar numror, eller se hur nyhets rubriker förändras olika dagar om man skrapar nyheter. När man skriver tabllen till en fil behöver man inte bry sig om <code class="docutils literal notranslate"><span class="pre">max_colwidth</span></code>, all data kommer nog med ändå. Hela programmet blir att se ut så här:</p>
+<p>Man kan spara nyheterna t.ex. som en <code class="docutils literal notranslate"><span class="pre">csv</span></code> fil med <code class="docutils literal notranslate"><span class="pre">pandas</span></code> funktionen <code class="docutils literal notranslate"><span class="pre">to_csv()</span></code> ifall man tänker använda datan man skrapar från nätet till något mer. Man kan t.ex. räkna statistik om man skrapar numror, eller se hur nyhets rubriker förändras olika dagar om man skrapar nyheter. När man skriver tabllen till en fil behöver man inte bry sig om <code class="docutils literal notranslate"><span class="pre">max_colwidth</span></code>, all data kommer nog med ändå.</p>
+<div class="nbinput nblast docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[14]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
+<span></span><span class="n">nyheter</span><span class="o">.</span><span class="n">to_csv</span><span class="p">(</span><span class="s1">'nyheter.csv'</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<p>Hela programmet blir att se ut så här:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">requests</span>
 <span class="kn">from</span> <span class="nn">bs4</span> <span class="kn">import</span> <span class="n">BeautifulSoup</span>
 <span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
@@ -760,7 +770,7 @@ programmeringstips. Det är bra att veta att alla programmerare konstant söker 
 <span class="n">yle</span> <span class="o">=</span> <span class="n">requests</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">'https://svenska.yle.fi'</span><span class="p">)</span>
 <span class="n">soppa</span> <span class="o">=</span> <span class="n">BeautifulSoup</span><span class="p">(</span><span class="n">yle</span><span class="o">.</span><span class="n">content</span><span class="p">,</span> <span class="s1">'html.parser'</span><span class="p">)</span>
 
-<span class="n">innehall</span> <span class="o">=</span> <span class="n">soppa</span><span class="o">.</span><span class="n">find</span><span class="p">(</span><span class="s2">"body"</span><span class="p">)</span>
+<span class="n">innehall</span> <span class="o">=</span> <span class="n">soppa</span><span class="o">.</span><span class="n">find</span><span class="p">(</span><span class="s1">'body'</span><span class="p">)</span>
 <span class="n">innehall_lankar</span> <span class="o">=</span> <span class="n">innehall</span><span class="o">.</span><span class="n">find_all</span><span class="p">(</span><span class="s1">'a'</span><span class="p">)</span>
 
 <span class="n">nyhetsrubriker</span> <span class="o">=</span> <span class="p">[]</span>
@@ -774,7 +784,7 @@ programmeringstips. Det är bra att veta att alla programmerare konstant söker 
 <span class="n">nyheter</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">({</span><span class="s1">'Rubrik'</span><span class="p">:</span> <span class="n">nyhetsrubriker</span><span class="p">,</span> <span class="s1">'Länk'</span><span class="p">:</span> <span class="n">nyhetslankar</span><span class="p">})</span>
 <span class="nb">print</span><span class="p">(</span><span class="n">nyheter</span><span class="o">.</span><span class="n">head</span><span class="p">(</span><span class="mi">10</span><span class="p">))</span>
 
-<span class="n">nyheter</span><span class="o">.</span><span class="n">to_csv</span><span class="p">(</span><span class="s2">"yle_nyheter.csv"</span><span class="p">)</span>
+<span class="n">nyheter</span><span class="o">.</span><span class="n">to_csv</span><span class="p">(</span><span class="s1">'yle_nyheter.csv'</span><span class="p">)</span>
 </pre></div>
 </div>
 <p>I nästa kapitel visualiserar vi nyhtetsrubrikerna som ordmoln!</p>
