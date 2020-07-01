@@ -24,7 +24,7 @@
 <link href="../genindex/" rel="index" title="Index"/>
 <link href="../search/" rel="search" title="Sök"/>
 <link href="../latex/" rel="next" title="LaTeX"/>
-<link href="../operationer/" rel="prev" title="Operationer"/>
+<link href="../operationer/" rel="prev" title="Tal och räkneoperationer"/>
 </head>
 <body class="wy-body-for-nav">
 <div class="wy-grid-for-nav">
@@ -56,8 +56,7 @@
 <p class="caption"><span class="caption-text">Grunder:</span></p>
 <ul class="current">
 <li class="toctree-l1"><a class="reference internal" href="../inledning/">Inledning</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../operationer/">Operationer</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../operationer/#Tal-och-räkneoperationer">Tal och räkneoperationer</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../operationer/">Tal och räkneoperationer</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../operationer/#Strängar">Strängar</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../operationer/#Variabler">Variabler</a></li>
 <li class="toctree-l1 current"><a class="current reference internal" href="#">Listor</a><ul>
@@ -65,18 +64,18 @@
 <li class="toctree-l2"><a class="reference internal" href="#Element-och-index">Element och index</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#append,-pop-och-remove"><code class="docutils literal notranslate"><span class="pre">append</span></code>, <code class="docutils literal notranslate"><span class="pre">pop</span></code> och <code class="docutils literal notranslate"><span class="pre">remove</span></code></a></li>
 <li class="toctree-l2"><a class="reference internal" href="#Iterering-över-listor">Iterering över listor</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#min,-max-och-medelvärde"><code class="docutils literal notranslate"><span class="pre">min</span></code>, <code class="docutils literal notranslate"><span class="pre">max</span></code> och medelvärde</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="#Övningar">Övningar</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="#Övning-1">Övning 1</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#Övning-2">Övning 2</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#Övning-3">Övning 3</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#Övning-4">Övning 4</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#min,-max-och-medelvärde"><code class="docutils literal notranslate"><span class="pre">min</span></code>, <code class="docutils literal notranslate"><span class="pre">max</span></code> och medelvärde</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#Övningar">Övningar</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#Övning-1">Övning 1</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#Övning-2">Övning 2</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#Övning-3">Övning 3</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#Övning-4">Övning 4</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#Konsol">Konsol</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#Quiz">Quiz</a></li>
 </ul>
 </li>
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="#Konsol">Konsol</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#Quiz">Quiz</a></li>
 </ul>
 </li>
 </ul>
@@ -715,10 +714,11 @@ medelvärde: 9.285714285714286
 </pre></div></div>
 </div>
 <p>I exemplet ovan fyller vi en lista kallad <code class="docutils literal notranslate"><span class="pre">flyttal</span></code> med sju stycken godtyckliga flyttal. Sedan skapar vi en variabel med namnet <code class="docutils literal notranslate"><span class="pre">summa</span></code> som är i början noll. Vi adderar till <code class="docutils literal notranslate"><span class="pre">summa</span></code> variablen varje flyttal i listan, med hjälp av en <code class="docutils literal notranslate"><span class="pre">for</span> <span class="pre">loop</span></code>. Denna summa är sedan delad med längden av listan (<code class="docutils literal notranslate"><span class="pre">len(flyttal)</span></code>) för att få medelvärdet.</p>
+</div>
 <div class="section" id="Övningar">
-<h3>Övningar<a class="headerlink" href="#Övningar" title="Permalink till denna rubrik">¶</a></h3>
+<h2>Övningar<a class="headerlink" href="#Övningar" title="Permalink till denna rubrik">¶</a></h2>
 <div class="section" id="Övning-1">
-<h4>Övning 1<a class="headerlink" href="#Övning-1" title="Permalink till denna rubrik">¶</a></h4>
+<h3>Övning 1<a class="headerlink" href="#Övning-1" title="Permalink till denna rubrik">¶</a></h3>
 <p>Skapa en lista med heltalen 0-19, t.ex. så här:</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">heltal</span> <span class="o">=</span> <span class="p">[]</span>
 <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">20</span><span class="p">):</span>
@@ -734,7 +734,7 @@ medelvärde: 9.285714285714286
 <p>Tips: Använd dig av indexeringen och iterering av listor.</p>
 </div>
 <div class="section" id="Övning-2">
-<h4>Övning 2<a class="headerlink" href="#Övning-2" title="Permalink till denna rubrik">¶</a></h4>
+<h3>Övning 2<a class="headerlink" href="#Övning-2" title="Permalink till denna rubrik">¶</a></h3>
 <p>Högsta uppmätta temperaturen under dagarna 24.5-22.6 år 2020 var som följer:</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">temperatur</span> <span class="o">=</span> <span class="p">[</span><span class="mf">13.0</span> <span class="mf">16.2</span> <span class="mf">16.7</span> <span class="mf">17.4</span> <span class="mf">15.7</span> <span class="mf">15.8</span> <span class="mf">18.5</span> <span class="mf">17.1</span> <span class="mf">13.7</span> <span class="mf">14.3</span> <span class="mf">15.8</span> <span class="mf">16.4</span> <span class="mf">13.8</span> <span class="mf">15.2</span> <span class="mf">16.5</span> <span class="mf">18.7</span> <span class="mf">17.0</span> <span class="mf">21.7</span> <span class="mf">20.0</span> <span class="mf">19.9</span> <span class="mf">19.5</span> <span class="mf">20.7</span> <span class="mf">21.6</span> <span class="mf">23.2</span> <span class="mf">21.7</span> <span class="mf">21.2</span> <span class="mf">24.4</span> <span class="mf">22.5</span> <span class="mf">18.9</span> <span class="mf">20.4</span><span class="p">]</span>
 </pre></div>
@@ -742,7 +742,7 @@ medelvärde: 9.285714285714286
 <p>Kopiera denna lista till din kod och ge följande information: Det minsta värdet, det högsta värdet, samt medeltalet av temperaturerna.</p>
 </div>
 <div class="section" id="Övning-3">
-<h4>Övning 3<a class="headerlink" href="#Övning-3" title="Permalink till denna rubrik">¶</a></h4>
+<h3>Övning 3<a class="headerlink" href="#Övning-3" title="Permalink till denna rubrik">¶</a></h3>
 <p>Skriv ett program som skapar en inköpslista. Programmet skall ha tre funktionaliteter: Att lägga till produkter, ta bort produkter samt att printa ut produkterna som en lista.</p>
 <p>Programmet skall fungera så här när du kör det:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">Ge</span> <span class="n">kommando</span><span class="p">:</span> <span class="n">lägg</span> <span class="n">till</span>
@@ -762,7 +762,7 @@ medelvärde: 9.285714285714286
 <p>Tips: <code class="docutils literal notranslate"><span class="pre">while</span></code> loopen och <code class="docutils literal notranslate"><span class="pre">input</span></code> funktionen från tidigare är nyttiga här.</p>
 </div>
 <div class="section" id="Övning-4">
-<h4>Övning 4<a class="headerlink" href="#Övning-4" title="Permalink till denna rubrik">¶</a></h4>
+<h3>Övning 4<a class="headerlink" href="#Övning-4" title="Permalink till denna rubrik">¶</a></h3>
 <p>Fortsätt utveckla på programmet i föregående övning genom att lägga till en funktionalitet för att räkna ut priset för inköpen.</p>
 <p>Programmet skall fungera så här när du kör det:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span>Ge kommando: lägg till
@@ -779,21 +779,20 @@ Ge kommando: sluta
 </pre></div>
 </div>
 <p>Notera här också att allt efter ”:” är användarens input!</p>
-</div>
-</div>
-</div>
 <div class="section" id="Konsol">
-<h2>Konsol<a class="headerlink" href="#Konsol" title="Permalink till denna rubrik">¶</a></h2>
+<h4>Konsol<a class="headerlink" href="#Konsol" title="Permalink till denna rubrik">¶</a></h4>
 </div><iframe allowfullscreen="true" allowtransparency="true" frameborder="no" sandbox="allow-forms allow-pointer-lock allow-popups allow-same-origin allow-scripts" scrolling="no" src="https://repl.it/@kodanka/python?lite=true" style="border: none; width: 100%; height: 500px; padding-bottom: 20px;"></iframe>
 <div class="section" id="Quiz">
-<h2>Quiz<a class="headerlink" href="#Quiz" title="Permalink till denna rubrik">¶</a></h2>
+<h4>Quiz<a class="headerlink" href="#Quiz" title="Permalink till denna rubrik">¶</a></h4>
 </div><iframe src="https://docs.google.com/forms/d/e/1FAIpQLSeb6ntlHgATI0pLBQ0w3KD6-iQeRVavkDAV_yRb8FKnZLFPtQ/viewform?embedded=true" style="border: none; width: 100%; height: 500px; padding-bottom: 20px;"></iframe>
 </div>
 </div>
 </div>
-<footer><div aria-label="footer navigation" class="rst-footer-buttons" role="navigation"><a accesskey="p" class="btn btn-neutral float-left" href="../operationer/" rel="prev" title="Operationer"><span class="fa fa-arrow-circle-left"></span> Föregående</a>
+</div>
+</div>
+<footer><div aria-label="footer navigation" class="rst-footer-buttons" role="navigation"><a accesskey="p" class="btn btn-neutral float-left" href="../operationer/" rel="prev" title="Tal och räkneoperationer"><span class="fa fa-arrow-circle-left"></span> Föregående</a>
 <a accesskey="n" class="btn btn-neutral float-right" href="../latex/" rel="next" title="LaTeX">Nästa <span class="fa fa-arrow-circle-right"></span></a>
-</div><hr/><div role="contentinfo">© Copyright 2020, Kodanka</div></footer>
+</div><hr/><div role="contentinfo">© Copyright 2020, Kodanka | Sphinx tema av Read the Docs</div><br/><a href="http://creativecommons.org/licenses/by-nc-sa/4.0"><img alt="Visa licens" src="../_static/by-nc-sa.svg" style="width: 88px; height: 31px;"/></a></footer>
 </div>
 </div>
 </section>

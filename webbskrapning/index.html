@@ -55,8 +55,7 @@
 <p class="caption"><span class="caption-text">Grunder:</span></p>
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="../inledning/">Inledning</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../operationer/">Operationer</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../operationer/#Tal-och-räkneoperationer">Tal och räkneoperationer</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../operationer/">Tal och räkneoperationer</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../operationer/#Strängar">Strängar</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../operationer/#Variabler">Variabler</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../listor/">Listor</a></li>
@@ -68,7 +67,12 @@
 <p class="caption"><span class="caption-text">Projekt:</span></p>
 <ul class="current">
 <li class="toctree-l1 current"><a class="current reference internal" href="#">Webbskrapning</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="#Dagens-nyheter">Dagens nyheter</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#Dagens-nyheter">Dagens nyheter</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#Hitta-HTML-element">Hitta HTML element</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#Spara-innehåll-i-listor">Spara innehåll i listor</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#Skapa-en-tabell">Skapa en tabell</a></li>
+</ul>
+</li>
 <li class="toctree-l2"><a class="reference internal" href="#Konsol">Konsol</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#Quiz">Quiz</a></li>
 </ul>
@@ -337,20 +341,19 @@ div.rendered_html tbody tr:hover {
 </style>
 <div class="section" id="Webbskrapning">
 <h1>Webbskrapning<a class="headerlink" href="#Webbskrapning" title="Permalink till denna rubrik">¶</a></h1>
-<p>Webbskrapning (<em>eng. web scraping</em>) går ut på att hämta information från sidor på nätet</p>
-<p>Motiveringar:</p>
+<p>Webbskrapning (<em>eng. web scraping</em>) går ut på att automatisera sökandet av information från sidor på nätet. Här är några motiveringar till varför man kan göra det:</p>
 <ul class="simple">
-<li><p>När data du behöver inte finns färdigt samlad</p></li>
-<li><p>Forskningssyfte för att skaffa information</p></li>
-<li><p>Kommersiellt syfte för att automatisera marknadsföring eller analysera kunders val på nätet</p></li>
+<li><p>När den data du behöver inte finns färdigt samlad</p></li>
+<li><p>I forskningssyfte för att skaffa information</p></li>
+<li><p>I kommersiellt syfte för att analysera kunders val på nätet och automatisera marknadsföring</p></li>
 </ul>
-<p>Lagligt?</p>
-<p>Allmänt tillgänglig data</p>
+<p>Men är det lagligt? Jo, så länge man skrapar allmänt tillgänglig data:</p>
 <ul class="simple">
 <li><p>Användaren har gjort datan offentlig</p></li>
 <li><p>Det krävs inget konto för att nå datan</p></li>
-<li><p>Sidan är inte blockerad av en <code class="docutils literal notranslate"><span class="pre">robots.txt</span></code> fil, exempelvis Yle har en sådan <a class="reference external" href="https://yle.fi/robots.txt">https://yle.fi/robots.txt</a>. Vi tar och ser vad den innehåller:</p></li>
+<li><p>Sidan är inte blockerad av en <code class="docutils literal notranslate"><span class="pre">robots.txt</span></code> fil</p></li>
 </ul>
+<p>Som exempel har Yle en sådan fil med restriktioner, <a class="reference external" href="https://yle.fi/robots.txt">https://yle.fi/robots.txt</a>. Vi tar och ser vad den innehåller. Ett lätt sätt att ladda sidor från internet i Python är genom att använda <code class="docutils literal notranslate"><span class="pre">requests.get()</span></code>:</p>
 <div class="nbinput docutils container">
 <div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[1]:
 </pre></div>
@@ -358,8 +361,8 @@ div.rendered_html tbody tr:hover {
 <div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
 <span></span><span class="kn">import</span> <span class="nn">requests</span>
 
-<span class="n">robots</span> <span class="o">=</span> <span class="n">requests</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">'https://yle.fi/robots.txt'</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="n">sida</span><span class="o">.</span><span class="n">text</span><span class="p">)</span>
+<span class="n">restriktioner</span> <span class="o">=</span> <span class="n">requests</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">'https://yle.fi/robots.txt'</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">restriktioner</span><span class="o">.</span><span class="n">text</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
@@ -368,23 +371,42 @@ div.rendered_html tbody tr:hover {
 </div>
 <div class="output_area docutils container">
 <div class="highlight"><pre>
-<span class="ansi-red-fg">---------------------------------------------------------------------------</span>
-<span class="ansi-red-fg">NameError</span>                                 Traceback (most recent call last)
-<span class="ansi-green-fg">&lt;ipython-input-1-6cb3879ca2bb&gt;</span> in <span class="ansi-cyan-fg">&lt;module&gt;</span>
-<span class="ansi-green-intense-fg ansi-bold">      2</span>
-<span class="ansi-green-intense-fg ansi-bold">      3</span> robots <span class="ansi-blue-fg">=</span> requests<span class="ansi-blue-fg">.</span>get<span class="ansi-blue-fg">(</span><span class="ansi-blue-fg">'https://yle.fi/robots.txt'</span><span class="ansi-blue-fg">)</span>
-<span class="ansi-green-fg">----&gt; 4</span><span class="ansi-red-fg"> </span>print<span class="ansi-blue-fg">(</span>sida<span class="ansi-blue-fg">.</span>text<span class="ansi-blue-fg">)</span>
+User-agent: *
+Disallow: /ylefiroot-errors
+Disallow: /cgi-bin
+Disallow: /klaffi
+Disallow: /java
+Disallow: /player
+Disallow: /errorsivut/
+Disallow: /global/
+Disallow: /haku/
+Disallow: /eurovision/
+Disallow: /embed/
+Allow: /global/api/load.php
+Allow: /cgi-bin/tekstitv/ttv.cgi/
 
-<span class="ansi-red-fg">NameError</span>: name 'sida' is not defined
+
+#yle.fi/aihe, aka. FYND - contact drupal@yle.fi if needed
+Disallow: /aihe/flag/
+Disallow: /aihe/ajax_comments/
+Disallow: /aihe/comment/reply/
+
+# karttasovellus APla 9.7.2015
+Disallow: /karttasovellus/
 </pre></div></div>
 </div>
 <ul class="simple">
 <li><p><code class="docutils literal notranslate"><span class="pre">User-agent:</span> <span class="pre">*</span></code> i filen innebär att restriktionerna gäller alla sorters robotar</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">Disallow:</span> <span class="pre">/eurovision/</span></code> innebär att robotar inte får skrapa <a class="reference external" href="https://yle.fi/eurovision/">https://yle.fi/eurovision/</a></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">Disallow:</span> <span class="pre">/eurovision/</span></code> innebär att robotar inte får skrapa t.ex. <a class="reference external" href="https://yle.fi/eurovision/">https://yle.fi/eurovision/</a></p></li>
 </ul>
+<div class="admonition note">
+<p class="admonition-title fa fa-exclamation-circle">Övning 1</p>
+<p>Sök på olika sidor som du brukar använda ifall de har en <code class="docutils literal notranslate"><span class="pre">robots.txt</span></code> fil. Försök förstå vilka sidor de avråder robotar från att besöka. Om du vill veta mer om <em>The Robots Exclusion Protocol</em> hittar man information här <a class="reference external" href="https://www.robotstxt.org">https://www.robotstxt.org</a>.</p>
+</div>
 <div class="section" id="Dagens-nyheter">
 <h2>Dagens nyheter<a class="headerlink" href="#Dagens-nyheter" title="Permalink till denna rubrik">¶</a></h2>
-<p>Vårt mål är här att automatiskt få dagens nyheter listade.</p>
+<p>Nu ska vi se om vi lyckas skrapa Svenska Yles framsida för att få dagens nyheter listade. Vi börjar med att importera <code class="docutils literal notranslate"><span class="pre">BeautifulSoup</span></code> som är ett paket i Python för att navigera HTML (HyperText Markup Language), d.v.s. språket som webbsidor skrivs i. Sedan söker vi sidan på nätet med <code class="docutils literal notranslate"><span class="pre">requests</span></code> paketet igen och omvandlar sidans innehåll med en HTML parser till en s.k. <em>soppa</em> som <code class="docutils literal notranslate"><span class="pre">Beautifulsoup</span></code> kan hantera. En parser är något som förstår syntaxen (regler, grammatik, uppbyggnad) för ett
+språk som i vårt fall är HTML.</p>
 <div class="nbinput nblast docutils container">
 <div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[2]:
 </pre></div>
@@ -392,11 +414,14 @@ div.rendered_html tbody tr:hover {
 <div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
 <span></span><span class="kn">from</span> <span class="nn">bs4</span> <span class="kn">import</span> <span class="n">BeautifulSoup</span>
 
-<span class="n">yle</span> <span class="o">=</span> <span class="n">requests</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">'https://svenska.yle.fi/'</span><span class="p">)</span>
+<span class="n">yle</span> <span class="o">=</span> <span class="n">requests</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">'https://svenska.yle.fi'</span><span class="p">)</span>
 <span class="n">soppa</span> <span class="o">=</span> <span class="n">BeautifulSoup</span><span class="p">(</span><span class="n">yle</span><span class="o">.</span><span class="n">content</span><span class="p">,</span> <span class="s1">'html.parser'</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
+<div class="section" id="Hitta-HTML-element">
+<h3>Hitta HTML element<a class="headerlink" href="#Hitta-HTML-element" title="Permalink till denna rubrik">¶</a></h3>
+<p>Man kan hitta information i sidan med <code class="docutils literal notranslate"><span class="pre">find()</span></code>, vi söker sidans titel som syns uppe i sidans flik i sökmotorn. HTML använder <code class="docutils literal notranslate"><span class="pre">&lt;tagg&gt;&lt;/tagg&gt;</span></code> för olika typer av innehåll, och genom att byta ut <code class="docutils literal notranslate"><span class="pre">tagg</span></code> till t.ex. <code class="docutils literal notranslate"><span class="pre">title</span></code> = titel, <code class="docutils literal notranslate"><span class="pre">header</span></code> = sidhuvud eller <code class="docutils literal notranslate"><span class="pre">footer</span></code> = sidfot får man olika sorters element på webbsidor.</p>
 <div class="nbinput docutils container">
 <div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[3]:
 </pre></div>
@@ -415,14 +440,36 @@ div.rendered_html tbody tr:hover {
 &lt;title&gt;Svenska Yle&lt;/title&gt;
 </pre></div></div>
 </div>
+<p>Sedan kollar vi på sidhuvudet som ofta har lite inledande information samt länkar för att navigera sidan. Själva länkarna finner vi genom HTML taggen <code class="docutils literal notranslate"><span class="pre">&lt;a&gt;</span></code>, man kan få alla på en gång som en lista genom att använda <code class="docutils literal notranslate"><span class="pre">find_all()</span></code>. Själva webaddressen finns i HTML under <code class="docutils literal notranslate"><span class="pre">href</span></code>. Man kan göra det lite snyggare då man skriver ut <code class="docutils literal notranslate"><span class="pre">BeautifulSoup</span></code> element genom att använda <code class="docutils literal notranslate"><span class="pre">prettify()</span></code></p>
 <div class="nbinput docutils container">
 <div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[4]:
 </pre></div>
 </div>
 <div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
 <span></span><span class="n">sidhuvud</span> <span class="o">=</span> <span class="n">soppa</span><span class="o">.</span><span class="n">find</span><span class="p">(</span><span class="s1">'header'</span><span class="p">)</span>
+<span class="n">sidhuvud_lankar</span> <span class="o">=</span> <span class="n">sidhuvud</span><span class="o">.</span><span class="n">find_all</span><span class="p">(</span><span class="s1">'a'</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">sidhuvud_lankar</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="o">.</span><span class="n">prettify</span><span class="p">())</span>
+</pre></div>
+</div>
+</div>
+<div class="nboutput nblast docutils container">
+<div class="prompt empty docutils container">
+</div>
+<div class="output_area docutils container">
+<div class="highlight"><pre>
+&lt;a href="https://svenska.yle.fi" id="yle-header-main-link--svenska-yle" tabindex="0"&gt;
+ Svenska Yle
+&lt;/a&gt;
 
-<span class="k">for</span> <span class="n">lank</span> <span class="ow">in</span> <span class="n">sidhuvud</span><span class="o">.</span><span class="n">find_all</span><span class="p">(</span><span class="s1">'a'</span><span class="p">,</span> <span class="n">text</span><span class="o">=</span><span class="kc">True</span><span class="p">):</span>
+</pre></div></div>
+</div>
+<p>Eftersom vi sökte länkarna som en lista kan man loopa igenom dem och deras texter! Man får texten för ett <code class="docutils literal notranslate"><span class="pre">Beautifulsoup</span></code> element med <code class="docutils literal notranslate"><span class="pre">text</span></code> funktionen och länkar fås med <code class="docutils literal notranslate"><span class="pre">get('href')</span></code>. Här skrivs allt ut som <code class="docutils literal notranslate"><span class="pre">f-strängar</span></code> för att få enhetliga mellanrum mellan text och länkar.</p>
+<div class="nbinput docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[5]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
+<span></span><span class="k">for</span> <span class="n">lank</span> <span class="ow">in</span> <span class="n">sidhuvud_lankar</span><span class="p">:</span>
   <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">"</span><span class="si">{</span><span class="n">lank</span><span class="o">.</span><span class="n">text</span><span class="si">:</span><span class="s2">20s</span><span class="si">}{</span><span class="n">lank</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">'href'</span><span class="p">)</span><span class="si">}</span><span class="s2">"</span><span class="p">)</span>
 </pre></div>
 </div>
@@ -457,22 +504,38 @@ Fler ämnen          https://svenska.yle.fi/lista/amnessidor
 Mitt konto          https://tunnus.yle.fi/#mina-uppgifter
 </pre></div></div>
 </div>
-<p>Vi söker alla länkar</p>
+<div class="admonition note">
+<p class="admonition-title fa fa-exclamation-circle">Övning 2</p>
+<p>Se vad du hittar för länkar i sidfoten på <a class="reference external" href="https://svenska.yle.fi">https://svenska.yle.fi</a>, tips: börja med att söka på <code class="docutils literal notranslate"><span class="pre">footer</span></code>. Skriv ut webbadresserna tillsammans med deras texter. Här är en grund för programmet:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">requests</span>
+<span class="kn">from</span> <span class="nn">bs4</span> <span class="kn">import</span> <span class="n">BeautifulSoup</span>
+
+<span class="n">yle</span> <span class="o">=</span> <span class="n">requests</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">'https://svenska.yle.fi'</span><span class="p">)</span>
+<span class="n">soppa</span> <span class="o">=</span> <span class="n">BeautifulSoup</span><span class="p">(</span><span class="n">yle</span><span class="o">.</span><span class="n">content</span><span class="p">,</span> <span class="s1">'html.parser'</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="section" id="Spara-innehåll-i-listor">
+<h3>Spara innehåll i listor<a class="headerlink" href="#Spara-innehåll-i-listor" title="Permalink till denna rubrik">¶</a></h3>
+<p>Nyheterna som vi är intresserade av att hitta finns i huvudinnehållet i sidan innanför <code class="docutils literal notranslate"><span class="pre">&lt;body&gt;...&lt;/body&gt;</span></code> så vi börjar med att söka på det.</p>
 <div class="nbinput nblast docutils container">
-<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[5]:
-</pre></div>
-</div>
-<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
-<span></span><span class="n">yle_lankar</span> <span class="o">=</span> <span class="n">soppa</span><span class="o">.</span><span class="n">find_all</span><span class="p">(</span><span class="s1">'a'</span><span class="p">)</span>
-</pre></div>
-</div>
-</div>
-<div class="nbinput docutils container">
 <div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[6]:
 </pre></div>
 </div>
 <div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
-<span></span><span class="nb">print</span><span class="p">(</span><span class="n">yle_lankar</span><span class="p">[</span><span class="mi">2</span><span class="p">]</span><span class="o">.</span><span class="n">prettify</span><span class="p">())</span>
+<span></span><span class="n">innehall</span> <span class="o">=</span> <span class="n">soppa</span><span class="o">.</span><span class="n">find</span><span class="p">(</span><span class="s2">"body"</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<p>Rubriker i HTML finns innanför <code class="docutils literal notranslate"><span class="pre">&lt;h1&gt;</span></code>, <code class="docutils literal notranslate"><span class="pre">&lt;h2&gt;</span></code>, o.s.v. beroende på vilken nivå/storlekt rubriken har. Vi ser om vi hittar något som skulle likna en nyhet.</p>
+<div class="nbinput docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[7]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
+<span></span><span class="nb">print</span><span class="p">(</span><span class="n">innehall</span><span class="o">.</span><span class="n">find</span><span class="p">(</span><span class="s1">'h1'</span><span class="p">)</span><span class="o">.</span><span class="n">prettify</span><span class="p">())</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">innehall</span><span class="o">.</span><span class="n">find</span><span class="p">(</span><span class="s1">'h2'</span><span class="p">)</span><span class="o">.</span><span class="n">prettify</span><span class="p">())</span>
 </pre></div>
 </div>
 </div>
@@ -481,18 +544,22 @@ Mitt konto          https://tunnus.yle.fi/#mina-uppgifter
 </div>
 <div class="output_area docutils container">
 <div class="highlight"><pre>
-&lt;a href="https://svenska.yle.fi" id="yle-header-main-link--svenska-yle" tabindex="0"&gt;
- Svenska Yle
-&lt;/a&gt;
+&lt;h1 class="visually-hidden"&gt;
+ Innehåll från svenska.yle.fi
+&lt;/h1&gt;
 
+&lt;h2 class="visually-hidden focusable"&gt;
+ Huvudinnehåll
+&lt;/h2&gt;
 </pre></div></div>
 </div>
+<p>Det verkar som att <code class="docutils literal notranslate"><span class="pre">&lt;h1&gt;</span></code> och <code class="docutils literal notranslate"><span class="pre">&lt;h2&gt;</span></code> inte fungerar so nyhetsubriker på sidan, men se däremot på <code class="docutils literal notranslate"><span class="pre">&lt;h3&gt;</span></code>:</p>
 <div class="nbinput docutils container">
-<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[7]:
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[8]:
 </pre></div>
 </div>
 <div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
-<span></span><span class="nb">print</span><span class="p">(</span><span class="n">soppa</span><span class="o">.</span><span class="n">find</span><span class="p">(</span><span class="s1">'h3'</span><span class="p">)</span><span class="o">.</span><span class="n">prettify</span><span class="p">())</span>
+<span></span><span class="nb">print</span><span class="p">(</span><span class="n">innehall</span><span class="o">.</span><span class="n">find</span><span class="p">(</span><span class="s1">'h3'</span><span class="p">)</span><span class="o">.</span><span class="n">prettify</span><span class="p">())</span>
 </pre></div>
 </div>
 </div>
@@ -502,21 +569,32 @@ Mitt konto          https://tunnus.yle.fi/#mina-uppgifter
 <div class="output_area docutils container">
 <div class="highlight"><pre>
 &lt;h3 class="js-ydd-card-title flex txt-16"&gt;
- Senaste nytt om coronaviruset
+ Ted &amp;amp; Kaj: Din mamma var en sköldpadda
 &lt;/h3&gt;
 
 </pre></div></div>
 </div>
-<div class="nbinput docutils container">
-<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[8]:
+<p>Nu vet vi hur vi hittar nyhternas rubriker, men vad är de utan länkar till själva nyheten? Dem kan vi hitta genom att igen söka på alla <code class="docutils literal notranslate"><span class="pre">&lt;a&gt;</span></code> taggar.</p>
+<div class="nbinput nblast docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[9]:
 </pre></div>
 </div>
 <div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
-<span></span><span class="k">for</span> <span class="n">yle_lank</span> <span class="ow">in</span> <span class="n">yle_lankar</span><span class="p">:</span>
-  <span class="n">rubrik</span> <span class="o">=</span> <span class="n">yle_lank</span><span class="o">.</span><span class="n">find</span><span class="p">(</span><span class="s1">'h3'</span><span class="p">)</span>
+<span></span><span class="n">innehall_lankar</span> <span class="o">=</span> <span class="n">innehall</span><span class="o">.</span><span class="n">find_all</span><span class="p">(</span><span class="s1">'a'</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<p>Vi vill hitta de länkar som är associerade till en nyhetsrubrik, så vi söker efter rubrik taggen <code class="docutils literal notranslate"><span class="pre">&lt;h3&gt;</span></code> i varje länk. Nu för att se att det fungerar avslutas loopen med <code class="docutils literal notranslate"><span class="pre">break</span></code> efter att vi hittat den första rubriken. För att få bort onödiga mellanrum som finns kring en del rubriker använder vi <code class="docutils literal notranslate"><span class="pre">strip()</span></code> funktionen.</p>
+<div class="nbinput docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[10]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
+<span></span><span class="k">for</span> <span class="n">lank</span> <span class="ow">in</span> <span class="n">innehall_lankar</span><span class="p">:</span>
+  <span class="n">rubrik</span> <span class="o">=</span> <span class="n">lank</span><span class="o">.</span><span class="n">find</span><span class="p">(</span><span class="s1">'h3'</span><span class="p">)</span>
   <span class="k">if</span> <span class="n">rubrik</span><span class="p">:</span>
     <span class="nb">print</span><span class="p">(</span><span class="s1">'Rubrik:'</span><span class="p">,</span> <span class="n">rubrik</span><span class="o">.</span><span class="n">text</span><span class="o">.</span><span class="n">strip</span><span class="p">())</span>
-    <span class="nb">print</span><span class="p">(</span><span class="s1">'Länk:'</span><span class="p">,</span> <span class="n">yle_lank</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">'href'</span><span class="p">))</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s1">'Länk:'</span><span class="p">,</span> <span class="n">lank</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">'href'</span><span class="p">))</span>
     <span class="k">break</span>
 </pre></div>
 </div>
@@ -526,40 +604,62 @@ Mitt konto          https://tunnus.yle.fi/#mina-uppgifter
 </div>
 <div class="output_area docutils container">
 <div class="highlight"><pre>
-Rubrik: Senaste nytt om coronaviruset
-Länk: https://svenska.yle.fi/coronavirus
+Rubrik: Ted &amp; Kaj: Din mamma var en sköldpadda
+Länk: https://arenan.yle.fi/1-50576822
 </pre></div></div>
 </div>
-<p>href egenskapen anger länkens destination</p>
+<p>Det ser ju bra ut, då gör vi lika för alla länkar i innehållet och sparar resultatet i två listor, <code class="docutils literal notranslate"><span class="pre">nyhetsrubriker</span></code> och <code class="docutils literal notranslate"><span class="pre">nyhetslankar</span></code>.</p>
 <div class="nbinput nblast docutils container">
-<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[9]:
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[11]:
 </pre></div>
 </div>
 <div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
-<span></span><span class="n">rubriker</span> <span class="o">=</span> <span class="p">[]</span>
-<span class="n">lankar</span> <span class="o">=</span> <span class="p">[]</span>
+<span></span><span class="n">nyhetsrubriker</span> <span class="o">=</span> <span class="p">[]</span>
+<span class="n">nyhetslankar</span> <span class="o">=</span> <span class="p">[]</span>
 
-<span class="k">for</span> <span class="n">yle_lank</span> <span class="ow">in</span> <span class="n">yle_lankar</span><span class="p">:</span>
-  <span class="n">rubrik</span> <span class="o">=</span> <span class="n">yle_lank</span><span class="o">.</span><span class="n">find</span><span class="p">(</span><span class="s1">'h3'</span><span class="p">)</span>
+<span class="k">for</span> <span class="n">lank</span> <span class="ow">in</span> <span class="n">innehall_lankar</span><span class="p">:</span>
+  <span class="n">rubrik</span> <span class="o">=</span> <span class="n">lank</span><span class="o">.</span><span class="n">find</span><span class="p">(</span><span class="s1">'h3'</span><span class="p">)</span>
   <span class="k">if</span> <span class="n">rubrik</span><span class="p">:</span>
-    <span class="n">rubriker</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">rubrik</span><span class="o">.</span><span class="n">text</span><span class="o">.</span><span class="n">strip</span><span class="p">())</span>
-    <span class="n">lankar</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">yle_lank</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">'href'</span><span class="p">))</span>
+    <span class="n">nyhetsrubriker</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">rubrik</span><span class="o">.</span><span class="n">text</span><span class="o">.</span><span class="n">strip</span><span class="p">())</span>
+    <span class="n">nyhetslankar</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">lank</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">'href'</span><span class="p">))</span>
 </pre></div>
 </div>
 </div>
+<div class="admonition note">
+<p class="admonition-title fa fa-exclamation-circle">Övning 3</p>
+<p>Det finns flera hundra robotar listade på <a class="reference external" href="https://www.robotstxt.org/db.html">https://www.robotstxt.org/db.html</a>, spara robotarnas namn och webaddresser i varsin lista. Tips: <code class="docutils literal notranslate"><span class="pre">find_all()</span></code> och <code class="docutils literal notranslate"><span class="pre">&lt;li&gt;</span></code> (<em>eng. list item</em>) som är en tagg för listade element.</p>
+<p>Man kan se hela sidans innehåll så här:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">requests</span>
+<span class="kn">from</span> <span class="nn">bs4</span> <span class="kn">import</span> <span class="n">BeautifulSoup</span>
+
+<span class="n">robotar</span> <span class="o">=</span> <span class="n">requests</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">'https://www.robotstxt.org/db.html'</span><span class="p">)</span>
+<span class="n">soppa</span> <span class="o">=</span> <span class="n">BeautifulSoup</span><span class="p">(</span><span class="n">robotar</span><span class="o">.</span><span class="n">content</span><span class="p">,</span> <span class="s1">'html.parser'</span><span class="p">)</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="n">soppa</span><span class="o">.</span><span class="n">prettify</span><span class="p">())</span>
+</pre></div>
+</div>
+<p>Ett annat mycket bra sätt att se sidans uppbyggnad är att besöka sidan, högerklicka på den och välja <code class="docutils literal notranslate"><span class="pre">Visa</span> <span class="pre">sidkälla</span></code>, <a class="reference external" href="view-source:https://www.robotstxt.org/db.html">view-source:https://www.robotstxt.org/db.html</a>.</p>
+</div>
+</div>
+<div class="section" id="Skapa-en-tabell">
+<h3>Skapa en tabell<a class="headerlink" href="#Skapa-en-tabell" title="Permalink till denna rubrik">¶</a></h3>
+<p>Det skulle vara snyggt att visa nyheterna i tabellform så vi använder oss av paketet <code class="docutils literal notranslate"><span class="pre">pandas</span></code> som är bra på just det. Man anger kolumnernas namn som nycklar och listorna som värden i ett Python dictionary.</p>
 <div class="nbinput nblast docutils container">
-<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[10]:
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[12]:
 </pre></div>
 </div>
 <div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
 <span></span><span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
 
-<span class="n">nyheter</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">({</span><span class="s1">'Rubrik'</span><span class="p">:</span> <span class="n">rubriker</span><span class="p">,</span> <span class="s1">'Länk'</span><span class="p">:</span> <span class="n">lankar</span><span class="p">})</span>
+<span class="n">nyheter</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">({</span><span class="s1">'Rubrik'</span><span class="p">:</span> <span class="n">nyhetsrubriker</span><span class="p">,</span> <span class="s1">'Länk'</span><span class="p">:</span> <span class="n">nyhetslankar</span><span class="p">})</span>
 </pre></div>
 </div>
 </div>
+<p>Rubrikerna och länkarna kan vara väldigt långa så för att undvika att de kapas av automatiskt sätter vi <code class="docutils literal notranslate"><span class="pre">max_colwidth</span></code> till <code class="docutils literal notranslate"><span class="pre">None</span></code>, det gör att det inte finns nån maximal bredd för tabellens innehåll. Men hur vet man att man ska ändra på just någon sån parameter? Det lär man sig genom att söka på nätet, oftast landar man på <a class="reference external" href="https://stackoverflow.com/questions/25351968/how-to-display-full-non-truncated-dataframe-information-in-html-when-convertin">Stack Overflow</a> då det handlar om
+programmeringstips. Det är bra att veta att alla programmerare konstant söker information på internet eftersom det är omöjligt att veta och minnas hur man ska koda olika saker.</p>
+<p>Till slut skriver vi ut topp 10 nyheterna!</p>
 <div class="nbinput docutils container">
-<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[11]:
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[13]:
 </pre></div>
 </div>
 <div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
@@ -569,7 +669,7 @@ Länk: https://svenska.yle.fi/coronavirus
 </div>
 </div>
 <div class="nboutput nblast docutils container">
-<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[11]:
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[13]:
 </pre></div>
 </div>
 <div class="output_area rendered_html docutils container">
@@ -598,43 +698,43 @@ Länk: https://svenska.yle.fi/coronavirus
 <tbody>
 <tr>
 <th>0</th>
+<td>Ted &amp; Kaj: Din mamma var en sköldpadda</td>
+<td>https://arenan.yle.fi/1-50576822</td>
+</tr>
+<tr>
+<th>1</th>
 <td>Senaste nytt om coronaviruset</td>
 <td>https://svenska.yle.fi/coronavirus</td>
 </tr>
 <tr>
-<th>1</th>
-<td>IT-företagaren Kaj Arnö: Hårt arbete och kloka beslut eller bondtur att vi lyckades sälja IT-firman för en miljard dollar?</td>
-<td>https://svenska.yle.fi/artikel/2020/07/01/it-foretagaren-kaj-arno-hart-arbete-och-kloka-beslut-eller-bondtur-att-vi</td>
-</tr>
-<tr>
 <th>2</th>
-<td>Lyssna på Kaj Arnös sommarprat</td>
-<td>https://arenan.yle.fi/1-50548527</td>
+<td>Jobb som bärplockare är ökänt för dåliga arbetsförhållanden men så ska det inte vara: "Det är viktigt att alla behandlas lika oavsett varifrån de kommer"</td>
+<td>https://svenska.yle.fi/artikel/2020/07/01/jobb-som-barplockare-ar-okant-for-daliga-arbetsforhallanden-men-sa-ska-det-inte</td>
 </tr>
 <tr>
 <th>3</th>
-<td>Tiotusentals hushåll utan el efter stormen Päivö - på onsdag väntar häftiga åskväder</td>
-<td>https://svenska.yle.fi/artikel/2020/07/01/tiotusentals-hushall-utan-el-efter-stormen-paivo-pa-onsdag-vantar-haftiga</td>
+<td>Tusentals Hongkongbor ute på gatorna i protest mot ny inskränkande lag - polisen grep människor med hänvisning till lagen</td>
+<td>https://svenska.yle.fi/artikel/2020/07/01/tusentals-hongkongbor-ute-pa-gatorna-i-protest-mot-ny-inskrankande-lag-polisen</td>
 </tr>
 <tr>
 <th>4</th>
-<td>Stormen Päivö drog in över Borgå - gatubrunnar svämmade över och fyllde källare med vatten</td>
-<td>https://svenska.yle.fi/artikel/2020/06/30/stormen-paivo-drog-in-over-borga-gatubrunnar-svammade-over-och-fyllde-kallare-med</td>
+<td>Hongkongborna uppmärksammade 23 år under kinesiskt styre i dystra tecken - nationell säkerhetslag trädde i kraft under årsdagen</td>
+<td>https://svenska.yle.fi/artikel/2020/07/01/hongkongborna-uppmarksammade-23-ar-under-kinesiskt-styre-i-dystra-tecken</td>
 </tr>
 <tr>
 <th>5</th>
-<td>MT:s gallup: Haavisto och Halla-aho tappar i popularitet som presidentkandidater – Marin upp på tredje plats</td>
-<td>https://svenska.yle.fi/artikel/2020/07/01/mts-gallup-haavisto-och-halla-aho-tappar-i-popularitet-som-presidentkandidater</td>
+<td>Att vara kvinna och jägare är att våga ta plats och bevisa sin duglighet</td>
+<td>https://svenska.yle.fi/artikel/2020/07/01/att-vara-kvinna-och-jagare-ar-att-vaga-ta-plats-och-bevisa-sin-duglighet</td>
 </tr>
 <tr>
 <th>6</th>
-<td>USA:s Fauci: Hela landet hotas av snabb coronaspridning - "Skulle inte vara förvånad om vi är uppe i över 100 000 fall per dag"</td>
-<td>https://svenska.yle.fi/artikel/2020/07/01/usas-fauci-hela-landet-hotas-av-snabb-coronaspridning-skulle-inte-vara-forvanad</td>
+<td>Talvivaaraledare friades - inget insiderbrott när teckningsrätter såldes</td>
+<td>https://svenska.yle.fi/artikel/2020/07/01/talvivaaraledare-friades-inget-insiderbrott-nar-teckningsratter-saldes</td>
 </tr>
 <tr>
 <th>7</th>
-<td>Kommentar: Så länge ryssarna sväljer maktfullkomlighet och valfusk sitter Putin stadigt kvar</td>
-<td>https://svenska.yle.fi/artikel/2020/07/01/kommentar-sa-lange-ryssarna-svaljer-maktfullkomlighet-och-valfusk-sitter-putin</td>
+<td>Israels annektering av Västbanken skjuts fram: "Israel och USA spelar ett högt spel"</td>
+<td>https://svenska.yle.fi/artikel/2020/07/01/israels-annektering-av-vastbanken-skjuts-fram-israel-och-usa-spelar-ett-hogt-spel</td>
 </tr>
 <tr>
 <th>8</th>
@@ -643,12 +743,39 @@ Länk: https://svenska.yle.fi/coronavirus
 </tr>
 <tr>
 <th>9</th>
-<td>Hjärnskadade Irina föreläser ibland om sina erfarenheter - i FPA:s ögon är hon arbetsför och behöver inget stöd</td>
-<td>https://svenska.yle.fi/artikel/2020/07/01/hjarnskadade-irina-forelaser-ibland-om-sina-erfarenheter-i-fpas-ogon-ar-hon</td>
+<td>Mystisk massdöd bland elefanter i Botswana - ny sjukdom eller gift?</td>
+<td>https://svenska.yle.fi/artikel/2020/07/01/mystisk-massdod-bland-elefanter-i-botswana-ny-sjukdom-eller-gift</td>
 </tr>
 </tbody>
 </table>
 </div></div>
+</div>
+<p>Man kan spara nyheterna t.ex. som en <code class="docutils literal notranslate"><span class="pre">csv</span></code> fil med <code class="docutils literal notranslate"><span class="pre">pandas</span></code> funktionen <code class="docutils literal notranslate"><span class="pre">to_csv()</span></code> ifall man tänker använda datan man skrapar från nätet till något mer. Man kan t.ex. räkna statistik om man skrapar numror, eller se hur nyhets rubriker förändras olika dagar om man skrapar nyheter. När man skriver tabllen till en fil behöver man inte bry sig om <code class="docutils literal notranslate"><span class="pre">max_colwidth</span></code>, all data kommer nog med ändå. Hela programmet blir att se ut så här:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">requests</span>
+<span class="kn">from</span> <span class="nn">bs4</span> <span class="kn">import</span> <span class="n">BeautifulSoup</span>
+<span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
+
+<span class="n">yle</span> <span class="o">=</span> <span class="n">requests</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">'https://svenska.yle.fi'</span><span class="p">)</span>
+<span class="n">soppa</span> <span class="o">=</span> <span class="n">BeautifulSoup</span><span class="p">(</span><span class="n">yle</span><span class="o">.</span><span class="n">content</span><span class="p">,</span> <span class="s1">'html.parser'</span><span class="p">)</span>
+
+<span class="n">innehall</span> <span class="o">=</span> <span class="n">soppa</span><span class="o">.</span><span class="n">find</span><span class="p">(</span><span class="s2">"body"</span><span class="p">)</span>
+<span class="n">innehall_lankar</span> <span class="o">=</span> <span class="n">innehall</span><span class="o">.</span><span class="n">find_all</span><span class="p">(</span><span class="s1">'a'</span><span class="p">)</span>
+
+<span class="n">nyhetsrubriker</span> <span class="o">=</span> <span class="p">[]</span>
+<span class="n">nyhetslankar</span> <span class="o">=</span> <span class="p">[]</span>
+<span class="k">for</span> <span class="n">lank</span> <span class="ow">in</span> <span class="n">innehall_lankar</span><span class="p">:</span>
+  <span class="n">rubrik</span> <span class="o">=</span> <span class="n">lank</span><span class="o">.</span><span class="n">find</span><span class="p">(</span><span class="s1">'h3'</span><span class="p">)</span>
+  <span class="k">if</span> <span class="n">rubrik</span><span class="p">:</span>
+    <span class="n">nyhetsrubriker</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">rubrik</span><span class="o">.</span><span class="n">text</span><span class="o">.</span><span class="n">strip</span><span class="p">())</span>
+    <span class="n">nyhetslankar</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">lank</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">'href'</span><span class="p">))</span>
+
+<span class="n">nyheter</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">({</span><span class="s1">'Rubrik'</span><span class="p">:</span> <span class="n">nyhetsrubriker</span><span class="p">,</span> <span class="s1">'Länk'</span><span class="p">:</span> <span class="n">nyhetslankar</span><span class="p">})</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">nyheter</span><span class="o">.</span><span class="n">head</span><span class="p">(</span><span class="mi">10</span><span class="p">))</span>
+
+<span class="n">nyheter</span><span class="o">.</span><span class="n">to_csv</span><span class="p">(</span><span class="s2">"yle_nyheter.csv"</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>I nästa kapitel visualiserar vi nyhtetsrubrikerna som ordmoln!</p>
 </div>
 </div>
 <div class="section" id="Konsol">
@@ -661,7 +788,7 @@ Länk: https://svenska.yle.fi/coronavirus
 </div>
 </div>
 <footer><div aria-label="footer navigation" class="rst-footer-buttons" role="navigation"><a accesskey="p" class="btn btn-neutral float-left" href="../latex/" rel="prev" title="LaTeX"><span class="fa fa-arrow-circle-left"></span> Föregående</a>
-</div><hr/><div role="contentinfo">© Copyright 2020, Kodanka</div></footer>
+</div><hr/><div role="contentinfo">© Copyright 2020, Kodanka | Sphinx tema av Read the Docs</div><br/><a href="http://creativecommons.org/licenses/by-nc-sa/4.0"><img alt="Visa licens" src="../_static/by-nc-sa.svg" style="width: 88px; height: 31px;"/></a></footer>
 </div>
 </div>
 </section>

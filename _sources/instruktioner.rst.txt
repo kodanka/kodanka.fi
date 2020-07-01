@@ -38,7 +38,7 @@ Efter att man har laddat ner Python och VS Code enligt instruktionerna i :ref:`i
    :align: center
 
 - Testa Python genom att skriva en kodsnutt i filen: ``print("Kvack, kvack!")``
-- Spara filen (``Ctrl`` + ``S`` på Windows och Linux) eller (``Cmd`` + ``S`` på Mac)
+- Spara filen (``Ctrl`` + ``S`` på Windows och Linux eller ``Cmd`` + ``S`` på Mac)
 - Tryck på **Terminal** > **New Terminal**
 - Kör programmet genom att skriva ``python programmets_namn.py`` och trycka ``Enter`` i terminalen som nyss öppnades, d.v.s:
 
@@ -77,8 +77,8 @@ som erbjuder ett sätt att blanda text och kod.
    :target: https://colab.research.google.com/github/kodanka/kodanka.fi/blob/master/inledning.ipynb
    :align: center
 
-- Man kan testa den kod som finns i läromaterialet genom att välja valfri cell i Colab och trycka på play (▶️) ikonen som syns i bilden nedan. 
-- Det går även skriva ny kod/text genom att lägga till fler celler (``+ Code``/``+ Text``), och ta bort celler på soptunnan (🗑️). 
+- Man kan testa den kod som finns i läromaterialet genom att välja valfri cell i Colab och trycka på play ▶️ ikonen som syns i bilden nedan. 
+- Det går även skriva ny kod/text genom att lägga till fler celler ``+ Code``/``+ Text``, och ta bort celler på soptunnan 🗑️. 
 - Man kan skapa samt spara (**File** > **Save a copy in Drive**) helt nya Colab filer ifall man har ett Google konto. 
 - Colab har bra stöd för det mesta Python har att erbjuda och framför allt är det lätt! 
 - *Pro tip:* man kan göra snygga skolrapporter där om man behöver räkna och göra grafer i dem ;)
@@ -88,8 +88,8 @@ som erbjuder ett sätt att blanda text och kod.
    :alt: Använd Colab
    :align: center
 
-Det finns dessutom en integrerad kodredigerare av `Repl.it <http://repl.it>`_ i styckena **grunder** och **fördjupat**. 
-Där kan man snabbt testa sina idéer och försöka på uppgifter om man kodar allt på nätet.  
+Det finns dessutom en integrerad kodredigerare av `Repl.it <http://repl.it>`_ längst ner i materialet
+där man snabbt kan testa sina idéer och försöka på uppgifter om man kodar allt på nätet.  
 Knappen ``open in repl.it`` uppe i högra hörnet öppnar en helskärmsversion av editorn i en ny flik. Tryck på den gröna pilen
 för att köra kod.
 
