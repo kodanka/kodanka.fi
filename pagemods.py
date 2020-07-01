@@ -35,25 +35,38 @@ for root, dirs, files in os.walk("_build"):
                     soup.title.string = "Kodanka"
 
                 # Translate navigation buttons to swedish
-                next_button = soup.find("a", attrs={"accesskey": "n"})
-                if next_button:
-                    next_button.clear()
-                    next_button.insert(0, "Nästa ")
-                    next_arrow = soup.new_tag("span", attrs={"class": "fa fa-arrow-circle-right"})
-                    next_button.insert(1, next_arrow)
-                previous_button = soup.find("a", attrs={"accesskey": "p"})
-                if previous_button:
-                    previous_button.clear()
-                    previous_arrow = soup.new_tag("span", attrs={"class": "fa fa-arrow-circle-left"})
-                    previous_button.insert(0, previous_arrow)
-                    previous_button.insert(1, " Föregående")
+                navigation = soup.find("div", attrs={"aria-label": "footer navigation"})
+                if navigation:
+                    next_button = navigation.find("a", attrs={"accesskey": "n"})
+                    if next_button:
+                        next_button.clear()
+                        next_button.insert(0, "Nästa ")
+                        next_arrow = soup.new_tag("span", attrs={"class": "fa fa-arrow-circle-right"})
+                        next_button.insert(1, next_arrow)
+                        navigation.insert(1, next_button)
+                    previous_button = navigation.find("a", attrs={"accesskey": "p"})
+                    if previous_button:
+                        previous_button.clear()
+                        previous_arrow = soup.new_tag("span", attrs={"class": "fa fa-arrow-circle-left"})
+                        previous_button.insert(0, previous_arrow)
+                        previous_button.insert(1, " Föregående")
+                        navigation.insert(0, previous_button)
+
+                # Copyright info
+                copyright = soup.new_tag("div", attrs={"role": "contentinfo"})
+                copyright.insert(0, soup.new_tag("p"))
+                copyright.string = "© Copyright 2020, Kodanka"
+
+                # Insert into footer
+                footer = soup.find("footer")
+                footer.clear()
+                if navigation:
+                    footer.insert(0, navigation)
+                footer.insert(1, soup.new_tag("hr"))
+                footer.insert(2, copyright)
 
                 # Translate search functionality to swedish
                 soup = bs(str(soup).replace("placeholder=\"Search docs\"", "placeholder=\"Sök\""))
-
-                # Modify page footer
-                old_footer = "Built with <a href=\"http://sphinx-doc.org/\">Sphinx</a> using a <a href=\"https://github.com/rtfd/sphinx_rtd_theme\">theme</a> provided by <a href=\"https://readthedocs.org\">Read the Docs</a>."
-                soup = bs(str(soup).replace(old_footer, ""))
 
                 # Modify page header
                 if os.path.isfile(notebook):
