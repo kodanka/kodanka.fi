@@ -35,8 +35,11 @@ jobs:
         python pagemods.py
         touch _build/.nojekyll
 
-    - name: Create CNAME
-      run: echo "kodanka.fi" > _build/CNAME
+    - name: Copy CNAME
+      run: cp CNAME _build/CNAME
+
+    - name: Copy robots.txt
+      run: cp robots.txt _build/robots.txt
 
     - name: Deploy
       uses: peaceiris/actions-gh-pages@v3
