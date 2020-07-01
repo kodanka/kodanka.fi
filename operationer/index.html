@@ -6,7 +6,7 @@
 <head>
 <meta charset="utf-8"/>
 <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
-<title>Kodanka</title>
+<title>Kodanka - Operationer</title>
 <link href="../_static/logo.png" rel="shortcut icon"/>
 <script src="../_static/js/modernizr.min.js" type="text/javascript"></script>
 <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js" type="text/javascript"></script>
@@ -23,6 +23,8 @@
 <link href="../_static/pygments.css" rel="stylesheet" type="text/css"/>
 <link href="../genindex/" rel="index" title="Index"/>
 <link href="../search/" rel="search" title="Sök"/>
+<link href="../listor/" rel="next" title="Listor"/>
+<link href="../inledning/" rel="prev" title="Inledning"/>
 </head>
 <body class="wy-body-for-nav">
 <div class="wy-grid-for-nav">
@@ -52,8 +54,25 @@
 <li class="toctree-l1"><a class="reference internal" href="../om-kodanka/">Om Kodanka</a></li>
 </ul>
 <p class="caption"><span class="caption-text">Grunder:</span></p>
-<ul>
+<ul class="current">
 <li class="toctree-l1"><a class="reference internal" href="../inledning/">Inledning</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Operationer</a></li>
+<li class="toctree-l1"><a class="reference internal" href="#Tal-och-räkneoperationer">Tal och räkneoperationer</a></li>
+<li class="toctree-l1"><a class="reference internal" href="#Strängar">Strängar</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#Speciella-symboler">Speciella symboler</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="#Variabler">Variabler</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#Övningar">Övningar</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#Övning-1">Övning 1</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#Övning-2">Övning 2</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#Övning-3">Övning 3</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#Konsol">Konsol</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#Quiz">Quiz</a></li>
+</ul>
+</li>
 <li class="toctree-l1"><a class="reference internal" href="../listor/">Listor</a></li>
 </ul>
 <p class="caption"><span class="caption-text">Fördjupat:</span></p>
@@ -62,7 +81,7 @@
 </ul>
 <p class="caption"><span class="caption-text">Projekt:</span></p>
 <ul>
-<li class="toctree-l1"><a class="reference internal" href="../latex/">LaTeX</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../webbskrapning/">Webbskrapning</a></li>
 </ul>
 </div>
 </div>
@@ -325,8 +344,8 @@ div.rendered_html tbody tr:hover {
     text-align: unset;
 }
 </style>
-<div class="section" id="Inledning">
-<h1>Inledning<a class="headerlink" href="#Inledning" title="Permalink till denna rubrik">¶</a></h1>
+<div class="section" id="Operationer">
+<h1>Operationer<a class="headerlink" href="#Operationer" title="Permalink till denna rubrik">¶</a></h1>
 <p>I det här kapitlet kommer du att lära dig hur man kan använda Python som en kalkylator, och vad som menas med en ”sträng” inom programmering (det är alltså någonting annat än en gitarrsträng). Innan vi börjar, lyckas du lista ut vad följande program gör, och varför dess output är talet 8?</p>
 <div class="nbinput docutils container">
 <div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[1]:
@@ -706,16 +725,23 @@ b är sedan: Ja!
 </pre></div></div>
 </div>
 <p>Variabeln <code class="docutils literal notranslate"><span class="pre">b</span></code> tilldelades samma värde som variabeln <code class="docutils literal notranslate"><span class="pre">a</span></code>, vilket var <code class="docutils literal notranslate"><span class="pre">'Ja!'</span></code>. Trots att värdet på <code class="docutils literal notranslate"><span class="pre">a</span></code> ändrades till <code class="docutils literal notranslate"><span class="pre">'Nej...'</span></code> påverkade det inte variabeln <code class="docutils literal notranslate"><span class="pre">b</span></code>.</p>
-</div>
 <div class="section" id="Övningar">
-<h1>Övningar<a class="headerlink" href="#Övningar" title="Permalink till denna rubrik">¶</a></h1>
+<h2>Övningar<a class="headerlink" href="#Övningar" title="Permalink till denna rubrik">¶</a></h2>
 <p>Du kan göra följande övningar antingen i programtolken i din egen Python-editerare, eller i programtolken som finns längst ner.</p>
+<div class="section" id="Övning-1">
+<h3>Övning 1<a class="headerlink" href="#Övning-1" title="Permalink till denna rubrik">¶</a></h3>
 <p>Använd Python för att ta reda på vilken av talen <span class="math notranslate nohighlight">\(3^4\)</span> och <span class="math notranslate nohighlight">\(4^3\)</span> som är större.</p>
+</div>
+<div class="section" id="Övning-2">
+<h3>Övning 2<a class="headerlink" href="#Övning-2" title="Permalink till denna rubrik">¶</a></h3>
 <p>Skriv en kod vars output är den vackra vågen</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">_</span><span class="o">/~</span>\<span class="n">_</span><span class="o">/~</span>\<span class="n">_</span><span class="o">/~</span>\<span class="n">_</span><span class="o">/~</span>\<span class="n">_</span><span class="o">/~</span>\<span class="n">_</span><span class="o">/~</span>\<span class="n">_</span><span class="o">/~</span>\<span class="n">_</span><span class="o">/~</span>\<span class="n">_</span><span class="o">/~</span>\<span class="n">_</span><span class="o">/~</span>\<span class="n">_</span><span class="o">/~</span>\<span class="n">_</span><span class="o">/~</span>\<span class="n">_</span>
 </pre></div>
 </div>
 <p>så att din kod består av mindre än 30 symboler.</p>
+</div>
+<div class="section" id="Övning-3">
+<h3>Övning 3<a class="headerlink" href="#Övning-3" title="Permalink till denna rubrik">¶</a></h3>
 <p>Fundera på hur du kan beräkna resten efter division mellan två tal <code class="docutils literal notranslate"><span class="pre">a</span></code> och <code class="docutils literal notranslate"><span class="pre">b</span></code>, utan att använda operatorn <code class="docutils literal notranslate"><span class="pre">%</span></code>. Du får alltså endast använda operatorerna <code class="docutils literal notranslate"><span class="pre">+</span></code>, <code class="docutils literal notranslate"><span class="pre">-</span></code>, <code class="docutils literal notranslate"><span class="pre">*</span></code>, <code class="docutils literal notranslate"><span class="pre">/</span></code> och <code class="docutils literal notranslate"><span class="pre">//</span></code>.</p>
 <div class="nbinput nblast docutils container">
 <div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[19]:
@@ -724,6 +750,8 @@ b är sedan: Ja!
 <div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
 <span></span><span class="c1">#Du kan göra övningarna genom att skriva din kod här.</span>
 </pre></div>
+</div>
+</div>
 </div>
 </div>
 <div class="section" id="Konsol">
@@ -735,17 +763,9 @@ b är sedan: Ja!
 </div>
 </div>
 </div>
-<footer>
-<hr/>
-<div role="contentinfo">
-<p>
-        © Copyright 2020, Kodanka
-
-    </p>
-</div>
-  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
-
-</footer>
+<footer><div aria-label="footer navigation" class="rst-footer-buttons" role="navigation"><a accesskey="p" class="btn btn-neutral float-left" href="../inledning/" rel="prev" title="Inledning"><span class="fa fa-arrow-circle-left"></span> Föregående</a>
+<a accesskey="n" class="btn btn-neutral float-right" href="../listor/" rel="next" title="Listor">Nästa <span class="fa fa-arrow-circle-right"></span></a>
+</div><hr/><div role="contentinfo">© Copyright 2020, Kodanka</div></footer>
 </div>
 </div>
 </section>

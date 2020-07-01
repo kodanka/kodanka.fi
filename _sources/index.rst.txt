@@ -17,6 +17,7 @@ Här kan man lära sig programmera! **</>** + 🦆 = sant
    :caption: Grunder:
 
    inledning
+   operationer
    listor
 
 .. toctree::
@@ -29,4 +30,4 @@ Här kan man lära sig programmera! **</>** + 🦆 = sant
    :maxdepth: 1
    :caption: Projekt:
 
-   latex
+   webbskrapning
